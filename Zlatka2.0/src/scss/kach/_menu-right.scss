@@ -1,0 +1,55 @@
+.menu-right {
+    position: absolute;
+    top: 35px;
+    right: 35px;
+    z-index: 2;
+
+    &_link {
+        border-radius: 50%;
+        display: inline-block;
+        height: 32px;
+        width: 32px;
+        margin: 0 15px;
+
+        &__shedule {
+            background: url(img/calendar.png) no-repeat;
+            position: relative;
+
+            &:after {
+                content: '|';
+                color: #dddce2;
+                font-size: 20px;
+                position: absolute;
+                right: -16px;
+                top: 2px;
+            }
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+    &_checkbox {
+        display: none;
+    }
+    &_popup {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: #fff;
+        padding: 10px;
+        border: 1px solid #000;
+        z-index: -1;
+        opacity: 0;
+        transition: .2s ease opacity;
+
+        .menu-right_checkbox:checked + & {
+            z-index: 2;
+            opacity: 1;
+        }
+    }
+    &_popup-link {
+        display: block;
+        margin: 5px 0;
+    }
+}

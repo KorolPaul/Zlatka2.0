@@ -1,0 +1,21 @@
+.shedule {
+    background: #fff;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px 25px;
+    z-index: 3;
+    display: none;
+
+    &__opened {
+        display: block;
+    }
+    &_header {
+        color: #2582e9;
+        font-size: 34px;
+        font-family: $headings_font-family;
+        text-transform: uppercase;
+    }
+}

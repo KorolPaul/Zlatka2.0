@@ -1,0 +1,127 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="gender">
+    <a href="#" class="gender_button gender_button__male"></a>
+    <a href="#" class="gender_button gender_button__female active"></a>
+</div>
+<div class="shedule" id="shedule">
+    <h2 class="shedule_header">Тренировки</h2>
+    <ul class="trainings" id="trainings"></ul>
+    <ul class="training" id="training"></ul>
+    <a class="share-training" id="shareTraining"></a>
+    <a class="add-training" id="addTraining">+</a>
+
+    <div class="excercise" id="excercise">
+        <a href="#" class="excercise_close" id="close-excercise">✕</a>
+        <div id="excercise_sets-holder"></div>
+        <button class="excercise_delete" id="delete-excercise">✕</button>
+    </div>
+</div>
+<!--
+<img class="brush" src="img/brush.svg" alt="">
+-->
+<div class="muscles">
+    <div class="muscles_titles">
+        <a class="muscles_title muscles_title__chest muscles_title__visible" data-muscle="chest" href="#" data-layer="0">грудные</a>
+        <a class="muscles_title muscles_title__quadriceps muscles_title__visible" data-muscle="quadriceps" href="#" data-layer="0">квадрицепс</a>
+
+        <a class="muscles_title muscles_title__shoulder" data-muscle="shoulder" href="#" data-layer="1">плечи</a>
+        <a class="muscles_title muscles_title__trapezium" data-muscle="trapezium" href="#" data-layer="1">трепеции</a>
+
+        <a class="muscles_title muscles_title__butt" data-muscle="butt" href="#" data-layer="4">ягодицы</a>
+        <a class="muscles_title muscles_title__shin" data-muscle="shin" href="#" data-layer="4">икры</a>
+
+        <a class="muscles_title muscles_title__back" data-muscle="back" href="#" data-layer="6">широчайшие</a>
+        <a class="muscles_title muscles_title__small-back" data-muscle="triceps" href="#" data-layer="6">длинные</a>
+
+        <a class="muscles_title muscles_title__hamstrings" data-muscle="hamstrings" href="#" data-layer="7">бицепс бедра</a>
+        <a class="muscles_title muscles_title__triceps" data-muscle="triceps" href="#" data-layer="7">трицепс</a>
+
+        <a class="muscles_title muscles_title__biceps" data-muscle="biceps" href="#" data-layer="10">бицепс</a>
+        <a class="muscles_title muscles_title__arm" data-muscle="biceps" href="#" data-layer="10">предплечья</a>
+
+        <a class="muscles_title muscles_title__press" data-muscle="press" href="#" data-layer="11">пресс</a>
+        <a class="muscles_title muscles_title__sidepress" data-muscle="press" href="#" data-layer="11">косые</a>
+    </div>
+    <svg class="muscles_map muscles_map__girl" id="map" pointer-events="all" version="1.1" viewBox="0 0 600 1300">
+        <defs>
+            <filter id="blur">
+                <feGaussianBlur stdDeviation="3" />
+            </filter>
+            <pattern id="grid" patternUnits="userSpaceOnUse" width="20" height="20" patternTransform="rotate(55 0 0)">
+                <rect x="0" y="0" width="20" height="20" fill="rgba(255, 0, 0, .2)" stroke="red" />
+            </pattern>
+        </defs>
+        <style>
+            path {
+                fill: url(#grid);
+                //filter: url(#blur);
+            }
+        </style>
+        <g class="muscles_side active">
+            <path class="quadriceps" title="Квадрицепсы" d="m 300.83565,641.16992 50.13928,112.31197 41.11421,101.28134 5.01392,-12.03343 16.04457,-7.01949 c 0,0 35.0975,3.00835 38.10585,8.02228 3.00836,5.01393 -15.04178,-39.10864 -21.05849,-87.24234 -6.01672,-48.1337 -5.01393,-158.44011 -26.07243,-178.49582 -21.05849,-20.05571 -103.28691,63.17549 -103.28691,63.17549 z" />
+            <path class="shin" title="Икроножные мышцы" d="m 460.27855,867.79944 c 0,0 23.06407,22.06128 31.08635,44.12257 8.02229,22.06128 26.07243,173.48189 26.07243,173.48189 l 10.02785,24.0669 -37.10306,6.0167 c 0,0 -57.15878,-208.57942 -73.20335,-219.61006 -16.04456,-11.03064 43.11978,-28.078 43.11978,-28.078 z" />
+            <path class="press" title="Брюшной пресс" d="m 273.76045,571.97772 17.04735,-64.17828 5.01393,-101.28134 c 0,0 21.05849,-8.02228 29.08078,17.04736 8.02228,25.06964 8.02228,110.30641 -6.01672,131.3649 -14.03899,21.0585 -22.06128,20.05571 -22.06128,20.05571 z" />
+            <path class="chest" title="Грудные мышцы" d="m 310.86351,261.11421 c 0,0 -16.04457,93.25905 -5.01393,110.3064 11.03064,17.04736 41.11421,34.09471 60.16713,31.08635 19.05293,-3.00835 21.0585,0 25.06964,-29.08078 4.01114,-29.08078 2.00557,-64.17827 3.00836,-75.20891 1.00278,-11.03064 -83.2312,-37.10306 -83.2312,-37.10306 z" />
+            <path class="biceps" title="Бицепсы" d="m 402.11699,322.28412 c 0,0 37.10307,75.20892 41.11421,75.20892 4.01114,0 22.06128,-9.02507 22.06128,-9.02507 0,0 9.02507,-13.03622 -9.02507,-44.12257 -18.05014,-31.08635 -52.14485,-22.06128 -54.15042,-22.06128 z" />
+            <path class="arm" title="Предплечья" d="m 444.23398,408.52368 c 0,0 21.0585,-12.03343 29.08078,-2.00558 8.02229,10.02786 11.03064,8.02229 11.03064,8.02229 0,0 -72.20055,122.33983 -73.20334,131.3649 -1.00278,9.02507 -23.06407,-8.02228 -23.06407,-8.02228 z" />
+            <path class="shoulder" title="Дельтовидные мышцы" d="m 369.78336,234.61265 c 0,0 -6.02715,31.19936 29.07214,43.25366 35.09928,12.0543 35.45382,11.69976 35.45382,11.69976 0,0 -7.09077,-49.98988 -36.87198,-54.95342 -29.78121,-4.96354 -27.65398,0 -27.65398,0 z" />
+            <path class="trapezium" title="Трапециевидные мышцы" d="m 303.48472,255.53041 c 0,0 38.64466,-6.02715 52.47165,-13.47246 13.82699,-7.4453 13.82699,-7.4453 13.82699,-7.4453 l -42.19005,-17.37237 z" />
+        </g>
+
+        <g class="muscles_side">
+            <path class="quadriceps" title="Квадрицепсы" d="m 288.80017,632.75907 c 0,0 53.88981,194.99602 67.36226,212.72293 13.47245,17.72691 36.1629,17.72691 36.1629,17.72691 0,0 0,10.63615 8.50891,-5.67261 8.50896,-16.30876 2.12723,-127.63376 -8.50891,-192.86879 -10.63615,-65.23503 -103.52516,-31.90844 -103.52516,-31.90844 z" />
+            <path class="shin" title="Икроножные мышцы" d="m 405.79778,919.22595 c 0,0 34.74472,-26.9449 55.30792,3.54538 20.5633,30.49029 22.6905,46.08997 25.5268,77.99837 2.8363,31.9085 10.6361,141.1063 10.6361,141.1063 l -39.7082,-1.4182 c 0,0 -40.4174,-163.79666 -46.09,-193.57787 -5.67262,-29.78121 -5.67262,-27.65398 -5.67262,-27.65398 z" />
+            <path class="press" title="Брюшной пресс" d="m 267.52787,564.68773 16.30876,0.70908 c 0,0 9.92707,-0.70908 19.85414,-19.14506 9.92707,-18.43599 14.89061,-60.2715 9.92707,-102.81609 -4.96353,-42.54458 -43.25366,-50.34443 -44.67181,-46.08997 -1.41816,4.25446 -13.47246,60.98058 -7.79984,114.16131 5.67261,53.18073 6.38168,53.18073 6.38168,53.18073 z" />
+            <path class="arm" title="Предплечья" d="m 384.52549,542.70636 21.98141,14.89061 96.4344,-137.56083 -51.0536,-0.70908 z" />
+            <path class="biceps" title="Бицепсы" d="m 449.0514,403.0183 c 0,0 -44.67177,-58.85334 -45.38085,-73.74394 -0.70908,-14.89061 7.79985,-21.98137 7.79985,-21.98137 0,0 53.1807,59.56242 49.6353,73.74395 -3.5453,14.18152 -12.0543,21.98136 -12.0543,21.98136 z" />
+            <path class="triceps" title="Трицепсы" d="m 480.9599,371.81894 c 0,0 -9.218,11.34522 -23.3995,-15.59968 -14.1816,-26.9449 -35.4539,-57.43519 -35.4539,-57.43519 l 17.7269,4.96353 z" />
+            <path class="chest" title="Грудные мышцы" d="m 269.6551,368.27356 c 0,0 0.70908,30.49029 26.94491,34.03567 26.23583,3.54538 56.01704,-14.18153 56.01704,-14.18153 l 21.98137,-75.87118 c 0,0 -31.19937,-48.92627 -57.4352,-43.25366 -26.23582,5.67261 -47.50812,99.2707 -47.50812,99.2707 z" />
+            <path class="shoulder" title="Дельтовидные мышцы" d="m 380.9801,293.82053 c 0,0 35.4538,18.43599 49.6354,18.43599 14.1815,0 -12.0543,-70.90764 -34.74479,-76.58025 -22.69045,-5.67262 -33.32659,22.69044 -33.32659,22.69044 z" />
+            <path class="trapezium" title="Трапециевидные мышцы" d="m 304.19379,259.07579 c 0,0 43.96274,-21.98137 58.85335,-24.1086 14.8906,-2.12723 -34.74475,-19.85414 -34.74475,-19.85414 z" />
+        </g>
+        <g class="muscles_side">
+
+        </g>
+        <g class="muscles_side">
+
+        </g>
+        <g class="muscles_side">
+
+        </g>
+        <g class="muscles_side">
+
+        </g>
+        <g class="muscles_side">
+
+        </g>
+        <g class="muscles_side">
+
+        </g>
+        <g class="muscles_side">
+
+        </g>
+        <g class="muscles_side">
+
+        </g>
+        <g class="muscles_side">
+
+        </g>
+        <g class="muscles_side">
+
+        </g>
+        <g class="muscles_side">
+
+        </g>
+    </svg>
+</div>
+
+<ul id="excercises" class="excercises"></ul>
+<div class="info" id="info">
+    <a href="#" class="info_close" id="info_close">&larr;</a>
+    <div class="info_holder"></div>
+</div>
+
+<ul class="trainings-popup" id="trainings-popup"></ul>

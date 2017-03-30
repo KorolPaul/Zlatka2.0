@@ -1,0 +1,39 @@
+.excercises {
+    background: rgba(255, 255, 255, .7);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 0 20px;
+    max-height: calc(100% - 100px);
+    overflow: auto;
+    z-index: 2;
+    @include tablet {
+        background: transparent;
+        bottom: auto;
+        left: auto;
+        top: 100px;
+    }
+
+    li,
+    .training li {
+        list-style: none;
+        position: relative;
+        z-index: 1;
+        transition: .05s all ease;
+    }
+    li.animated,
+    .training li.animated {
+        transition: .2s all ease-in;
+    }
+}
+.excercise-info {
+    position: relative;
+    flex-grow: 5;
+}
+li.temp {
+    position: absolute;
+    cursor: pointer;
+    left: -5000px;
+    top: -100px;
+}

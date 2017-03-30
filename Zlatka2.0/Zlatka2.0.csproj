@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{731AEACB-AE68-4806-BB7E-05B98A03169A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Zlatka2._0</RootNamespace>
+    <AssemblyName>Zlatka2.0</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort>44382</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\TrainingController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\TrainingContext.cs" />
+    <Compile Include="Models\TrainingModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\excercises.xml" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="gulpfile.js" />
+    <Content Include="src\img\barbell.png" />
+    <Content Include="src\img\brush-gray.png" />
+    <Content Include="src\img\brush-top.png" />
+    <Content Include="src\img\brush.svg" />
+    <Content Include="src\img\calendar.png" />
+    <Content Include="src\img\excercises\arms\bending-wrist-barbell-back.jpg" />
+    <Content Include="src\img\excercises\arms\bending-wrist-barbell.jpg" />
+    <Content Include="src\img\excercises\arms\revert-bending-wrist-barbell.jpg" />
+    <Content Include="src\img\excercises\back\close-grip-pull-ups.jpg" />
+    <Content Include="src\img\excercises\back\deadlift.jpg" />
+    <Content Include="src\img\excercises\back\pull-ups.jpg" />
+    <Content Include="src\img\excercises\back\t-neck.jpg" />
+    <Content Include="src\img\excercises\back\thrust-dumbbell.jpg" />
+    <Content Include="src\img\excercises\back\thrust-rod-slope.jpg" />
+    <Content Include="src\img\excercises\back\traction-high-block.jpg" />
+    <Content Include="src\img\excercises\back\traction-low-block.jpg" />
+    <Content Include="src\img\excercises\biceps\21.jpg" />
+    <Content Include="src\img\excercises\biceps\burbell-curl.jpg" />
+    <Content Include="src\img\excercises\biceps\burbell-revert-curl.jpg" />
+    <Content Include="src\img\excercises\biceps\concentrated-bending.jpg" />
+    <Content Include="src\img\excercises\biceps\curl-dumbbells-incline-bench.jpg" />
+    <Content Include="src\img\excercises\biceps\hummer.jpg" />
+    <Content Include="src\img\excercises\biceps\scott-pullup.jpg" />
+    <Content Include="src\img\excercises\biceps\сurl-dumbbell-sitting.jpg" />
+    <Content Include="src\img\excercises\biceps\сurls-block.jpg" />
+    <Content Include="src\img\excercises\butt\rear-leg-raises.jpg" />
+    <Content Include="src\img\excercises\chest\bench-dumbbels.jpg" />
+    <Content Include="src\img\excercises\chest\bench-press.jpeg" />
+    <Content Include="src\img\excercises\chest\breeding-dumbbels.jpg" />
+    <Content Include="src\img\excercises\chest\dips.jpg" />
+    <Content Include="src\img\excercises\chest\incle-bench-dumbbels.jpg" />
+    <Content Include="src\img\excercises\chest\incle-bench-press.jpeg" />
+    <Content Include="src\img\excercises\chest\mix-hands-block.jpg" />
+    <Content Include="src\img\excercises\chest\pullover.jpg" />
+    <Content Include="src\img\excercises\hamstrings\deadlift-streight-legs.jpg" />
+    <Content Include="src\img\excercises\hamstrings\flexion-simulator.jpg" />
+    <Content Include="src\img\excercises\hamstrings\rear-leg-raises.jpg" />
+    <Content Include="src\img\excercises\press\bending-body-incle.jpg" />
+    <Content Include="src\img\excercises\press\flexion-trunk-block.jpg" />
+    <Content Include="src\img\excercises\press\grouping-horizontal-bar.jpg" />
+    <Content Include="src\img\excercises\press\leg-raises.jpg" />
+    <Content Include="src\img\excercises\press\rise-legs-crossbar.jpg" />
+    <Content Include="src\img\excercises\press\rise-legs-vertical-bench.jpg" />
+    <Content Include="src\img\excercises\press\trunk-flexion.jpg" />
+    <Content Include="src\img\excercises\press\turns torso.jpg" />
+    <Content Include="src\img\excercises\press\turns-torso.jpg" />
+    <Content Include="src\img\excercises\press\twisting.jpg" />
+    <Content Include="src\img\excercises\press\vacum.jpg" />
+    <Content Include="src\img\excercises\quadriceps\half-squats.jpg" />
+    <Content Include="src\img\excercises\quadriceps\legs-extensions.jpg" />
+    <Content Include="src\img\excercises\quadriceps\legs-press.jpg" />
+    <Content Include="src\img\excercises\quadriceps\lunges.jpeg" />
+    <Content Include="src\img\excercises\quadriceps\squats-chest.jpg" />
+    <Content Include="src\img\excercises\quadriceps\squats.jpg" />
+    <Content Include="src\img\excercises\shin\donkey.jpg" />
+    <Content Include="src\img\excercises\shin\toes-ups-sitting.gif" />
+    <Content Include="src\img\excercises\shin\toes-ups.jpg" />
+    <Content Include="src\img\excercises\shoulders\army-press.jpg" />
+    <Content Include="src\img\excercises\shoulders\arnold.jpg" />
+    <Content Include="src\img\excercises\shoulders\back-shoulder.jpg" />
+    <Content Include="src\img\excercises\shoulders\behind-pullup.jpg" />
+    <Content Include="src\img\excercises\shoulders\block-side-shoulder.jpg" />
+    <Content Include="src\img\excercises\shoulders\block-side-sit.jpg" />
+    <Content Include="src\img\excercises\shoulders\block-side.jpg" />
+    <Content Include="src\img\excercises\shoulders\breeding-hands.jpg" />
+    <Content Include="src\img\excercises\shoulders\dumbbell-press.jpg" />
+    <Content Include="src\img\excercises\shoulders\shoulders-lift.jpg" />
+    <Content Include="src\img\excercises\shoulders\shvungi.jpg" />
+    <Content Include="src\img\excercises\small-back\hyperextension.jpg" />
+    <Content Include="src\img\excercises\trapezium\high-lift.jpg" />
+    <Content Include="src\img\excercises\trapezium\shrags-dumbbells.jpg" />
+    <Content Include="src\img\excercises\trapezium\shrags.jpg" />
+    <Content Include="src\img\excercises\triceps\extension-dumbbell-head.jpg" />
+    <Content Include="src\img\excercises\triceps\french-presses.jpg" />
+    <Content Include="src\img\excercises\triceps\presses-top-shelf-reverse.jpg" />
+    <Content Include="src\img\excercises\triceps\presses-top-shelf.jpeg" />
+    <Content Include="src\img\excercises\triceps\push-ups-parallel-benches.jpg" />
+    <Content Include="src\img\excercises\triceps\retraction-hand-dumbbells.jpg" />
+    <Content Include="src\img\excercises\triceps\triceps-extensions.jpg" />
+    <Content Include="src\img\female.png" />
+    <Content Include="src\img\filters.png" />
+    <Content Include="src\img\girl-original.png" />
+    <Content Include="src\img\girl.png" />
+    <Content Include="src\img\logo.png" />
+    <Content Include="src\img\male.png" />
+    <Content Include="src\img\masks.svg" />
+    <Content Include="src\img\profile.jpg" />
+    <Content Include="src\img\share.png" />
+    <Content Include="src\js\entities\body.js" />
+    <Content Include="src\js\entities\excercise.js" />
+    <Content Include="src\js\entities\training.js" />
+    <Content Include="src\js\kach.js" />
+    <Content Include="src\js\main.js" />
+    <Content Include="src\js\stats.js" />
+    <Content Include="src\js\touch.js" />
+    <Content Include="src\js\UI.js" />
+    <Content Include="src\js\utils.js" />
+    <Content Include="src\js\vendors\hammer.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Scripts\" />
+    <Folder Include="Views\Training\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\fonts\formular-lisht.woff" />
+    <Content Include="Content\fonts\futuraptcond-bookobl.woff" />
+    <Content Include="Content\fonts\futuraptcond-extraboldobl.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\fonts\formular-lisht.woff" />
+    <Content Include="src\fonts\futuraptcond-bookobl.woff" />
+    <Content Include="src\fonts\futuraptcond-extraboldobl.woff" />
+    <Content Include="src\scss\admin\_delete.scss" />
+    <Content Include="src\scss\admin\_logo.scss" />
+    <Content Include="src\scss\admin\_main-menu.scss" />
+    <Content Include="src\scss\admin\_table-list.scss" />
+    <Content Include="src\scss\form-elements\_button.scss" />
+    <Content Include="src\scss\form-elements\_form.scss" />
+    <Content Include="src\scss\form-elements\_input.scss" />
+    <Content Include="src\scss\form-elements\_label.scss" />
+    <Content Include="src\scss\form-elements\_textarea.scss" />
+    <Content Include="src\scss\header\_header.scss" />
+    <Content Include="src\scss\header\_logo.scss" />
+    <Content Include="src\scss\header\_menu-right.scss" />
+    <Content Include="src\scss\header\_menu.scss" />
+    <Content Include="src\scss\header\_navigation.scss" />
+    <Content Include="src\scss\kach\_add-button.scss" />
+    <Content Include="src\scss\kach\_add-training.scss" />
+    <Content Include="src\scss\kach\_brush.scss" />
+    <Content Include="src\scss\kach\_characteristics.scss" />
+    <Content Include="src\scss\kach\_complexity.scss" />
+    <Content Include="src\scss\kach\_delete.scss" />
+    <Content Include="src\scss\kach\_excercise-name.scss" />
+    <Content Include="src\scss\kach\_excercise.scss" />
+    <Content Include="src\scss\kach\_excercises.scss" />
+    <Content Include="src\scss\kach\_fade.scss" />
+    <Content Include="src\scss\kach\_gender.scss" />
+    <Content Include="src\scss\kach\_info.scss" />
+    <Content Include="src\scss\kach\_instagram-media.scss" />
+    <Content Include="src\scss\kach\_menu-right.scss" />
+    <Content Include="src\scss\kach\_muscles.scss" />
+    <Content Include="src\scss\kach\_plots.scss" />
+    <Content Include="src\scss\kach\_schedule.scss" />
+    <Content Include="src\scss\kach\_sets.scss" />
+    <Content Include="src\scss\kach\_share-training.scss" />
+    <Content Include="src\scss\kach\_statistics.scss" />
+    <Content Include="src\scss\kach\_training.scss" />
+    <Content Include="src\scss\kach\_trainings-popup.scss" />
+    <Content Include="src\scss\kach\_trainings.scss" />
+    <Content Include="src\scss\layout\_content.scss" />
+    <Content Include="src\scss\layout\_defaults.scss" />
+    <Content Include="src\scss\layout\_fonts.scss" />
+    <Content Include="src\scss\layout\_footer.scss" />
+    <Content Include="src\scss\layout\_headings.scss" />
+    <Content Include="src\scss\layout\_layout.scss" />
+    <Content Include="src\scss\layout\_links.scss" />
+    <Content Include="src\scss\layout\_normalize.scss" />
+    <Content Include="src\scss\style.scss" />
+    <Content Include="src\scss\_const.scss" />
+    <Content Include="src\scss\_placeholders.scss" />
+    <Content Include="src\scss\_templates.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="package.json" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62160</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44382/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

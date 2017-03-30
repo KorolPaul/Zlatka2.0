@@ -1,0 +1,173 @@
+@mixin title-color($color) {
+    color: $color;
+
+    &:hover {
+        color: $color;
+    }
+}
+
+.muscles {
+    cursor: ns-resize;    
+    text-align: center;
+    
+    &_map {
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        height: 80vh;
+        left: 50%;
+        top: 55%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        clip: rect(0, auto, auto, 5vh);
+        @include tablet {
+            height: 90vh;
+            top: 50%;            
+        }
+
+        &__girl {
+            background-image: url(img/girl.png);
+            width: 37vh;
+            z-index: 0;
+            @include tablet {
+                width: 42vh;
+            }
+        }
+    }
+    &_side {
+        transition: .3s ease opacity;
+        opacity: 0;
+        visibility: hidden;
+
+        &.active {
+            opacity: 1;
+            visibility: visible;
+
+            path {
+                display: block;
+            }
+        }
+
+        path {
+            cursor: pointer;
+            transition: .2s all ease-out;
+            opacity: .6;
+            display: none;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+    &_title {
+        font-size: 15vmin;
+        line-height: 1;
+        font-family: $headings_font-family;
+        position: absolute;
+        text-decoration: none;
+        text-transform: uppercase;
+        z-index: 2;
+        opacity: 0;
+        transform: translate(-30%, 0);        
+        user-select: none;
+        visibility: hidden;
+        transition: .2s ease filter,
+                    .5s ease opacity,
+                    .4s ease transform;
+
+        &:hover {
+            color: inherit;
+            filter: saturate(1.75);
+        }
+
+        &__press {
+            @include title-color($press);
+            top: 52%;
+            left: 50%;
+        }
+        &__sidepress {
+            @include title-color($press);
+            top: 30%;
+            right: 55%;
+            z-index: 0;
+            transform: translate(30%, 0);
+        }
+        &__shoulder {
+            @include title-color($shoulders);
+            top: 35%;
+            left: 55%;
+        }
+        &__trapezium {
+            @include title-color($shoulders);
+            top: 20%;
+            right: 39%;
+            transform: translate(30%, 0);
+            z-index: 0;
+        }
+        &__quadriceps {
+            @include title-color($chest);
+            top: 69%;
+            left: 19%;
+        }
+        &__chest {
+            @include title-color($chest);
+            top: 21%;
+            right: 42%;
+            transform: translate(30%, 0);
+            z-index: 0;
+        }
+        &__hamstrings {
+            @include title-color($triceps);
+            top: 50%;
+            left: 45%;
+        }
+        &__triceps {
+            @include title-color($triceps);
+            top: 19%;
+            right: 46%;
+            transform: translate(30%, 0);
+            z-index: 0;
+        }
+        &__arm {
+            @include title-color($biceps);
+            top: 50%;
+            left: 20%;
+        }
+        &__biceps {
+            @include title-color($biceps);
+            top: 25%;
+            right: 52%;
+            transform: translate(30%, 0);
+            z-index: 0;
+        }
+        &__butt {
+            @include title-color($butt);
+            top: 30%;
+            left: 35%;
+        }
+        &__shin {
+            @include title-color($butt);
+            top: 61%;
+            right: 55%;
+            transform: translate(30%, 0);
+            z-index: 0;
+        }
+        &__small-back {
+            @include title-color($back);
+            top: 49%;
+            left: 34%;
+        }
+        &__back {
+            @include title-color($back);
+            top: 25%;
+            right: 12%;
+            transform: translate(30%, 0);
+            z-index: 0;
+        }
+         
+         &__visible {
+            opacity: 1;
+            transform: translate(0);
+            visibility: visible;
+        }
+    }
+}
