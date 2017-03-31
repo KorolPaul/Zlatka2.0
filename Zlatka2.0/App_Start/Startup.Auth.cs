@@ -50,6 +50,7 @@ namespace Zlatka2._0
             //    clientId: "",
             //    clientSecret: "");
 
+            /*
             app.UseTwitterAuthentication(
                consumerKey: "VWJdeXqJs2VlCfdjZ6zxmC78V",
                consumerSecret: "GoIefOGl1rli5oHWuTL3tVyUAj3iYjGAPcumLY7d86QaMKp0Pn");
@@ -62,6 +63,21 @@ namespace Zlatka2._0
             {
                 ClientId = "718632715664-7bmj1p4ttman992j00q0uk5icjqoclvk.apps.googleusercontent.com",
                 ClientSecret = "e41osfr0kgMlr60GaqLDEjSQ"
+            });
+            */
+
+            app.UseTwitterAuthentication(
+               consumerKey: "xQXblX2IYD5p5wIvNEzScKCQt",
+               consumerSecret: "2TjcCcaeLbliLjnbP6TSGgpxdSM5dsBhAAvCZyamMwacS7TB0m");
+
+            app.UseFacebookAuthentication(
+               appId: "1936753826556706",
+               appSecret: "100252a22b7e4bd9d62d9f334be88bdd");
+
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "718632715664-7bmj1p4ttman992j00q0uk5icjqoclvk.apps.googleusercontent.com",
+                ClientSecret = "jnkwZ9bzE7UNsAz6INSQkzP3"
             });
         }
     }

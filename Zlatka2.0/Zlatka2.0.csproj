@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,6 +35,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,6 +45,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -51,17 +54,15 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
-    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
@@ -102,6 +103,7 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
@@ -204,7 +206,96 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include=".well-known\acme-challenge\Web.config">
+      <SubType>Designer</SubType>
+    </None>
     <Content Include="Content\excercises.xml" />
+    <Content Include="Content\img\barbell.png" />
+    <Content Include="Content\img\brush-gray.png" />
+    <Content Include="Content\img\brush-top.png" />
+    <Content Include="Content\img\brush.svg" />
+    <Content Include="Content\img\calendar.png" />
+    <Content Include="Content\img\excercises\arms\bending-wrist-barbell-back.jpg" />
+    <Content Include="Content\img\excercises\arms\bending-wrist-barbell.jpg" />
+    <Content Include="Content\img\excercises\arms\revert-bending-wrist-barbell.jpg" />
+    <Content Include="Content\img\excercises\back\close-grip-pull-ups.jpg" />
+    <Content Include="Content\img\excercises\back\deadlift.jpg" />
+    <Content Include="Content\img\excercises\back\pull-ups.jpg" />
+    <Content Include="Content\img\excercises\back\t-neck.jpg" />
+    <Content Include="Content\img\excercises\back\thrust-dumbbell.jpg" />
+    <Content Include="Content\img\excercises\back\thrust-rod-slope.jpg" />
+    <Content Include="Content\img\excercises\back\traction-high-block.jpg" />
+    <Content Include="Content\img\excercises\back\traction-low-block.jpg" />
+    <Content Include="Content\img\excercises\biceps\21.jpg" />
+    <Content Include="Content\img\excercises\biceps\burbell-curl.jpg" />
+    <Content Include="Content\img\excercises\biceps\burbell-revert-curl.jpg" />
+    <Content Include="Content\img\excercises\biceps\concentrated-bending.jpg" />
+    <Content Include="Content\img\excercises\biceps\curl-dumbbells-incline-bench.jpg" />
+    <Content Include="Content\img\excercises\biceps\hummer.jpg" />
+    <Content Include="Content\img\excercises\biceps\scott-pullup.jpg" />
+    <Content Include="Content\img\excercises\biceps\сurl-dumbbell-sitting.jpg" />
+    <Content Include="Content\img\excercises\biceps\сurls-block.jpg" />
+    <Content Include="Content\img\excercises\butt\rear-leg-raises.jpg" />
+    <Content Include="Content\img\excercises\chest\bench-dumbbels.jpg" />
+    <Content Include="Content\img\excercises\chest\breeding-dumbbels.jpg" />
+    <Content Include="Content\img\excercises\chest\dips.jpg" />
+    <Content Include="Content\img\excercises\chest\incle-bench-dumbbels.jpg" />
+    <Content Include="Content\img\excercises\chest\mix-hands-block.jpg" />
+    <Content Include="Content\img\excercises\chest\pullover.jpg" />
+    <Content Include="Content\img\excercises\hamstrings\deadlift-streight-legs.jpg" />
+    <Content Include="Content\img\excercises\hamstrings\flexion-simulator.jpg" />
+    <Content Include="Content\img\excercises\hamstrings\rear-leg-raises.jpg" />
+    <Content Include="Content\img\excercises\press\bending-body-incle.jpg" />
+    <Content Include="Content\img\excercises\press\flexion-trunk-block.jpg" />
+    <Content Include="Content\img\excercises\press\grouping-horizontal-bar.jpg" />
+    <Content Include="Content\img\excercises\press\leg-raises.jpg" />
+    <Content Include="Content\img\excercises\press\rise-legs-crossbar.jpg" />
+    <Content Include="Content\img\excercises\press\rise-legs-vertical-bench.jpg" />
+    <Content Include="Content\img\excercises\press\trunk-flexion.jpg" />
+    <Content Include="Content\img\excercises\press\turns torso.jpg" />
+    <Content Include="Content\img\excercises\press\turns-torso.jpg" />
+    <Content Include="Content\img\excercises\press\twisting.jpg" />
+    <Content Include="Content\img\excercises\press\vacum.jpg" />
+    <Content Include="Content\img\excercises\quadriceps\half-squats.jpg" />
+    <Content Include="Content\img\excercises\quadriceps\legs-extensions.jpg" />
+    <Content Include="Content\img\excercises\quadriceps\legs-press.jpg" />
+    <Content Include="Content\img\excercises\quadriceps\squats-chest.jpg" />
+    <Content Include="Content\img\excercises\quadriceps\squats.jpg" />
+    <Content Include="Content\img\excercises\shin\donkey.jpg" />
+    <Content Include="Content\img\excercises\shin\toes-ups-sitting.gif" />
+    <Content Include="Content\img\excercises\shin\toes-ups.jpg" />
+    <Content Include="Content\img\excercises\shoulders\army-press.jpg" />
+    <Content Include="Content\img\excercises\shoulders\arnold.jpg" />
+    <Content Include="Content\img\excercises\shoulders\back-shoulder.jpg" />
+    <Content Include="Content\img\excercises\shoulders\behind-pullup.jpg" />
+    <Content Include="Content\img\excercises\shoulders\block-side-shoulder.jpg" />
+    <Content Include="Content\img\excercises\shoulders\block-side-sit.jpg" />
+    <Content Include="Content\img\excercises\shoulders\block-side.jpg" />
+    <Content Include="Content\img\excercises\shoulders\breeding-hands.jpg" />
+    <Content Include="Content\img\excercises\shoulders\dumbbell-press.jpg" />
+    <Content Include="Content\img\excercises\shoulders\shoulders-lift.jpg" />
+    <Content Include="Content\img\excercises\shoulders\shvungi.jpg" />
+    <Content Include="Content\img\excercises\small-back\hyperextension.jpg" />
+    <Content Include="Content\img\excercises\trapezium\high-lift.jpg" />
+    <Content Include="Content\img\excercises\trapezium\shrags-dumbbells.jpg" />
+    <Content Include="Content\img\excercises\trapezium\shrags.jpg" />
+    <Content Include="Content\img\excercises\triceps\extension-dumbbell-head.jpg" />
+    <Content Include="Content\img\excercises\triceps\french-presses.jpg" />
+    <Content Include="Content\img\excercises\triceps\presses-top-shelf-reverse.jpg" />
+    <Content Include="Content\img\excercises\triceps\push-ups-parallel-benches.jpg" />
+    <Content Include="Content\img\excercises\triceps\retraction-hand-dumbbells.jpg" />
+    <Content Include="Content\img\excercises\triceps\triceps-extensions.jpg" />
+    <Content Include="Content\img\female.png" />
+    <Content Include="Content\img\filters.png" />
+    <Content Include="Content\img\girl-original.png" />
+    <Content Include="Content\img\girl.png" />
+    <Content Include="Content\img\logo.png" />
+    <Content Include="Content\img\male.png" />
+    <Content Include="Content\img\masks.svg" />
+    <Content Include="Content\img\profile.jpg" />
+    <Content Include="Content\img\share.png" />
+    <Content Include="Content\script.js" />
+    <Content Include="Content\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -410,6 +501,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="package.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".well-known\acme-challenge\rvb0oM2EDLpBH_qW22eXaNHgC7HzF4DrOBe6wNTOCEY" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

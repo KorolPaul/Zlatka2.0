@@ -50,7 +50,7 @@ gulp.task('js', function () {
         }))
         .pipe(concat('script.js'))
         //.pipe(uglify())
-        .pipe(gulp.dest('./Scripts'))
+        .pipe(gulp.dest('./Content'))
         .pipe(connect.reload());
 });
 

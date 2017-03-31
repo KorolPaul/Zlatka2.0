@@ -93,3 +93,4 @@ C:\Users\p_korol\Documents\Visual Studio 2017\Projects\Zlatka2.0\Zlatka2.0\bin\M
 C:\Users\p_korol\Documents\Visual Studio 2017\Projects\Zlatka2.0\Zlatka2.0\bin\Microsoft.AI.Web.xml
 C:\Users\p_korol\Documents\Visual Studio 2017\Projects\Zlatka2.0\Zlatka2.0\obj\Release\Zlatka2.0.dll
 C:\Users\p_korol\Documents\Visual Studio 2017\Projects\Zlatka2.0\Zlatka2.0\obj\Release\Zlatka2.0.pdb
+C:\Users\p_korol\Documents\Visual Studio 2017\Projects\Zlatka2.0\Zlatka2.0\obj\Release\Zlatka2.0.csprojResolveAssemblyReference.cache
