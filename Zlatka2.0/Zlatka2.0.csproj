@@ -48,6 +48,10 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ASPSnippets.GoogleAPI, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\ASPSnippets.GoogleAPI.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
@@ -209,6 +213,7 @@
     <None Include=".well-known\acme-challenge\Web.config">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="ASPSnippets.GoogleAPI.dll" />
     <Content Include="Content\excercises.xml" />
     <Content Include="Content\img\barbell.png" />
     <Content Include="Content\img\brush-gray.png" />

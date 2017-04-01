@@ -1,6 +1,6 @@
 
 let trainings = [],
-    xml,
+    xml = document.createElement('div'),
     isTouchDevice = 'ontouchstart' in document.documentElement;
 ;
 
@@ -21,7 +21,8 @@ let info,
     excercises,
     excerciseSetsHolder,
     closeExcercise,
-    deleteExcercise;
+    deleteExcercise,
+    avatar;
 
 const UI = {
 
@@ -50,20 +51,21 @@ const UI = {
         
     },
 
-    loadExcercises: function() {
-        const ajax = new XMLHttpRequest();
-
-        ajax.open('get', 'Content/excercises.xml', true);
-        ajax.onreadystatechange = function (e) {
-            if (ajax.readyState == 4) {
-                xml = ajax.responseXML;
-            }
-        }
-        ajax.onerror = function () {
+    loadExcercises: function () {
+        fetch('Content/excercises.xml', {
+            method: 'GET',
+            headers: { 'Content-Type': 'application/xml' }
+        })
+        .then(function (response) {
+            return response.text();
+        })
+        .then(function (data) {
+            xml.innerHTML = data;
+        })
+        .catch(function (error) {
             console.log('Cant load xml');
-            setTimeout(UI.loadExcercises, 5000);
-        }
-        ajax.send(null);
+            console.log(error);
+        });
         
     },
 
@@ -86,7 +88,28 @@ const UI = {
         }
     },
 
-    
+    loadAvatar: function () {
+        if (localStorage.avatarUrl !== undefined) {
+            avatar.src = localStorage.avatarUrl;
+        } else {
+            fetch('/Training/GetAvatar', {
+                method: 'POST',
+                headers: { 'Content-Type': 'text; charset=utf-8' }
+            })
+            .then(function (response) {
+                return response.text();
+            })
+            .then(function (data) {
+                let src = data.replace(/\"/g, "");
+                src = src.replace(/sz=50/, 'sz=100');
+                avatar.src = src;
+                localStorage.avatarUrl = src;
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+        }
+    },
 
     clearLocalStorage: function(e) {
         if (e.keyCode == 76) {

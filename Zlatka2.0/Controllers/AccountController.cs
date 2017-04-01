@@ -327,6 +327,7 @@ namespace Zlatka2._0.Controllers
             {
                 return RedirectToAction("Login");
             }
+            var imageUrl = loginInfo.ExternalIdentity.Claims.FirstOrDefault(c => c.Type == "image").Value;
 
             // Sign in the user with this external login provider if the user already has a login
             var result = await SignInManager.ExternalSignInAsync(loginInfo, isPersistent: false);
@@ -337,14 +338,37 @@ namespace Zlatka2._0.Controllers
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:
-                    return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = false });
+                    return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = true });
                 case SignInStatus.Failure:
                 default:
                     // If the user does not have an account, then prompt the user to create an account
                     ViewBag.ReturnUrl = returnUrl;
+                    SaveAvatar(imageUrl);
                     ViewBag.LoginProvider = loginInfo.Login.LoginProvider;
                     return View("ExternalLoginConfirmation", new ExternalLoginConfirmationViewModel { Email = loginInfo.Email });
             }
+
+        }
+
+        public void SaveAvatar(string url)
+        {
+            TrainingContext db = new TrainingContext();
+            string userId = this.User.Identity.GetUserId();
+
+
+            int trainingId = (from t in db.Trainings where t.UserId == userId select t.id).FirstOrDefault();
+
+            if (trainingId != 0)
+            {
+                db.Trainings.Find(trainingId).AvatarUrl = url;
+            }
+            else
+            {
+                Training training = new Training { AvatarUrl = url, UserId = userId };
+                db.Trainings.Add(training);
+            }
+            db.SaveChanges();
+
         }
 
         //

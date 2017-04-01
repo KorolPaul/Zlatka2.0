@@ -4,6 +4,7 @@
     <title>@ViewBag.Title</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script src="~/Content/script.js"></script>
     @Styles.Render("~/Content/css")
 </head>
@@ -15,7 +16,7 @@
     <div class="menu-right">
         <a href="#" class="menu-right_link menu-right_link__shedule shedule-icon" id="shedule-toggle"></a>
         <label class="menu-right_link profile-icon" for="profile">
-            <img src="~/Content/img/profile.jpg" alt="">
+            <img class="menu-right_avatar" src="~/Content/img/profile.jpg" alt="" id="avatar">
         </label>
         <input class="menu-right_checkbox" type="checkbox" id="profile"  />
         <div class="menu-right_popup">
@@ -26,7 +27,7 @@
     @RenderBody()
     
     <footer style="display:none;">
-        <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        <p>&copy; @DateTime.Now.Year</p>
     </footer>
     <div class="fade"></div>
     <script async="" defer="defer" src="//platform.instagram.com/en_US/embeds.js"></script>

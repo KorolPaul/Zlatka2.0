@@ -11,5 +11,6 @@ namespace Zlatka2._0.Models
         [AllowHtml]
         public string Content { get; set; }
         public string UserId { get; set; }
+        public string AvatarUrl { get; set; }
     }
 }

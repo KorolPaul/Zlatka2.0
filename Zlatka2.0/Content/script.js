@@ -58,6 +58,7 @@ window.onload = function () {
     excerciseSetsHolder = document.getElementById('excercise_sets-holder');
     deleteExcercise = document.getElementById('delete-excercise');
     closeExcercise = document.getElementById('close-excercise');
+    avatar = document.getElementById('avatar');
 
     Training.loadProgram();
 
@@ -93,6 +94,7 @@ window.onload = function () {
     };
 
     UI.loadExcercises();
+    UI.loadAvatar();
 };
 /*
 window.onload = function () {
@@ -266,7 +268,7 @@ var touch = {
 'use strict';
 
 var trainings = [],
-    xml = void 0,
+    xml = document.createElement('div'),
     isTouchDevice = 'ontouchstart' in document.documentElement;
 ;
 
@@ -287,7 +289,8 @@ var info = void 0,
     excercises = void 0,
     excerciseSetsHolder = void 0,
     closeExcercise = void 0,
-    deleteExcercise = void 0;
+    deleteExcercise = void 0,
+    avatar = void 0;
 
 var UI = {
 
@@ -321,19 +324,17 @@ var UI = {
     },
 
     loadExcercises: function loadExcercises() {
-        var ajax = new XMLHttpRequest();
-
-        ajax.open('get', 'Content/excercises.xml', true);
-        ajax.onreadystatechange = function (e) {
-            if (ajax.readyState == 4) {
-                xml = ajax.responseXML;
-            }
-        };
-        ajax.onerror = function () {
+        fetch('Content/excercises.xml', {
+            method: 'GET',
+            headers: { 'Content-Type': 'application/xml' }
+        }).then(function (response) {
+            return response.text();
+        }).then(function (data) {
+            xml.innerHTML = data;
+        }).catch(function (error) {
             console.log('Cant load xml');
-            setTimeout(UI.loadExcercises, 5000);
-        };
-        ajax.send(null);
+            console.log(error);
+        });
     },
 
     showExcercises: function showExcercises(e) {
@@ -352,6 +353,26 @@ var UI = {
             //excercise.addEventListener('touchstart', touch.moveExcerciseStart);
 
             excercises.appendChild(excercise);
+        }
+    },
+
+    loadAvatar: function loadAvatar() {
+        if (localStorage.avatarUrl !== undefined) {
+            avatar.src = localStorage.avatarUrl;
+        } else {
+            fetch('/Training/GetAvatar', {
+                method: 'POST',
+                headers: { 'Content-Type': 'text; charset=utf-8' }
+            }).then(function (response) {
+                return response.text();
+            }).then(function (data) {
+                var src = data.replace(/\"/g, "");
+                src = src.replace(/sz=50/, 'sz=100');
+                avatar.src = src;
+                localStorage.avatarUrl = src;
+            }).catch(function (error) {
+                console.log(error);
+            });
         }
     },
 

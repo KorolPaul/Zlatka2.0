@@ -16,6 +16,7 @@ window.onload = function () {
     excerciseSetsHolder = document.getElementById('excercise_sets-holder');
     deleteExcercise = document.getElementById('delete-excercise');
     closeExcercise = document.getElementById('close-excercise');
+    avatar = document.getElementById('avatar');
     
     Training.loadProgram();
 
@@ -51,4 +52,7 @@ window.onload = function () {
     };
 
     UI.loadExcercises();
+    UI.loadAvatar();
+
 }
+

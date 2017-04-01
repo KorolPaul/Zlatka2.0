@@ -25,11 +25,11 @@
         }
 
         &__girl {
-            background-image: url(img/girl.png);
-            width: 37vh;
+            background-image: url(img/girl.jpg);
+            width: 53vh;
             z-index: 0;
             @include tablet {
-                width: 42vh;
+                width: 53vh;
             }
         }
     }
@@ -167,7 +167,7 @@
          &__visible {
             opacity: 1;
             transform: translate(0);
-            visibility: visible;
+            //visibility: visible;
         }
     }
 }
