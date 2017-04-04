@@ -60,5 +60,5 @@ gulp.task('watch', function () {
 });
 
 gulp.task('default', function () {
-    gulp.run('server', 'watch');
+    gulp.run('watch');
 });

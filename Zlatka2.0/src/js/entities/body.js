@@ -30,7 +30,7 @@ class Body {
     }
 
     static rotateBody() {
-        musclesMap.style.backgroundPositionX = motionFrame * 9 + "%";
+        musclesMap.style.backgroundPositionX = motionFrame * 9.1 + "%";
 
         utils.removeClassFromElements(musculeTitles, 'muscles_title__visible');
         utils.addClassToElements(document.querySelectorAll('[data-layer="'+ motionFrame +'"]'), 'muscles_title__visible');

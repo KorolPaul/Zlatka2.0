@@ -95,6 +95,8 @@ window.onload = function () {
 
     UI.loadExcercises();
     UI.loadAvatar();
+
+    gapi.load('client', UI.loadAvatar);
 };
 /*
 window.onload = function () {
@@ -358,20 +360,26 @@ var UI = {
 
     loadAvatar: function loadAvatar() {
         if (localStorage.avatarUrl !== undefined) {
+            console.log('avatart is saved');
             avatar.src = localStorage.avatarUrl;
         } else {
-            fetch('/Training/GetAvatar', {
-                method: 'POST',
-                headers: { 'Content-Type': 'text; charset=utf-8' }
+            console.log('avatart not saved');
+
+            gapi.client.init({
+                'discoveryDocs': ['https://people.googleapis.com/$discovery/rest'],
+                'clientId': '676405800702-43q3jac4kqbii78partduenvd1utnmmh.apps.googleusercontent.com',
+                'clientSecret': "IUAw3wl1FvavbTl0lGvc6Bp_",
+                'scope': 'profile'
+            }).then(function () {
+                return gapi.client.people.people.get({
+                    resourceName: 'people/me'
+                });
             }).then(function (response) {
-                return response.text();
-            }).then(function (data) {
-                var src = data.replace(/\"/g, "");
-                src = src.replace(/sz=50/, 'sz=100');
-                avatar.src = src;
-                localStorage.avatarUrl = src;
-            }).catch(function (error) {
-                console.log(error);
+                //console.log(response.result);
+                localStorage.avatarUrl = response.result.photos[0].url;
+                avatar.src = response.result.photos[0].url;
+            }, function (reason) {
+                console.log('Error: ' + reason.result.error.message);
             });
         }
     },
@@ -488,7 +496,7 @@ var Body = function () {
     }, {
         key: 'rotateBody',
         value: function rotateBody() {
-            musclesMap.style.backgroundPositionX = motionFrame * 9 + "%";
+            musclesMap.style.backgroundPositionX = motionFrame * 9.1 + "%";
 
             utils.removeClassFromElements(musculeTitles, 'muscles_title__visible');
             utils.addClassToElements(document.querySelectorAll('[data-layer="' + motionFrame + '"]'), 'muscles_title__visible');

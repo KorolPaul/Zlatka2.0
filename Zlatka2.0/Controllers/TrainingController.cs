@@ -50,26 +50,12 @@ namespace Zlatka2._0.Controllers
             }
             else
             {
-                Training training = new Training { Content = content, UserId = userId, AvatarUrl = "empty" };
+                Training training = new Training { Content = content, UserId = userId };
                 db.Trainings.Add(training);
             }
             db.SaveChanges();
 
             return Json("Saved");
-        }
-
-        [HttpPost]
-        public JsonResult GetAvatar()
-        {
-            string userId = this.User.Identity.GetUserId();
-            int trainingId = (from t in db.Trainings where t.UserId == userId select t.id).FirstOrDefault();
-
-            if (trainingId != 0)
-            {
-                Training training = db.Trainings.Find(trainingId);
-                return Json(training.AvatarUrl);
-            }
-            return Json(null);
         }
     }
 }

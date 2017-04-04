@@ -6,8 +6,7 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using Zlatka2._0.Models;
-using System.Security.Claims;
-using System.Threading.Tasks;
+
 
 namespace Zlatka2._0
 {
@@ -67,35 +66,16 @@ namespace Zlatka2._0
             app.UseFacebookAuthentication(
                appId: "1936753826556706",
                appSecret: "100252a22b7e4bd9d62d9f334be88bdd");
-            
+            */
             app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             {
-                ClientId = "718632715664-7bmj1p4ttman992j00q0uk5icjqoclvk.apps.googleusercontent.com",
-                ClientSecret = "jnkwZ9bzE7UNsAz6INSQkzP3"
-            });*/
-            var googleOptions = new GoogleOAuth2AuthenticationOptions()
-            {
                 ClientId = "676405800702-43q3jac4kqbii78partduenvd1utnmmh.apps.googleusercontent.com",
-                ClientSecret = "IUAw3wl1FvavbTl0lGvc6Bp_",
-                Provider = new GoogleOAuth2AuthenticationProvider()
-                {
-                    OnAuthenticated = context =>
-                    {
-                        var userDetail = context.User;
-
-                        var picture = userDetail.GetValue("image");
-                        context.Identity.AddClaim(new Claim("image", picture.Value<string>("url")));
-
-                        return Task.FromResult(0);
-                    },
-                },
-            };
-
-            app.UseGoogleAuthentication(googleOptions);
+                ClientSecret = "IUAw3wl1FvavbTl0lGvc6Bp_"
+            });
 
             app.UseFacebookAuthentication(
-               appId: "098219630289569",
-               appSecret: "d6f36b1d8e932d9b5633e71b11abaecb");
+               appId: "656677394533739",
+               appSecret: "84e0992a882a44174a62486976a81b44");
 
         }
     }

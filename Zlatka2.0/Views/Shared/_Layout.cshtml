@@ -4,8 +4,7 @@
     <title>@ViewBag.Title</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <script src="~/Content/script.js"></script>
+    <script src="https://plus.google.com/js/client:platform.js" async defer></script>
     @Styles.Render("~/Content/css")
 </head>
 <body>
@@ -31,6 +30,9 @@
     </footer>
     <div class="fade"></div>
     <script async="" defer="defer" src="//platform.instagram.com/en_US/embeds.js"></script>
+    @Scripts.Render("~/bundles/jquery")
     @RenderSection("scripts", required: false)
+
+
 </body>
 </html>

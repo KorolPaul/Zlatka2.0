@@ -16,20 +16,20 @@
         height: 80vh;
         left: 50%;
         top: 55%;
-        transform: translate(-50%, -50%);
+        transform: translate(-40%, -50%);
         position: absolute;
-        clip: rect(0, auto, auto, 5vh);
+        clip: rect(0, auto, auto, 3vh);
         @include tablet {
             height: 90vh;
             top: 50%;            
         }
 
         &__girl {
-            background-image: url(img/girl.jpg);
-            width: 53vh;
+            background-image: url(img/girl.png);
+            width: 50vh;
             z-index: 0;
             @include tablet {
-                width: 53vh;
+                width: 56.3vh;
             }
         }
     }
@@ -167,7 +167,7 @@
          &__visible {
             opacity: 1;
             transform: translate(0);
-            //visibility: visible;
+            visibility: visible;
         }
     }
 }
