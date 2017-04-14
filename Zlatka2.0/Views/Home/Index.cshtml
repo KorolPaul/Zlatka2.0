@@ -47,20 +47,113 @@
     </div>
     <svg class="muscles_map muscles_map__girl" id="map" pointer-events="all" version="1.1" viewBox="0 0 600 1300">
         <defs>
-            <filter id="blur">
-                <feGaussianBlur stdDeviation="3" />
-            </filter>
             <pattern id="grid" patternUnits="userSpaceOnUse" width="20" height="20" patternTransform="rotate(55 0 0)">
-                <rect x="0" y="0" width="20" height="20" fill="rgba(255, 0, 0, .2)" stroke="red" />
+                <rect x="0" y="0" width="20" height="20" fill="rgba(255, 0, 0, .5)" stroke="red" />
             </pattern>
+
+            <radialGradient id="gradient">
+                <stop offset="0" stop-color="#8E0F3C" stop-opacity="1" />
+                <stop offset=".85" stop-color="#8E0F3C" stop-opacity="1" />
+                <stop offset="1" stop-color="#8E0F3C" stop-opacity="0" />
+            </radialGradient>
+            <radialGradient id="gradient-back">
+                <stop offset="0" stop-color="#5479FF" stop-opacity="1" />
+                <stop offset=".85" stop-color="#5479FF" stop-opacity="1" />
+                <stop offset="1" stop-color="#5479FF" stop-opacity="0" />
+            </radialGradient>
+            <radialGradient id="gradient-shoulders">
+                <stop offset="0" stop-color="#F96536" stop-opacity="1" />
+                <stop offset=".85" stop-color="#F96536" stop-opacity="1" />
+                <stop offset="1" stop-color="#F96536" stop-opacity="0" />
+            </radialGradient>
+            <radialGradient id="gradient-butt">
+                <stop offset="0" stop-color="#DA306C" stop-opacity="1" />
+                <stop offset=".85" stop-color="#DA306C" stop-opacity="1" />
+                <stop offset="1" stop-color="#DA306C" stop-opacity="0" />
+            </radialGradient>
+            <radialGradient id="gradient-hamstrings">
+                <stop offset="0" stop-color="#531ACC" stop-opacity="1" />
+                <stop offset=".85" stop-color="#531ACC" stop-opacity="1" />
+                <stop offset="1" stop-color="#531ACC" stop-opacity="0" />
+            </radialGradient>
+            <radialGradient id="gradient-biceps">
+                <stop offset="0" stop-color="#9725A3" stop-opacity="1" />
+                <stop offset=".85" stop-color="#9725A3" stop-opacity="1" />
+                <stop offset="1" stop-color="#9725A3" stop-opacity="0" />
+            </radialGradient>
+            <radialGradient id="gradient-press">
+                <stop offset="0" stop-color="#8ddf33" stop-opacity="1" />
+                <stop offset=".85" stop-color="#8ddf33" stop-opacity="1" />
+                <stop offset="1" stop-color="#8ddf33" stop-opacity="0" />
+            </radialGradient>
+
+            <mask id="mask" maskContentUnits="objectBoundingBox">
+                <image xlink:href="Content/img/mask.png" width="1" height="2.1" fill="url(#gradient)" />
+            </mask>
+            <mask id="mask2" maskContentUnits="objectBoundingBox">
+                <image xlink:href="Content/img/mask-2.png" width="1" height="1" fill="url(#gradient)" />
+            </mask>
         </defs>
         <style>
             path {
-                fill: url(#grid);
-                //filter: url(#blur);
+                fill: none;
             }
+            /*
+            .quadriceps {
+                fill: url(#gradient);
+                mask: url(#mask);
+            }
+            .chest {
+                fill: url(#gradient);
+                mask: url(#mask2);
+            }
+            .back {
+                fill: url(#gradient-back);
+                mask: url(#mask);
+            }
+            .small-back {
+                fill: url(#gradient-back);
+                mask: url(#mask);
+            }
+            .shoulder {
+                fill: url(#gradient-shoulders);
+                mask: url(#mask);
+            }
+            .trapezium {
+                fill: url(#gradient-shoulders);
+                mask: url(#mask);
+            }
+            .butt {
+                fill: url(#gradient-butt);
+                mask: url(#mask);
+            }
+            .shin {
+                fill: url(#gradient-butt);
+                mask: url(#mask);
+            }
+            .hamstrings {
+                fill: url(#gradient-hamstrings);
+                mask: url(#mask);
+            }
+            .triceps {
+                fill: url(#gradient-hamstrings);
+                mask: url(#mask);
+            }
+            .biceps {
+                fill: url(#gradient-biceps);
+                mask: url(#mask);
+            }
+            .arm {
+                fill: url(#gradient-biceps);
+                mask: url(#mask);
+            }
+            .press {
+                fill: url(#gradient-press);
+                mask: url(#mask);
+            }
+                */
         </style>
-        <g class="muscles_side active">
+        <g class="muscles_side active" >
             <path class="quadriceps" title="Квадрицепсы" d="M197.3,635c0,0,13.3,8.7,16.7,19.3c3.3,10.7,42.7,94,45.3,105.3 C262,771,291.3,847,296,851s20.7-4,30.7,0s20.7-11.3,25.3-12.7c4.7-1.3-14-24-20-100s-34.7-169.3-44.7-184 C277.3,539.7,197.3,635,197.3,635z" />
             <path class="chest" title="Грудные мышцы" d="M210.7,329c0,0-3.3,36.7,3.3,48s16,21.3,40,23.3 s32.7,0.7,41.3-21.3c8.7-22,5.3-66,8-76s-31.3-38.7-36-46c-4.7-7.3-50.7,6.7-50.7,6.7L210.7,329z" />
         </g>
@@ -88,9 +181,7 @@
         </g>
         <g class="muscles_side">
             <path class="triceps" title="Трицепсы" d="M44,391c0,0,13,15,44-37s-9-35-9-35l-35,65" />
-            <path class="hamstrings" title="Бицепс бедра" d="M225,670c0,0,26,127,32,148s19,52,33,30s-27-173-32.5-184
-	S225,670,225,670z" />
-            
+            <path class="hamstrings" title="Бицепс бедра" d="M225,670c0,0,26,127,32,148s19,52,33,30s-27-173-32.5-184 S225,670,225,670z" />
         </g>
         <g class="muscles_side">
 
@@ -113,6 +204,7 @@
 <div class="info" id="info">
     <a href="#" class="info_close" id="info_close">&larr;</a>
     <div class="info_holder"></div>
+    <div class="tags"></div>
 </div>
 
 <ul class="trainings-popup" id="trainings-popup"></ul>

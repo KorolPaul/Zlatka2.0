@@ -3356,7 +3356,7 @@
         </li>
     </press>
     <quadriceps>
-        <li class="quadriceps butt" data-complexity="10">
+        <li class="quadriceps butt" data-complexity="10" data-tags="штанга база масса">
             <div class="info_header">
                 <span class="excercise-name">Приседания со штангой</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -3419,7 +3419,7 @@
                 </ul>
             </div>
         </li>
-        <li class="quadriceps" data-complexity="9">
+        <li class="quadriceps" data-complexity="9" data-tags="штанга база масса">
             <div class="info_header">
                 <span class="excercise-name">Полуприседы</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -3472,7 +3472,7 @@
                 </ol>
             </div>
         </li>
-        <li class="quadriceps" data-complexity="9">
+        <li class="quadriceps" data-complexity="9" data-tags="штанга база масса">
             <div class="info_header">
                 <span class="excercise-name">Приседания со штангой на груди</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -3525,7 +3525,7 @@
                 </ol>
             </div>
         </li>
-        <li class="quadriceps" data-complexity="8">
+        <li class="quadriceps" data-complexity="8" data-tags="тренажеры масса">
             <div class="info_header">
                 <span class="excercise-name">Жимы ногами</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -3577,7 +3577,7 @@
                 </ol>
             </div>
         </li>
-        <li class="quadriceps butt" data-complexity="7">
+        <li class="quadriceps butt" data-complexity="7" data-tags="собственный вес гантели штанга">
             <div class="info_header">
                 <span class="excercise-name">Выпады</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -3630,7 +3630,7 @@
                 </ol>
             </div>
         </li>
-        <li class="quadriceps" data-complexity="5">
+        <li class="quadriceps" data-complexity="5" data-tags="тренажер рельеф">
             <div class="info_header">
                 <span class="excercise-name">Выпрямление ног на тренажере</span>
                 <button class="add-button">добавить в тренировку</button>

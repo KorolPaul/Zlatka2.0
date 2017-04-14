@@ -23,10 +23,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/30/2017 13:00:03</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>03/31/2017 17:15:38</publishTime>
+      <publishTime>04/06/2017 12:17:58</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>03/31/2017 17:15:38</publishTime>
+      <publishTime>04/06/2017 12:17:58</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>03/30/2017 13:00:13</publishTime>
@@ -206,13 +206,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/30/2017 13:00:18</publishTime>
     </File>
     <File Include="bin/Zlatka2.0.dll">
-      <publishTime>03/31/2017 17:15:28</publishTime>
+      <publishTime>04/05/2017 16:48:23</publishTime>
     </File>
     <File Include="bin/Zlatka2.0.pdb">
-      <publishTime>03/31/2017 17:15:28</publishTime>
+      <publishTime>04/05/2017 16:48:23</publishTime>
     </File>
     <File Include="Content/excercises.xml">
-      <publishTime>03/30/2017 13:00:03</publishTime>
+      <publishTime>04/04/2017 17:18:17</publishTime>
     </File>
     <File Include="Content/fonts/formular-lisht.woff">
       <publishTime>03/30/2017 13:00:03</publishTime>
@@ -224,265 +224,271 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/30/2017 13:00:04</publishTime>
     </File>
     <File Include="Content/img/barbell.png">
-      <publishTime>03/30/2017 13:00:04</publishTime>
+      <publishTime>04/04/2017 14:50:57</publishTime>
     </File>
     <File Include="Content/img/brush-gray.png">
-      <publishTime>03/30/2017 13:00:04</publishTime>
+      <publishTime>04/04/2017 14:50:58</publishTime>
     </File>
     <File Include="Content/img/brush-top.png">
-      <publishTime>03/30/2017 13:00:04</publishTime>
+      <publishTime>04/04/2017 14:50:58</publishTime>
     </File>
     <File Include="Content/img/brush.svg">
-      <publishTime>03/30/2017 13:00:04</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/calendar.png">
-      <publishTime>03/30/2017 13:00:04</publishTime>
+      <publishTime>04/04/2017 14:50:58</publishTime>
     </File>
     <File Include="Content/img/excercises/arms/bending-wrist-barbell-back.jpg">
-      <publishTime>03/30/2017 13:00:04</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/arms/bending-wrist-barbell.jpg">
-      <publishTime>03/30/2017 13:00:04</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/arms/revert-bending-wrist-barbell.jpg">
-      <publishTime>03/30/2017 13:00:04</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/back/close-grip-pull-ups.jpg">
-      <publishTime>03/30/2017 13:00:04</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/back/deadlift.jpg">
-      <publishTime>03/30/2017 13:00:04</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/back/pull-ups.jpg">
-      <publishTime>03/30/2017 13:00:04</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/back/t-neck.jpg">
-      <publishTime>03/30/2017 13:00:04</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/back/thrust-dumbbell.jpg">
-      <publishTime>03/30/2017 13:00:04</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/back/thrust-rod-slope.jpg">
-      <publishTime>03/30/2017 13:00:04</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/back/traction-high-block.jpg">
-      <publishTime>03/30/2017 13:00:04</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/back/traction-low-block.jpg">
-      <publishTime>03/30/2017 13:00:04</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/biceps/21.jpg">
-      <publishTime>03/30/2017 13:00:04</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/biceps/burbell-curl.jpg">
-      <publishTime>03/30/2017 13:00:04</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/biceps/burbell-revert-curl.jpg">
-      <publishTime>03/30/2017 13:00:04</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/biceps/concentrated-bending.jpg">
-      <publishTime>03/30/2017 13:00:04</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/biceps/curl-dumbbells-incline-bench.jpg">
-      <publishTime>03/30/2017 13:00:04</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/biceps/hummer.jpg">
-      <publishTime>03/30/2017 13:00:04</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/biceps/scott-pullup.jpg">
-      <publishTime>03/30/2017 13:00:04</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/biceps/сurl-dumbbell-sitting.jpg">
-      <publishTime>03/30/2017 13:00:04</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/biceps/сurls-block.jpg">
-      <publishTime>03/30/2017 13:00:04</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/butt/rear-leg-raises.jpg">
-      <publishTime>03/30/2017 13:00:04</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/chest/bench-dumbbels.jpg">
-      <publishTime>03/30/2017 13:00:04</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/chest/breeding-dumbbels.jpg">
-      <publishTime>03/30/2017 13:00:04</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/chest/dips.jpg">
-      <publishTime>03/30/2017 13:00:04</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/chest/incle-bench-dumbbels.jpg">
-      <publishTime>03/30/2017 13:00:04</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/chest/mix-hands-block.jpg">
-      <publishTime>03/30/2017 13:00:04</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/chest/pullover.jpg">
-      <publishTime>03/30/2017 13:00:04</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/hamstrings/deadlift-streight-legs.jpg">
-      <publishTime>03/30/2017 13:00:05</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/hamstrings/flexion-simulator.jpg">
-      <publishTime>03/30/2017 13:00:05</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/hamstrings/rear-leg-raises.jpg">
-      <publishTime>03/30/2017 13:00:05</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/press/bending-body-incle.jpg">
-      <publishTime>03/30/2017 13:00:05</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/press/flexion-trunk-block.jpg">
-      <publishTime>03/30/2017 13:00:05</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/press/grouping-horizontal-bar.jpg">
-      <publishTime>03/30/2017 13:00:05</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/press/leg-raises.jpg">
-      <publishTime>03/30/2017 13:00:05</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/press/rise-legs-crossbar.jpg">
-      <publishTime>03/30/2017 13:00:05</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/press/rise-legs-vertical-bench.jpg">
-      <publishTime>03/30/2017 13:00:05</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/press/trunk-flexion.jpg">
-      <publishTime>03/30/2017 13:00:05</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/press/turns torso.jpg">
-      <publishTime>03/30/2017 13:00:05</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/press/turns-torso.jpg">
-      <publishTime>03/30/2017 13:00:05</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/press/twisting.jpg">
-      <publishTime>03/30/2017 13:00:05</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/press/vacum.jpg">
-      <publishTime>03/30/2017 13:00:05</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/quadriceps/half-squats.jpg">
-      <publishTime>03/30/2017 13:00:05</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/quadriceps/legs-extensions.jpg">
-      <publishTime>03/30/2017 13:00:05</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/quadriceps/legs-press.jpg">
-      <publishTime>03/30/2017 13:00:06</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/quadriceps/squats-chest.jpg">
-      <publishTime>03/30/2017 13:00:06</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/quadriceps/squats.jpg">
-      <publishTime>03/30/2017 13:00:06</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/shin/donkey.jpg">
-      <publishTime>03/30/2017 13:00:06</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/shin/toes-ups-sitting.gif">
-      <publishTime>03/30/2017 13:00:06</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/shin/toes-ups.jpg">
-      <publishTime>03/30/2017 13:00:06</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/shoulders/army-press.jpg">
-      <publishTime>03/30/2017 13:00:06</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/shoulders/arnold.jpg">
-      <publishTime>03/30/2017 13:00:06</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/shoulders/back-shoulder.jpg">
-      <publishTime>03/30/2017 13:00:06</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/shoulders/behind-pullup.jpg">
-      <publishTime>03/30/2017 13:00:06</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/shoulders/block-side-shoulder.jpg">
-      <publishTime>03/30/2017 13:00:06</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/shoulders/block-side-sit.jpg">
-      <publishTime>03/30/2017 13:00:06</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/shoulders/block-side.jpg">
-      <publishTime>03/30/2017 13:00:06</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/shoulders/breeding-hands.jpg">
-      <publishTime>03/30/2017 13:00:06</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/shoulders/dumbbell-press.jpg">
-      <publishTime>03/30/2017 13:00:06</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/shoulders/shoulders-lift.jpg">
-      <publishTime>03/30/2017 13:00:06</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/shoulders/shvungi.jpg">
-      <publishTime>03/30/2017 13:00:06</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/small-back/hyperextension.jpg">
-      <publishTime>03/30/2017 13:00:06</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/trapezium/high-lift.jpg">
-      <publishTime>03/30/2017 13:00:06</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/trapezium/shrags-dumbbells.jpg">
-      <publishTime>03/30/2017 13:00:06</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/trapezium/shrags.jpg">
-      <publishTime>03/30/2017 13:00:06</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/triceps/extension-dumbbell-head.jpg">
-      <publishTime>03/30/2017 13:00:06</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/triceps/french-presses.jpg">
-      <publishTime>03/30/2017 13:00:06</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/triceps/presses-top-shelf-reverse.jpg">
-      <publishTime>03/30/2017 13:00:06</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/triceps/push-ups-parallel-benches.jpg">
-      <publishTime>03/30/2017 13:00:06</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/triceps/retraction-hand-dumbbells.jpg">
-      <publishTime>03/30/2017 13:00:06</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/excercises/triceps/triceps-extensions.jpg">
-      <publishTime>03/30/2017 13:00:06</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/female.png">
-      <publishTime>03/30/2017 13:00:06</publishTime>
+      <publishTime>04/04/2017 14:50:58</publishTime>
     </File>
     <File Include="Content/img/filters.png">
-      <publishTime>03/30/2017 13:00:06</publishTime>
+      <publishTime>04/04/2017 14:50:59</publishTime>
     </File>
     <File Include="Content/img/girl-original.png">
-      <publishTime>03/30/2017 13:00:06</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/girl.png">
-      <publishTime>03/30/2017 13:00:06</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/logo.png">
-      <publishTime>03/30/2017 13:00:06</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/male.png">
-      <publishTime>03/30/2017 13:00:06</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
+    </File>
+    <File Include="Content/img/mask-2.png">
+      <publishTime>04/05/2017 16:07:40</publishTime>
+    </File>
+    <File Include="Content/img/mask.png">
+      <publishTime>04/05/2017 15:58:47</publishTime>
     </File>
     <File Include="Content/img/masks.svg">
-      <publishTime>03/30/2017 13:00:06</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/profile.jpg">
-      <publishTime>03/30/2017 13:00:06</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/img/share.png">
-      <publishTime>03/30/2017 13:00:06</publishTime>
+      <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
     <File Include="Content/script.js">
-      <publishTime>03/31/2017 15:30:45</publishTime>
+      <publishTime>04/04/2017 17:06:02</publishTime>
     </File>
     <File Include="Content/Site.css">
       <publishTime>03/30/2017 13:00:03</publishTime>
     </File>
     <File Include="Content/style.css">
-      <publishTime>03/30/2017 13:00:06</publishTime>
+      <publishTime>04/04/2017 17:06:01</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>03/30/2017 13:00:08</publishTime>
@@ -491,16 +497,46 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="gulpfile.js">
-      <publishTime>03/31/2017 15:29:31</publishTime>
+      <publishTime>04/04/2017 14:17:18</publishTime>
     </File>
     <File Include="package.json">
-      <publishTime>03/30/2017 13:00:08</publishTime>
+      <publishTime>04/03/2017 17:38:27</publishTime>
     </File>
     <File Include="packages.config">
       <publishTime>03/30/2017 14:58:46</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>03/31/2017 17:15:30</publishTime>
+      <publishTime>04/06/2017 12:17:51</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.js">
+      <publishTime>04/04/2017 12:12:44</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.js">
+      <publishTime>04/04/2017 12:12:44</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.map">
+      <publishTime>04/04/2017 12:12:44</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>04/04/2017 12:12:44</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>04/04/2017 12:12:44</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>04/04/2017 12:12:44</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>04/04/2017 12:12:44</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>04/04/2017 12:12:44</publishTime>
+    </File>
+    <File Include="Scripts/respond.js">
+      <publishTime>04/04/2017 12:12:44</publishTime>
+    </File>
+    <File Include="Scripts/respond.min.js">
+      <publishTime>04/04/2017 12:12:44</publishTime>
     </File>
     <File Include="src/fonts/formular-lisht.woff">
       <publishTime>03/30/2017 13:00:08</publishTime>
@@ -755,16 +791,22 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/30/2017 13:00:11</publishTime>
     </File>
     <File Include="src/img/girl-original.png">
-      <publishTime>03/30/2017 13:00:11</publishTime>
+      <publishTime>04/04/2017 14:46:30</publishTime>
     </File>
     <File Include="src/img/girl.png">
-      <publishTime>03/30/2017 13:00:11</publishTime>
+      <publishTime>04/04/2017 14:50:25</publishTime>
     </File>
     <File Include="src/img/logo.png">
       <publishTime>03/30/2017 13:00:11</publishTime>
     </File>
     <File Include="src/img/male.png">
       <publishTime>03/30/2017 13:00:11</publishTime>
+    </File>
+    <File Include="src/img/mask-2.png">
+      <publishTime>04/05/2017 16:46:49</publishTime>
+    </File>
+    <File Include="src/img/mask.png">
+      <publishTime>04/05/2017 16:46:49</publishTime>
     </File>
     <File Include="src/img/masks.svg">
       <publishTime>03/30/2017 13:00:11</publishTime>
@@ -776,7 +818,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/30/2017 13:00:11</publishTime>
     </File>
     <File Include="src/js/entities/body.js">
-      <publishTime>03/30/2017 13:00:11</publishTime>
+      <publishTime>04/04/2017 15:19:03</publishTime>
     </File>
     <File Include="src/js/entities/excercise.js">
       <publishTime>03/30/2017 13:00:11</publishTime>
@@ -788,7 +830,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/30/2017 13:00:11</publishTime>
     </File>
     <File Include="src/js/main.js">
-      <publishTime>03/30/2017 13:00:11</publishTime>
+      <publishTime>04/04/2017 11:28:13</publishTime>
     </File>
     <File Include="src/js/stats.js">
       <publishTime>03/30/2017 13:00:11</publishTime>
@@ -797,7 +839,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/30/2017 13:00:11</publishTime>
     </File>
     <File Include="src/js/UI.js">
-      <publishTime>03/30/2017 13:00:11</publishTime>
+      <publishTime>04/04/2017 14:17:21</publishTime>
     </File>
     <File Include="src/js/utils.js">
       <publishTime>03/30/2017 13:00:11</publishTime>
@@ -887,10 +929,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/30/2017 13:00:13</publishTime>
     </File>
     <File Include="src/scss/kach/_menu-right.scss">
-      <publishTime>03/30/2017 13:00:13</publishTime>
+      <publishTime>04/03/2017 17:38:27</publishTime>
     </File>
     <File Include="src/scss/kach/_muscles.scss">
-      <publishTime>03/30/2017 13:00:13</publishTime>
+      <publishTime>04/04/2017 17:06:01</publishTime>
     </File>
     <File Include="src/scss/kach/_plots.scss">
       <publishTime>03/30/2017 13:00:13</publishTime>
@@ -956,7 +998,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/30/2017 13:00:07</publishTime>
     </File>
     <File Include="Views/Account/ExternalLoginConfirmation.cshtml">
-      <publishTime>03/30/2017 13:00:07</publishTime>
+      <publishTime>04/04/2017 12:19:21</publishTime>
     </File>
     <File Include="Views/Account/ExternalLoginFailure.cshtml">
       <publishTime>03/30/2017 13:00:07</publishTime>
@@ -989,7 +1031,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/30/2017 13:00:07</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>03/30/2017 13:00:07</publishTime>
+      <publishTime>04/06/2017 12:17:34</publishTime>
     </File>
     <File Include="Views/Manage/ChangePassword.cshtml">
       <publishTime>03/30/2017 13:00:07</publishTime>
@@ -1010,7 +1052,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/30/2017 13:00:07</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>03/31/2017 15:29:24</publishTime>
+      <publishTime>04/04/2017 12:31:21</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>03/31/2017 15:33:21</publishTime>
@@ -1022,7 +1064,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/30/2017 13:00:07</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>03/31/2017 16:44:46</publishTime>
+      <publishTime>04/04/2017 17:52:02</publishTime>
     </File>
   </ItemGroup>
 </Project>
