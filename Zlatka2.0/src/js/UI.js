@@ -47,6 +47,7 @@ const UI = {
             })
         }
 
+        UI.hideExcercises();
         window.instgrm.Embeds.process();
         
     },
@@ -86,6 +87,12 @@ const UI = {
 
             excercises.appendChild(excercise);
         }
+        excercises.classList.add('excercises__visible');
+        
+    },
+
+    hideExcercises: function() {
+        excercises.classList.remove('excercises__visible');
     },
 
     loadAvatar: function () {
