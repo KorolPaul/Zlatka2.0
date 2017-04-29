@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>icons/plus</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="styleguide" transform="translate(-1008.000000, -181.000000)" fill="#283150">
+            <g id="icons/plus" transform="translate(1008.000000, 181.000000)">
+                <path d="M15.931,11.6 L11.6,11.6 L11.6,15.931 C11.6,16.262 11.332,16.53 11,16.53 C10.669,16.53 10.4,16.262 10.4,15.931 L10.4,11.6 L6.069,11.6 C5.738,11.6 5.469,11.331 5.469,11 C5.469,10.668 5.738,10.4 6.069,10.4 L10.4,10.4 L10.4,6.069 C10.4,5.737 10.669,5.469 11,5.469 C11.332,5.469 11.6,5.737 11.6,6.069 L11.6,10.4 L15.931,10.4 C16.262,10.4 16.531,10.668 16.531,11 C16.531,11.331 16.262,11.6 15.931,11.6 M11,0 C4.925,0 3.90798505e-14,4.925 3.90798505e-14,11 C3.90798505e-14,17.075 4.925,22 11,22 C17.076,22 22,17.075 22,11 C22,4.925 17.076,0 11,0" id="Fill-1"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>icons/back</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="styleguide" transform="translate(-1019.000000, -227.000000)">
+            <g id="icons/back" transform="translate(1019.000000, 227.000000)">
+                <g id="Group-Copy-4" style="mix-blend-mode: multiply;">
+                    <rect id="Rectangle-20" fill="#283150" x="0" y="0" width="22" height="22" rx="4"></rect>
+                    <polyline id="Stroke-2" stroke="#FFFFFF" stroke-width="1.5" stroke-linejoin="round" transform="translate(10.476190, 11.048554) scale(-1, 1) rotate(-270.000000) translate(-10.476190, -11.048554) " points="4.66573177 13.143792 10.4761905 8.95331585 16.2866492 13.143792"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>icons/search</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons/search">
+            <circle id="Oval" fill="#283150" cx="14" cy="14" r="13"></circle>
+            <path d="M16.1790872,12.403236 C16.1790872,14.488825 14.4883587,16.1790872 12.403236,16.1790872 C10.3181133,16.1790872 8.62738484,14.4888241 8.62738484,12.403236 C8.62738484,10.3176479 10.3181131,8.62738484 12.403236,8.62738484 C14.4883587,8.62738484 16.1790872,10.3181131 16.1790872,12.403236 Z M15.0387413,15.0387413 L18.952381,18.952381 L15.0387413,15.0387413 Z" id="Stroke-2" stroke="#F2F3F4" stroke-width="1.2" stroke-linejoin="round"></path>
+        </g>
+    </g>
+</svg>
