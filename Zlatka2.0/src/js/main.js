@@ -54,6 +54,7 @@ window.onload = function () {
     UI.loadExcercises();
     UI.loadAvatar();
 
+
     gapi.load('client', UI.loadAvatar);
 }
 

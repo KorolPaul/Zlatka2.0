@@ -2,7 +2,7 @@
 let trainings = [],
     xml = document.createElement('div'),
     isTouchDevice = 'ontouchstart' in document.documentElement;
-;
+
 
 let info,
     infoClose,
@@ -62,6 +62,7 @@ const UI = {
         })
         .then(function (data) {
             xml.innerHTML = data;
+            new Search();    
         })
         .catch(function (error) {
             console.log('Cant load xml');
