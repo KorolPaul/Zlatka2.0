@@ -17,7 +17,8 @@ window.onload = function () {
     deleteExcercise = document.getElementById('delete-excercise');
     closeExcercise = document.getElementById('close-excercise');
     avatar = document.getElementById('avatar');
-    
+    menuTrigger = document.getElementById('menu-trigger');
+    menuPopup = document.querySelector('.menu_popup')
     Training.loadProgram();
 
     infoClose.onclick = function (e) {
@@ -42,6 +43,7 @@ window.onload = function () {
 
     new Body();
     
+    menuTrigger.addEventListener('click', UI.showMenu);
     addTrainingButton.onmousedown = Training.add;
     closeExcercise.addEventListener('click', Excercise.close);
     deleteExcercise.addEventListener('click', Excercise.delete);

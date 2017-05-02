@@ -1,11 +1,3 @@
-@mixin title-color($color) {
-    color: $color;
-
-    &:hover {
-        color: $color;
-    }
-}
-
 .muscles {
     cursor: ns-resize;    
     text-align: center;
@@ -80,84 +72,70 @@
         }
 
         &__press {
-            @include title-color($press);
             top: 52%;
             left: 50%;
         }
         &__sidepress {
-            @include title-color($press);
             top: 30%;
             right: 55%;
             z-index: 0;
             transform: translate(30%, 0);
         }
         &__shoulder {
-            @include title-color($shoulders);
             top: 35%;
             left: 55%;
         }
         &__trapezium {
-            @include title-color($shoulders);
             top: 20%;
             right: 39%;
             transform: translate(30%, 0);
             z-index: 0;
         }
         &__quadriceps {
-            @include title-color($chest);
             top: 69%;
             left: 19%;
         }
         &__chest {
-            @include title-color($chest);
             top: 21%;
             right: 42%;
             transform: translate(30%, 0);
             z-index: 0;
         }
         &__hamstrings {
-            @include title-color($triceps);
             top: 50%;
             left: 45%;
         }
         &__triceps {
-            @include title-color($triceps);
             top: 19%;
             right: 46%;
             transform: translate(30%, 0);
             z-index: 0;
         }
         &__arm {
-            @include title-color($biceps);
             top: 50%;
             left: 20%;
         }
         &__biceps {
-            @include title-color($biceps);
             top: 25%;
             right: 52%;
             transform: translate(30%, 0);
             z-index: 0;
         }
         &__butt {
-            @include title-color($butt);
             top: 30%;
             left: 35%;
         }
         &__shin {
-            @include title-color($butt);
             top: 61%;
             right: 55%;
             transform: translate(30%, 0);
             z-index: 0;
         }
         &__small-back {
-            @include title-color($back);
             top: 49%;
             left: 34%;
         }
         &__back {
-            @include title-color($back);
             top: 25%;
             right: 12%;
             transform: translate(30%, 0);

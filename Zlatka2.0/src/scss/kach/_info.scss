@@ -34,7 +34,7 @@
         display: none;
 
         &:hover {
-            color: $default_color;
+            
         }
         .info.opened & {
             display: block;
@@ -47,8 +47,10 @@
         @extend %text-column;
         font-size: 17px;
         line-height: 25px;
+        padding: 0 0 0 50px;
+        position: relative;
         @include tablet {
-            padding: 0 0 0 30px;            
+            padding-left: 30px;
         }
 
         li {
@@ -76,9 +78,7 @@
     &_title {
         font-size: 26px;
         font-family: $subheadings_font-family;
-        @include tablet {
-            margin-left: -30px;
-        }
+        margin-left: -30px;
     }
     &_advice {
         padding: 75px 0;

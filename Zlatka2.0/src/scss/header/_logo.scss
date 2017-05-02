@@ -1,6 +1,12 @@
 .logo {
     position: absolute;
-    top: 30px;
-    left: 30px;
+    top: 48px;
+    right: 48px;
     z-index: 1;
+    width: 170px;
+    z-index: -1;
+
+    &_image {
+        width: 100%;
+    }
 }

@@ -1,6 +1,16 @@
 .tags {
-    position: fixed;
-    left: 10%;
-    top: 50%;
+    position: absolute;
+    left: 35px;
+    top: 55px;
+    transform-origin: 0 0;
     transform: rotateZ(90deg);
+    white-space: nowrap;
+    @include tablet {
+        left: 20px;
+    }
+}
+
+.tag {
+    margin: 0 20px 0 0;
+    text-decoration: none;
 }

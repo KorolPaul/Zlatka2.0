@@ -22,12 +22,22 @@ let info,
     excerciseSetsHolder,
     closeExcercise,
     deleteExcercise,
-    avatar;
+    avatar,
+    menuTrigger,
+    menuPopup;
 
 const UI = {
 
-    showInfo: function(e) {
-        let html = xml.getElementsByClassName(this.dataset['name'])[this.dataset['origin']].innerHTML;
+    showMenu: function (e) {
+        e.preventDefault();
+        this.classList.toggle('menu_link__opened');
+        menuPopup.classList.toggle('menu_popup__opened');
+    },
+
+    showInfo: function (e) {
+        let excerciseNode = xml.querySelector('#' + this.dataset['excersice']),
+            html = excerciseNode.innerHTML;
+        
         info.classList.add('opened');
 
         info.querySelector('.info_holder').innerHTML = html;
@@ -36,18 +46,28 @@ const UI = {
         });
 
         let galleryItems = info.querySelectorAll('.info_gallery-item');
-        for (let i = 0; i < galleryItems.length; i++) {
-            galleryItems[i].addEventListener('click', function () {
-                for (let j = 0; j < galleryItems.length; j++) {
-                    galleryItems[j].classList.remove('info_gallery-item__active');
-                }
 
-                galleryItems[i].classList.add('info_gallery-item__active');
-                galleryItems[i].children[0].click();
+        galleryItems.forEach(function (el) {
+            el.addEventListener('click', function () {
+                galleryItems.forEach(function (el) {
+                    el.classList.remove('info_gallery-item__active');
+                });
+
+                el.classList.add('info_gallery-item__active');
+                el.children[0].click();
             })
-        }
+        });
+        
 
-        UI.hideExcercises();
+        let tags = excerciseNode.dataset['tags'].split(', '),
+            tagsNode = info.querySelector('.tags');
+        
+        tags.forEach(function (el) {
+            let newTag = utils.createElement('a', 'tag', el, '#', UI.showExcercises)
+            tagsNode.appendChild(newTag);
+        });
+
+        excercises.classList.remove('excercises__visible');                
         window.instgrm.Embeds.process();
         
     },
@@ -71,16 +91,15 @@ const UI = {
     },
 
     showExcercises: function (e) {
-        var musculeName = this.dataset.muscle || this.className['baseVal'] || this.className,
-            html = xml.getElementsByClassName(musculeName);
-
+        let musculeName = this.dataset.muscle || this.innerHTML,
+            html = xml.querySelectorAll('.' + musculeName + ', [data-tags*= ' + musculeName + ']');
+        
+        e.preventDefault();
         excercises.innerHTML = '';
-        console.log(musculeName)
         for (var i = 0; i < html.length; i++) {
             var excercise = utils.createElement('li', 'excercise-name', html[i].querySelector('.excercise-name').innerHTML, null, UI.showInfo);
             excercise.dataset['complexity'] = html[i].getAttribute('data-complexity');
-            excercise.dataset['origin'] = i;
-            excercise.dataset['name'] = musculeName;
+            excercise.dataset['excersice'] = html[i].id;
 
             //excercise.addEventListener('mousedown', touch.moveExcerciseStart);
             //excercise.addEventListener('touchstart', touch.moveExcerciseStart);

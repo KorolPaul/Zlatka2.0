@@ -59,7 +59,8 @@ window.onload = function () {
     deleteExcercise = document.getElementById('delete-excercise');
     closeExcercise = document.getElementById('close-excercise');
     avatar = document.getElementById('avatar');
-
+    menuTrigger = document.getElementById('menu-trigger');
+    menuPopup = document.querySelector('.menu_popup');
     Training.loadProgram();
 
     infoClose.onclick = function (e) {
@@ -84,6 +85,7 @@ window.onload = function () {
 
     new Body();
 
+    menuTrigger.addEventListener('click', UI.showMenu);
     addTrainingButton.onmousedown = Training.add;
     closeExcercise.addEventListener('click', Excercise.close);
     deleteExcercise.addEventListener('click', Excercise.delete);
@@ -292,12 +294,22 @@ var info = void 0,
     excerciseSetsHolder = void 0,
     closeExcercise = void 0,
     deleteExcercise = void 0,
-    avatar = void 0;
+    avatar = void 0,
+    menuTrigger = void 0,
+    menuPopup = void 0;
 
 var UI = {
 
+    showMenu: function showMenu(e) {
+        e.preventDefault();
+        this.classList.toggle('menu_link__opened');
+        menuPopup.classList.toggle('menu_popup__opened');
+    },
+
     showInfo: function showInfo(e) {
-        var html = xml.getElementsByClassName(this.dataset['name'])[this.dataset['origin']].innerHTML;
+        var excerciseNode = xml.querySelector('#' + this.dataset['excersice']),
+            html = excerciseNode.innerHTML;
+
         info.classList.add('opened');
 
         info.querySelector('.info_holder').innerHTML = html;
@@ -307,21 +319,26 @@ var UI = {
 
         var galleryItems = info.querySelectorAll('.info_gallery-item');
 
-        var _loop = function _loop(i) {
-            galleryItems[i].addEventListener('click', function () {
-                for (var j = 0; j < galleryItems.length; j++) {
-                    galleryItems[j].classList.remove('info_gallery-item__active');
-                }
+        galleryItems.forEach(function (el) {
+            el.addEventListener('click', function () {
+                galleryItems.forEach(function (el) {
+                    el.classList.remove('info_gallery-item__active');
+                });
 
-                galleryItems[i].classList.add('info_gallery-item__active');
-                galleryItems[i].children[0].click();
+                el.classList.add('info_gallery-item__active');
+                el.children[0].click();
             });
-        };
+        });
 
-        for (var i = 0; i < galleryItems.length; i++) {
-            _loop(i);
-        }
+        var tags = excerciseNode.dataset['tags'].split(', '),
+            tagsNode = info.querySelector('.tags');
 
+        tags.forEach(function (el) {
+            var newTag = utils.createElement('a', 'tag', el, '#', UI.showExcercises);
+            tagsNode.appendChild(newTag);
+        });
+
+        excercises.classList.remove('excercises__visible');
         window.instgrm.Embeds.process();
     },
 
@@ -340,22 +357,26 @@ var UI = {
     },
 
     showExcercises: function showExcercises(e) {
-        var musculeName = this.dataset.muscle || this.className['baseVal'] || this.className,
-            html = xml.getElementsByClassName(musculeName);
+        var musculeName = this.dataset.muscle || this.innerHTML,
+            html = xml.querySelectorAll('.' + musculeName + ', [data-tags*= ' + musculeName + ']');
 
+        e.preventDefault();
         excercises.innerHTML = '';
-        console.log(musculeName);
         for (var i = 0; i < html.length; i++) {
             var excercise = utils.createElement('li', 'excercise-name', html[i].querySelector('.excercise-name').innerHTML, null, UI.showInfo);
             excercise.dataset['complexity'] = html[i].getAttribute('data-complexity');
-            excercise.dataset['origin'] = i;
-            excercise.dataset['name'] = musculeName;
+            excercise.dataset['excersice'] = html[i].id;
 
             //excercise.addEventListener('mousedown', touch.moveExcerciseStart);
             //excercise.addEventListener('touchstart', touch.moveExcerciseStart);
 
             excercises.appendChild(excercise);
         }
+        excercises.classList.add('excercises__visible');
+    },
+
+    hideExcercises: function hideExcercises() {
+        excercises.classList.remove('excercises__visible');
     },
 
     loadAvatar: function loadAvatar() {

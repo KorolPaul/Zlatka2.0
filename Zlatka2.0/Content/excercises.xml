@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <excersises>
     <shoulder>
-        <li class="shoulder" data-complexity="7">
+        <li class="shoulder" data-complexity="7" data-tags="гантели" id="sh0">
             <div class="info_header">
                 <span class="excercise-name">Жимы арнольда</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -87,9 +87,10 @@
                     <li>Выполняйте движение плавно, желательно без остановки в нижней точке. Рывки и ускорения переносят нагрузку на позвоночник;</li>
                     <li>Поднимайте гантели как можно выше, чтобы добиться максимального сокращения дельт.</li>
                 </ul>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="shoulder" data-complexity="7">
+        <li class="shoulder" data-complexity="7" data-tags="штанга, масса" id="sh1">
             <div class="info_header">
                 <span class="excercise-name">Жимы штанги из-за головы</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -145,9 +146,10 @@
                     <li>Упражнение можно выполнять как стоя, так и сидя. Также можно менять ширину хвата;</li>
                     <li>Нет смысла поднимать тяжелую штангу с пола в начале каждого подхода. Вы можете положить штангу на стойки.</li>
                 </ul>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="shoulder" data-complexity="6">
+        <li class="shoulder" data-complexity="6" data-tags="гантели" id="sh2">
             <div class="info_header">
                 <span class="excercise-name">Жимы с гантелями</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -198,9 +200,10 @@
                     <li>Локти должны находиться строго под кистями по всей амплитуде движения. В этом случае, гантели будут двигаться по дугообразной траектории, немного сближаясь в верхней точке. Жим гантелей сидя выполняется двумя руками одновременно. Разворота кистей делать не нужно. Локти не следует выдвигать вперед, спину не прогибать, назад не наклоняться, даже если тяжело.</li>
                     <li>В верхней точке сделайте небольшую паузу. Выполняйте движение с ускорением, но не распрямляйте руки в верхней точке рывком - это может отрицательно сказаться на локтевых суставах. Опускайте вес подконтрольно, готовясь к очередному повторению.</li>
                 </ol>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="shoulder" data-complexity="7">
+        <li class="shoulder" data-complexity="7" data-tags="штанга, масса" id="sh3">
             <div class="info_header">
                 <span class="excercise-name">Армейский жим</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -251,9 +254,10 @@
                     <li>Плавно выжмите штангу в верхнюю точку. Выпрямляйте локти не до конца, чтобы снизить травматичность для локтей;</li>
                     <li>Медленно опустите штангу на грудь, не расслабляя мышцы в нижней точке и не допуская касания штангой груди и плеч.</li>
                 </ol>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="shoulder" data-complexity="7">
+        <li class="shoulder" data-complexity="7" data-tags="штанга, масса" id="sh4">
             <div class="info_header">
                 <span class="excercise-name">Швунги штанги</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -304,9 +308,10 @@
                     <li>Толкните штангу вверх, помогая себе ногами;</li>
                     <li>Плавно опускайте штангу на плечи.</li>
                 </ol>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="shoulder" data-complexity="5">
+        <li class="shoulder" data-complexity="5" data-tags="гантели" id="sh5">
             <div class="info_header">
                 <span class="excercise-name">Разведение рук с гантелями</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -362,9 +367,10 @@
                     <li>Частой ошибкой является раскачивание взад-вперед и махи гантелями вместо плавных движений, что резко снижает эффективность упражнения;</li>
                     <li>При выполнении упражнения в положении стоя у вас может появиться склонность к "читтингу". Этого можно избежать в положении сидя.</li>
                 </ul>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="shoulder" data-complexity="6">
+        <li class="shoulder" data-complexity="6" data-tags="тренажеры" id="sh6">
             <div class="info_header">
                 <span class="excercise-name">Отведение руки на уровень плеча на блочном тренажере</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -423,9 +429,10 @@
                     <li>Не помогайте себе, поднимая туловище: пользуйтесь дельтовидными мышцами;</li>
                     <li>Альтернативный вариант упражнения: трос находится за спиной.</li>
                 </ul>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="shoulder" data-complexity="6">
+        <li class="shoulder" data-complexity="6" data-tags="тренажеры" id="sh7">
             <div class="info_header">
                 <span class="excercise-name">Отведение руки в сторону на блочном тренажере</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -476,9 +483,10 @@
                     <li>Поднимите выпрямленную руку по дуге плавным движением чуть выше головы;</li>
                     <li>Опустите руку на уровень бедра.</li>
                 </ol>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="shoulder" data-complexity="6">
+        <li class="shoulder" data-complexity="6" data-tags="тренажеры" id="sh8">
             <div class="info_header">
                 <span class="excercise-name">Отведение руки на уровень плеча на блочном тренажере сидя</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -530,9 +538,10 @@
                     <li>В верхней точке напрягите плечо, для полного сокращения дельтовидной мышцы;</li>
                     <li>Опустите руку в исходное положение.</li>
                 </ol>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="shoulder" data-complexity="7">
+        <li class="shoulder" data-complexity="7" data-tags="гантели" id="sh9">
             <div class="info_header">
                 <span class="excercise-name">Подъемы рук с гантелями</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -582,9 +591,10 @@
                     <li>Возмите гантели и опустите руки вдоль туловища. Прямой рукой поднимите одну гантель вверх по широкой дуге выше головы;</li>
                     <li>Полностью контролируя движение, плавно опускайте гантель, одновременно поднимая другую. Вы должны поднимать гантели прямо перед собой.</li>
                 </ol>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="shoulder" data-complexity="4">
+        <li class="shoulder" data-complexity="4" data-tags="гантели" id="sh10">
             <div class="info_header">
                 <span class="excercise-name">Разведение рук с гантелями в наклоне</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -639,11 +649,12 @@
                     <p>Упражнения также можно выполнять сидя. Это позволит делать его с большей четкостью</p>
                     <img src="Content/img/barbell.png" alt="barbell" />
                 </div>
+                <div class="tags"> </div>
             </div>
         </li>
     </shoulder>
     <trapezium>
-        <li class="trapezium" data-complexity="7">
+        <li class="trapezium" data-complexity="7" data-tags="штанга, масса" id="tr0">
             <div class="info_header">
                 <span class="excercise-name">Высокая тяга штанги узким хватом</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -699,9 +710,10 @@
                     <li>Ширина хвата должна составлять 20-25 см;</li>
                     <li>Для общего укрепления плечевого пояса можно выполнять разновидность этого упражнения с большим весом и широким хватом.</li>
                 </ul>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="trapezium" data-complexity="6">
+        <li class="trapezium" data-complexity="6" data-tags="штанга" id="tr1">
             <div class="info_header">
                 <span class="excercise-name">"Шраги" со штангой</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -752,9 +764,10 @@
                     <li>Поднимите плечи максимально высоко и задержитесь на секунду в верхней точке;</li>
                     <li>Вернитесь в исходное положение.</li>
                 </ol>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="trapezium" data-complexity="6">
+        <li class="trapezium" data-complexity="6" data-tags="гантели" id="tr2">
             <div class="info_header">
                 <span class="excercise-name">"Шраги" с гантелями</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -805,11 +818,12 @@
                     <li>Поднимите плечи максимально высоко и задержитесь на секунду в верхней точке;</li>
                     <li>Вернитесь в исходное положение.</li>
                 </ol>
+                <div class="tags"> </div>
             </div>
         </li>
     </trapezium>
     <chest>
-        <li class="chest" data-complexity="8">
+        <li class="chest" data-complexity="8" data-tags="штанга, масса, база" id="ch0">
             <div class="info_header">
                 <span class="excercise-name">Жим штанги лежа</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -860,9 +874,10 @@
                     <li>Плавно опустите штангу до касания туловища чуть ниже груди;</li>
                     <li>В нижней точке ненадолго зафиксируйте штангу, затем снова поднимите ее до полного выпрямления рук.</li>
                 </ol>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="chest" data-complexity="8">
+        <li class="chest" data-complexity="8" data-tags="штанга, масса, база" id="ch1">
             <div class="info_header">
                 <span class="excercise-name">Жим штанги на наклонной скамье</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -916,15 +931,10 @@
                     <p>Помогает развить силу и массу среднего и верхнего отдела грудных машц, а также передних дельтоидов. При таком угле движения часть нагрузки переходит к верхним грудным мышцам и дельтоидам.</p>
                     <img src="Content/img/barbell.png" alt="barbell" />
                 </div>
-                <h3 class="info_title">Советы</h3>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="chest" data-complexity="8">
+        <li class="chest" data-complexity="8" data-tags="гантели" id="ch2">
             <div class="info_header">
                 <span class="excercise-name">Жимы гантелей на горизонтальной скамье</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -978,9 +988,10 @@
                     <p>Упражнения для развития массы и силы среднего и нижнего отдела грудных мышц. Гантели позволяют работать с большим диапазоном движения, чем штанга. Также в работу активнее включаются стабилизирующие мышцы.</p>
                     <img src="Content/img/barbell.png" alt="barbell" />
                 </div>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="chest" data-complexity="8">
+        <li class="chest" data-complexity="8" data-tags="гантели" id="ch3">
             <div class="info_header">
                 <span class="excercise-name">Жимы гантелей на наклонной скамье</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -1039,9 +1050,10 @@
                     <li>Угол наклона скамьи может быть разным. Чем он больше, больше нагрузки для дельтовидных мышц;</li>
                     <li>Также можно выполнять начало движения с ладонями, повернутыми друг к другу, а во время жима поворачивать запястья так, чтобы ладони смотрели вверх.</li>
                 </ul>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="chest" data-complexity="7">
+        <li class="chest triceps" data-complexity="7" data-tags="собственный вес" id="ch4">
             <div class="info_header">
                 <span class="excercise-name">Отжимание на брусьях</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -1089,12 +1101,13 @@
                     <li>Затем отожмитесь от брусьев. В верхней точке на несколько секунд напрягите грудь и трицепсы.</li>
                 </ol>
                 <div class="info_advice">
-                    <p>Чем больше вы наклоняетесь вперед, тем больше нагрузки переходит на грудные мышцы, поэтому вы время выполнения упражнения скрещивайте ноги за ягодицами.</p>
+                    <p>Чем больше вы наклоняетесь вперед, тем больше нагрузки переходит на грудные мышцы.</p>
                     <img src="Content/img/barbell.png" alt="barbell" />
                 </div>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="chest" data-complexity="6">
+        <li class="chest" data-complexity="6" data-tags="гантели, рельеф" id="ch5">
             <div class="info_header">
                 <span class="excercise-name">Сведение-разведение рук с гантелями</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -1151,9 +1164,10 @@
                     <li>Веса в этом упражнении не должны быть слишком большими. Большой вас заставит вас сгибать руки в локтевом суставе и опускать локти значительно ниже уровня плеч, что повредит технике и повысит травмоопасность;</li>
                     <li>Ни в коем случае не выполняйте упражнение с прямыми руками: это прямой путь к травме. Оптимаьлный угол в суставе должен быть неизменным и составлять около 150 градусов.</li>
                 </ul>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="chest" data-complexity="7">
+        <li class="chest" data-complexity="7" data-tags="тренажеры, рельеф" id="ch6">
             <div class="info_header">
                 <span class="excercise-name">Сведение рук на верхнем блоке стоя</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -1204,9 +1218,10 @@
                     <li>Немного согнув руки в локтях начните разводить руки по сторонам, пока не почувствуете растяжение в грудных мышцах. Торс при этом должен быть неподвижным, а руки - работать только в плечевых суставах;</li>
                     <li>Сведите руки вместе.</li>
                 </ol>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="chest" data-complexity="5">
+        <li class="chest" data-complexity="5" id="ch7"
             <div class="info_header">
                 <span class="excercise-name">Пуллоуверы</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -1257,11 +1272,12 @@
                     <li>Медленно опустите груз за голову, пока не почувствуете натяжение в грудных мышцах;</li>
                     <li>Плавно поднимите груз обратно.</li>
                 </ol>
+                <div class="tags"> </div>
             </div>
         </li>
     </chest>
     <biceps>
-        <li class="biceps" data-complexity="6">
+        <li class="biceps" data-complexity="6" data-tags="штанга, масса" id="bi0">
             <div class="info_header">
                 <span class="excercise-name">Сгибание рук со штангой стоя</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -1321,9 +1337,10 @@
                     <li>В верхней точке не поднимайте штангу выше груди с помощью локтей, чтобы не смещать нагрузку с бицепсов. Ваши плечи должны оставаться на месте;</li>
                     <li>В нижней точке не отбивайте штангу от бедер. Делайте полную остановку, прежде чем сделать очередной повтор.</li>
                 </ul>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="biceps" data-complexity="6">
+        <li class="biceps" data-complexity="6" data-tags="гантели" id="bi1">
             <div class="info_header">
                 <span class="excercise-name">Сгибание рук на изолирующей скамье</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -1382,9 +1399,10 @@
                     <li>Упражнение также можно выполнять с EZ-штангой или с гантелями;</li>
                     <li>Не наклоняйтесь вперед или назад во время выполнения упражнения. Работают должны только бицепсы.</li>
                 </ul>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="biceps" data-complexity="7">
+        <li class="biceps" data-complexity="7" data-tags="гантели" id="bi2">
             <div class="info_header">
                 <span class="excercise-name">Сгибания на три счета ("21")</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -1440,9 +1458,10 @@
                     <p>Упражнение можно выполнять как сидя, так и стоя.</p>
                     <img src="Content/img/barbell.png" alt="barbell" />
                 </div>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="biceps" data-complexity="6">
+        <li class="biceps" data-complexity="6" data-tags="гантели" id="bi3">
             <div class="info_header">
                 <span class="excercise-name">Сгибание рук с гантелями на наклонной скамье</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -1502,9 +1521,10 @@
                     <li>Если поднимать гантели к груди, упражнение становится общеразвивающим для бицепсов. К плечам - упражнением для внутренней части бицепсов;</li>
                     <li>Чтобы сделать упражнение еще более эффективным, можно сделать его на горизонтальной скамье. Оно позволит сильнее потянуть бицепсы и удлинить их.</li>
                 </ul>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="biceps" data-complexity="4">
+        <li class="biceps" data-complexity="4" data-tags="гантели" id="bi4">
             <div class="info_header">
                 <span class="excercise-name">Сгибание рук с гантелями сидя</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -1562,9 +1582,10 @@
                     <li>Упражнение можно выполнять стоя, что позволит работать с большим весом. Но при этом, движение будет не таким четким;</li>
                     <li>Также можно сгибать руки попеременно. Это позволяет добиться дополнительной изоляции мышц и свести "читтинг" к минимуму.</li>
                 </ul>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="biceps" data-complexity="6">
+        <li class="biceps arm" data-complexity="6" data-tags="гантели" id="bi5"
             <div class="info_header">
                 <span class="excercise-name">"Молоток"</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -1615,9 +1636,10 @@
                     <li>Удерживая локти неподвижно, согните руки. В верхней точке напрягите бицепсы;</li>
                     <li>Плавно опустите гантели, полностью выпрямив руки.</li>
                 </ol>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="biceps" data-complexity="5">
+        <li class="biceps" data-complexity="5" data-tags="гантели" id="bi6">
             <div class="info_header">
                 <span class="excercise-name">"Сосредоточенные сгибания"</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -1673,9 +1695,10 @@
                     <li>Упражнение следует выполнять с идеальной техникой. Однако, оно предназначено для увеличения высоты бицепса, а не для рельефности, поэтому вес гантели должен быть максимально тяжелым;</li>
                     <li>Не сгибайте руку к груди - ее нужно сгибать к противоположному плечу.</li>
                 </ul>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="biceps" data-complexity="6">
+        <li class="biceps" data-complexity="6" data-tags="тренажеры" id="bi7">
             <div class="info_header">
                 <span class="excercise-name">Сгибание рук на нижнем блоке</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -1731,9 +1754,10 @@
                     <li>Это упражнение в большей степени предназначено для улучшения формы и рельефности бицепсов, поэтому все движения стоит выполнять медленно и плавно;</li>
                     <li>Может выполняться на изолирующей скамье.</li>
                 </ul>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="biceps" data-complexity="6">
+        <li class="biceps arm" data-complexity="6" data-tags="штанга" id="bi8">
             <div class="info_header">
                 <span class="excercise-name">Сгибание рук со штангой обратным хватом</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -1793,11 +1817,12 @@
                     <li>Хотя в этом упражнении вы работаете меньшим весом, вы создаете очень интенсивную нагрузку на мышцы верхней части предплечья;</li>
                     <li>В ходе выполнения движения кисти рук не должны сгибаться.</li>
                 </ul>
+                <div class="tags"> </div>
             </div>
         </li>
     </biceps>
     <triceps>
-        <li class="triceps" data-complexity="5">
+        <li class="triceps" data-complexity="5" data-tags="тренажеры" id="tri0">
             <div class="info_header">
                 <span class="excercise-name">Жимы вниз на верхнем блоке</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -1857,9 +1882,10 @@
                     <li>Чтобы проработать трицепсы под разными углами, можно варьировать хват и его ширину, а также, тип перекладины и его расстояние до туловища;</li>
                     <li>Выполняя движение на три четверти, вы прорабатываете нижний отдел трицепсов.</li>
                 </ul>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="triceps" data-complexity="5">
+        <li class="triceps" data-complexity="5" data-tags="тренажеры" id="tri1"
             <div class="info_header">
                 <span class="excercise-name">Жимы одной рукой на блоке обратным хватом</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -1910,9 +1936,10 @@
                     <li>Удердивая локоть неподвижным, потяните рукоять вниз до полного выпрямления руки. В нижней точке на секунду напрягите трицепс для максимаьлного сокращения мышц;</li>
                     <li>Медленно вернитесь в исходное положение, ощущая потягивание трицепса.</li>
                 </ol>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="triceps" data-complexity="6">
+        <li class="triceps" data-complexity="6" data-tags="штанга" id="tri2">
             <div class="info_header">
                 <span class="excercise-name">Французский жим</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -1967,9 +1994,10 @@
                     <p>Упражнение можно также выполнять сидя или стоя. В последнем случае, вы сможете прибегнуть к "читингу", а значит, поднять больший вес.</p>
                     <img src="Content/img/barbell.png" alt="barbell" />
                 </div>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="triceps" data-complexity="4">
+        <li class="triceps" data-complexity="4" data-tags="гантели" id="tri3">
             <div class="info_header">
                 <span class="excercise-name">Отведение назад руки с гантелью в наклоне</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -2025,9 +2053,10 @@
                     <li>В ходе выполнения упражнения, двигаться должно только предплечье. Плечо должно оставаться неподвижным;</li>
                     <li>Это упражнение также можно выполнять на блочном устройстве.</li>
                 </ul>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="triceps" data-complexity="5">
+        <li class="triceps" data-complexity="5" data-tags="гантели" id="tri4">
             <div class="info_header">
                 <span class="excercise-name">Разгибание руки с гантелью из-за головы</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -2078,9 +2107,10 @@
                     <li>Заведите гантель за голову по дуге, удерживая локоть неподвижным;</li>
                     <li>Разогните руку и вернитесь в исходное положение. Выполняйте двиение максимально четко.</li>
                 </ol>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="triceps" data-complexity="5">
+        <li class="triceps" data-complexity="5" data-tags="собственный вес" id="tri5">
             <div class="info_header">
                 <span class="excercise-name">Отжимания на параллельных скамьях</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -2131,9 +2161,10 @@
                     <li>Чтобы акцентировать нагрузку на нижней части трицепсов, выполняйте движение на 3/4;</li>
                     <li>Упражнение можно выполнять с дополнительным отягощением, положив диск штанги на бедра.</li>
                 </ul>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="triceps" data-complexity="4">
+        <li class="triceps" data-complexity="4" data-tags="собственный вес, перекладина" id="tri6">
             <div class="info_header">
                 <span class="excercise-name">Экстензии для трицепсов на перекладине</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -2184,11 +2215,12 @@
                     <li>Сгибая руки, опустите туловище как можно ниже;</li>
                     <li>Вернитесь в исходное положение, выпрямив руки.</li>
                 </ol>
+                <div class="tags"> </div>
             </div>
         </li>
     </triceps>
     <arm>
-        <li class="arm" data-complexity="5">
+        <li class="arm" data-complexity="5" data-tags="штанга" id="arm0">
             <div class="info_header">
                 <span class="excercise-name">Сгибание запястий со штангой</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -2248,9 +2280,10 @@
                     <li>Предплечьям нужна в очень большая нагрузка для роста, поэтому работайте с большими весами и большим количством повторений;</li>
                     <li>Упражнение можно выполнять с гантелями.</li>
                 </ul>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="arm" data-complexity="5">
+        <li class="arm" data-complexity="5" data-tags="штанга" id="arm1">
             <div class="info_header">
                 <span class="excercise-name">Сгибание запястий со штангой за спиной</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -2301,9 +2334,10 @@
                     <li>Немного разогните пальцы, чтобы штанга скатилась вниз, к фалангам пальцев;</li>
                     <li>Согните пальцы и поднимите штангу так так высоко, как только сможете. Во время выполнения упражнения двигаться должны только запястья.</li>
                 </ol>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="arm" data-complexity="5">
+        <li class="arm" data-complexity="5" data-tags="штанга" id="arm2">
             <div class="info_header">
                 <span class="excercise-name">Обратное сгибание запястий со штангой</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -2358,11 +2392,12 @@
                     <p>Упражнение можно выполнять с гантелями, а также, на изолирующей скамье или стоя.</p>
                     <img src="Content/img/barbell.png" alt="barbell" />
                 </div>
+                <div class="tags"> </div>
             </div>
         </li>
     </arm>
     <back>
-        <li class="back" data-complexity="8">
+        <li class="back" data-complexity="8" data-tags="перекладина, собственный вес" id="back0">
             <div class="info_header">
                 <span class="excercise-name">Подтягивания широким хватом</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -2408,9 +2443,10 @@
                     <li>Подтянитесь вверх до касания перкладины грудью (или затылком). В верхней точке задержитесь на секунду;</li>
                     <li>Медленно опуститесь в исходное положение.</li>
                 </ol>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="back" data-complexity="8">
+        <li class="back" data-complexity="8" data-tags="перекладина, собственный вес" id="back1">
             <div class="info_header">
                 <span class="excercise-name">Подтягивания узким хватом</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -2456,9 +2492,10 @@
                     <li>Подтянитесь вверх до касания перкладины грудью. В верхней точке задержитесь на секунду;</li>
                     <li>Медленно опуститесь в исходное положение, ощущая растягивание мышц спины.</li>
                 </ol>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="back" data-complexity="7">
+        <li class="back" data-complexity="7" data-tags="тренажеры" id="back2">
             <div class="info_header">
                 <span class="excercise-name">Тяга за голову на высоком блоке</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -2513,9 +2550,10 @@
                     <p>Чтобы акцентировать нагрузку на нижней части спины, можно выполнять упражнение узким или хватом. При этом, в нижней точке отводите плечи назад и подавайтесь грудью вперед.</p>
                     <img src="Content/img/barbell.png" alt="barbell" />
                 </div>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="back" data-complexity="10">
+        <li class="back" data-complexity="10" data-tags="штанга, масса, база" id="back3">
             <div class="info_header">
                 <span class="excercise-name">Становая тяга</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -2555,47 +2593,27 @@
             </ul>
             <div class="info_gallery">
                 <div class="info_gallery-item info_gallery-item__main">
-                    
+                    <img src="Content/img/excercises/back/deadlift.jpg" alt="back" />
                 </div>
             </div>
             <div class="info_content">
                 <h3 class="info_title">Техника</h3>
-                <p></p>
-                <ol>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ol>
-                <div class="info_advice">
-                    <p></p>
-                    <img src="Content/img/barbell.png" alt="barbell" />
-                </div>
-                <h3 class="info_title">Советы</h3>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div>
-
-            <div class="info_content">
-                <img src="Content/img/excercises/back/deadlift.jpg" alt="back" />
+                
                 <p>Становая тяга штанги является отличным общеукрепляющим упражнением. В нем учавствуют практически все мышцы: нижняя и верхняя часть спины, трапециевидные мышцы, ягодицы и почти все мышцы ног.</p>
                 <ol>
                     <li>Стоя перед штангой, присядьте, наклонитесь вперед и возьмитесь за гриф средним хватом;</li>
                     <li>Начините поднимать штангу, сначала с помощью мышц ног, а затем подключайте мышцы спины. Когда полностью выпрямитесь, выпятите грудь и отведите плечи назад;</li>
                     <li>Опуская штангу, проделайте все в обратном порядке.</li>
                 </ol>
-                <span>Особенности:</span>
+                <span>Советы</span>
                 <ul>
                     <li>Во время выполнение упражнения голова должна быть поднята, а спина - быть прямой. Это необходимо для защиты спины от лишнего напряжения и избежать травм, особенно, при работе с большим весом;</li>
                     <li>При работе с большими весами удобнее использовать разнохват (одна рука сверху, другая снизу).</li>
                 </ul>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="back" data-complexity="8">
+        <li class="back" data-complexity="8" data-tags="штанга, масса" id="back4">
             <div class="info_header">
                 <span class="excercise-name">Тяга штанги в наклоне</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -2650,9 +2668,10 @@
                     <p>Упражнение можно выполнять с гантелями. Это позволит избежать ситуации, когда более сильная сторона спины начнет помогать более слабой, что, в свою очередь, поможет улучшить симметричность мышц спины.</p>
                     <img src="Content/img/barbell.png" alt="barbell" />
                 </div>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="back" data-complexity="8">
+        <li class="back" data-complexity="8" data-tags="масса" id="back5">
             <div class="info_header">
                 <span class="excercise-name">Тяга на T-грифе</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -2707,9 +2726,10 @@
                     <p>Выполняя упражнение узком хватом, вы больше нагружаете внешнию часть спины, т.к. такой диапазон движения не позволит как следует нагрузить внутренние участки. Однако, так вы сможете поднять больший весь, что это упражнение незаменимым для увеличения силы и массы спины.</p>
                     <img src="Content/img/barbell.png" alt="barbell" />
                 </div>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="back" data-complexity="7">
+        <li class="back" data-complexity="7" data-tags="гантели" id="back6">
             <div class="info_header">
                 <span class="excercise-name">Тяга гантели одной рукой в наклоне</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -2760,9 +2780,10 @@
                     <li>Поднимите гантель сбоку от себя, при этом концентрируясь на работе мышц спины, а не мышц руки. Туловище должно оставаться неподвижным;</li>
                     <li>Медленным движениям опустите гантель, удерживая ее под контролем. Полностью выпрямите руку, почувствуйте, как тянутся мышцы спины.</li>
                 </ol>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="back" data-complexity="6">
+        <li class="back" data-complexity="6" data-tags="тренажеры" id="back7">
             <div class="info_header">
                 <span class="excercise-name">Тяга к животу на нижнем блоке</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -2813,11 +2834,12 @@
                     <li>Потяните рукоять к животу, максимально отведя плечи и локи назад для полного сокращения мышц;</li>
                     <li>Плавно вытяните руки вперед, удерживая туловище в том же положении.</li>
                 </ol>
+                <div class="tags"> </div>
             </div>
         </li>
     </back>
     <small-back>
-        <li class="small-back" data-complexity="5">
+        <li class="small-back" data-complexity="5" data-tags="собственный вес" id="smback0">
             <div class="info_header">
                 <span class="excercise-name">Гиперэкстензии</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -2863,11 +2885,12 @@
                     <li>Скрестите руки на груди, либо, сцепите их за головой и наклонитесь вперед и вниз. Не наклоняйтесь слишком далеко: вы должны постоянно чувствовать напряжение в мышцах-разгибателях спины;</li>
                     <li>Плавно, без резких движений, поднимите туловище так высоко, как только сможете и задержитесь в верхней точке на несколько секунд.</li>
                 </ol>
+                <div class="tags"> </div>
             </div>
         </li>
     </small-back>
     <press>
-        <li class="press" data-complexity="4">
+        <li class="press" data-complexity="4" data-tags="собственный вес" id="pr0">
             <div class="info_header">
                 <span class="excercise-name">Сгибание туловища на наклонной скамье</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -2917,9 +2940,10 @@
                     <li>В верхней точке не наклоняйтесь вперед, чтобы не дать мышцам живота расслабиться;</li>
                     <li>Упражнение можно выполнять с дополнительным отягощением на груди.</li>
                 </ul>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="press" data-complexity="4">
+        <li class="press" data-complexity="4" data-tags="собственный вес" id="pr1">
             <div class="info_header">
                 <span class="excercise-name">Сгибание туловища</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -2965,9 +2989,10 @@
                     <li>Поднимите туловище по направлению к коленям. Не отрывать всю спину от пола, просто наклонитесь вперед, почувствовав напряжение в мышцах живота;</li>
                     <li>В верхней точке напрягите мышцы брюшного пресса на секунду и опустите туловище вниз.</li>
                 </ol>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="press" data-complexity="4">
+        <li class="press" data-complexity="4" data-tags="собственный вес" id="pr2">
             <div class="info_header">
                 <span class="excercise-name">Скручивания</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -3013,9 +3038,10 @@
                     <li>Поднимите туловище по направлению к коленям, при этом поворачиваясь набок и пытаясь дотянутся локтем до противоположной ноги;</li>
                     <li>Опуститесь вниз и сделайте движение, повернувшись в другую сторону.</li>
                 </ol>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="press" data-complexity="7">
+        <li class="press" data-complexity="7" data-tags="собственный вес, перекладина" id="pr3">
             <div class="info_header">
                 <span class="excercise-name">Подъем ног на перекладине</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -3061,9 +3087,10 @@
                     <li>Поднимите прямые ноги как можно выше. В идеале вы должны дотронутся до перекладины (вариант 2);</li>
                     <li>В верхней точке напрягите на секунду мышци пресса и опустите ноги в исходное положение.</li>
                 </ol>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="press" data-complexity="6">
+        <li class="press" data-complexity="6" data-tags="собственный вес" id="pr4">
             <div class="info_header">
                 <span class="excercise-name">Подъем ног в упоре</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -3109,9 +3136,10 @@
                     <li>Поднимите выпрямленные ноги, пока бедра не бедут пораллельны полу (вариант 2);</li>
                     <li>В верхней точке напрягите на секунду мышци пресса и опустите ноги в исходное положение.</li>
                 </ol>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="press" data-complexity="7">
+        <li class="press" data-complexity="7" data-tags="тренажеры" id="pr5">
             <div class="info_header">
                 <span class="excercise-name">Сгибание туловища на верхнем блоке</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -3162,9 +3190,10 @@
                     <li>Держа веревку перед собой, опустите туловище вперед и вниз, выгибая спину. Тяните веревку мышцами живота, но не руками;</li>
                     <li>В нижней точке напрягите на секунду мышци пресса и поднимитесь в исходное положение.</li>
                 </ol>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="press" data-complexity="5">
+        <li class="press" data-complexity="5" data-tags="собственный вес" id="pr6">
             <div class="info_header">
                 <span class="excercise-name">Группировка на горизонтальной скамье</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -3210,9 +3239,10 @@
                     <li>Согните туловище вперед, одновременно поднимая колени к подбородку;</li>
                     <li>Вернитесь в исходное положение.</li>
                 </ol>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="press" data-complexity="1">
+        <li class="press" data-complexity="1" id="pr7">
             <div class="info_header">
                 <span class="excercise-name">Повороты туловища</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -3258,9 +3288,10 @@
                     <li>Удерживая голову неподвижной, медленно поверните туловище максимально далеко;</li>
                     <li>На секунду задержитесь в крайней точке медленно вернитесь в исходное положение.</li>
                 </ol>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="press" data-complexity="5">
+        <li class="press" data-complexity="5" data-tags="собственный вес" id="pr8">
             <div class="info_header">
                 <span class="excercise-name">Подъемы ног</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -3305,9 +3336,10 @@
                     <li>Лягте на скамью, либо на пол и вытяните ноги вперед;</li>
                     <li>Поднимите прямые ноги вверх, а затем опустите их вниз.</li>
                 </ol>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="press" data-complexity="2">
+        <li class="press" data-complexity="2" id="pr9">
             <div class="info_header">
                 <span class="excercise-name">Втягивание живота ("вакуум")</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -3352,11 +3384,12 @@
                     <li>Напрягая мышцы пресса, втяните живот так сильно, как только сможете и удерживайте его таким как можно дольше;</li>
                     <li>Расслабьте живот, пердохните и повторите упражнение.</li>
                 </ol>
+                <div class="tags"> </div>
             </div>
         </li>
     </press>
     <quadriceps>
-        <li class="quadriceps butt" data-complexity="10" data-tags="штанга база масса">
+        <li class="quadriceps butt" data-complexity="10" data-tags="штанга, база, масса" id="q0">
             <div class="info_header">
                 <span class="excercise-name">Приседания со штангой</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -3417,9 +3450,10 @@
                     <li>Пока вы еще работаете с небольшими весами, важно опускаться ниже параллельной линии. Так вы будете развивать силу по всему диапазону движения и избежите травм впоследствии, при работе с более тяжелымм весами;</li>
                     <li>От начала и до самого конца упражнения держите спину немного прогнутой в пояснице. Это поможет вам сохранить здоровую спину.</li>
                 </ul>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="quadriceps" data-complexity="9" data-tags="штанга база масса">
+        <li class="quadriceps" data-complexity="9" data-tags="штанга, база, масса" id="q1">
             <div class="info_header">
                 <span class="excercise-name">Полуприседы</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -3470,9 +3504,10 @@
                     <li>Согните ноги в коленях и присядьте наполовину;</li>
                     <li>Медленно вернитесь в исходное положение.</li>
                 </ol>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="quadriceps" data-complexity="9" data-tags="штанга база масса">
+        <li class="quadriceps" data-complexity="9" data-tags="штанга, база, масса" id="q2">
             <div class="info_header">
                 <span class="excercise-name">Приседания со штангой на груди</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -3523,9 +3558,10 @@
                     <li>Согните ноги в коленях и медленно приседайте с прямой спиной до параллели или ниже;</li>
                     <li>Медленно вернитесь в исходное положение.</li>
                 </ol>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="quadriceps" data-complexity="8" data-tags="тренажеры масса">
+        <li class="quadriceps" data-complexity="8" data-tags="тренажеры, масса" id="q3">
             <div class="info_header">
                 <span class="excercise-name">Жимы ногами</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -3575,9 +3611,10 @@
                     <li>Упритесь ступнями в нижнюю опору тренажера и опустите вес максимально вниз, сгибая колени;</li>
                     <li>Выжимайте вес до полного выпрямления ног.</li>
                 </ol>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="quadriceps butt" data-complexity="7" data-tags="собственный вес гантели штанга">
+        <li class="quadriceps butt" data-complexity="7" data-tags="собственный вес, гантели штанга" id="q4">
             <div class="info_header">
                 <span class="excercise-name">Выпады</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -3628,9 +3665,10 @@
                     <li>Смотрите прямо, спину держите прямой и сделайте одной ногой широкий шаг вперед, чтобы колено второй ноги коснулось пола. Чем шире шаг, тем больше нагрузка на ягодицы;</li>
                     <li>Вернитесь в исходное положение одним мощным движением. Повторите движение для другой ноги.</li>
                 </ol>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="quadriceps" data-complexity="5" data-tags="тренажер рельеф">
+        <li class="quadriceps" data-complexity="5" data-tags="тренажеры, рельеф" id="q5">
             <div class="info_header">
                 <span class="excercise-name">Выпрямление ног на тренажере</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -3680,11 +3718,12 @@
                     <li>Займите исходное положение в тренажере и выпрямите ноги, преодолевая сопротивление. В верхней точке зафиксируйте положение ног для максимального эффекта;</li>
                     <li>Согните ноги, опустив рычаг тренажера.</li>
                 </ol>
+                <div class="tags"> </div>
             </div>
         </li>
     </quadriceps>
     <hamstrings>
-        <li class="hamstrings butt" data-complexity="6">
+        <li class="hamstrings butt" data-complexity="6" data-tags="тренажеры" id="h0">
             <div class="info_header">
                 <span class="excercise-name">Сгибание ног на тренажере</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -3740,9 +3779,10 @@
                     <li>Упражнение должно выполняться со строгой техникой и полным диапазоном движения;</li>
                     <li>Также это упражнение можно выполнять для стоя, поочередно для каждой ноги.</li>
                 </ul>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="hamstrings butt" data-complexity="8">
+        <li class="hamstrings butt" data-complexity="8" data-tags="штанга масса" id="h1">
             <div class="info_header">
                 <span class="excercise-name">Становая тяга штанги с прямыми ногами</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -3797,11 +3837,12 @@
                     <p>Т.к. это в этом упражнение штанга поднимается без помощи ног, ее вес должен быть значительно меньше, чем для классической становой тяги.</p>
                     <img src="Content/img/barbell.png" alt="barbell" />
                 </div>
+                <div class="tags"> </div>
             </div>
         </li>
     </hamstrings>
     <butt>
-        <li class="butt" data-complexity="4">
+        <li class="butt" data-complexity="4" data-tags="собственный вес" id="b0">
             <div class="info_header">
                 <span class="excercise-name">Задние подъемы ног</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -3847,11 +3888,12 @@
                     <li>Медленно, чувствуя сокращение ягодичных мышц, поднимите свободную ногу вверх и назад. Задержитесь в верхней точке и максимально напрягите ягоцицу;</li>
                     <li>Плавно опустите ногу и вынесете ее немного вперед для полного сокращения мышц.</li>
                 </ol>
+                <div class="tags"> </div>
             </div>
         </li>
     </butt>
     <shin>
-        <li class="shin" data-complexity="7">
+        <li class="shin" data-complexity="7" data-tags="тренажеры" id="sh0">
             <div class="info_header">
                 <span class="excercise-name">Подъемы на носки стоя</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -3907,9 +3949,10 @@
                     <li>Икроножные мышцы являются очень сильными и выносливыми, поэтому для их развития следует работать с большими отягощенями;</li>
                     <li>Когда вы уже не можете выполнить ни одного повторения, сделайие несколько частичных повторений, чтобы добить ваши икры.</li>
                 </ul>
+                <div class="tags"> </div>
             </div>
         </li>
-        <li class="shin" data-complexity="7">
+        <li class="shin" data-complexity="7" data-tags="тренажеры" id="sh1">
             <div class="info_header">
                 <span class="excercise-name">Подъемы на носки сидя</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -3959,6 +4002,7 @@
                     <li>Займите исходное положение на тренажере и зафиксируйте ноги в опоре. Медленно опустите пятки максимально вниз;</li>
                     <li>Выжмите вес вверх до полного сокращения икроножных мышц.</li>
                 </ol>
+                <div class="tags"> </div>
             </div>
         </li>
         <li class="shin" data-complexity="8">
@@ -4006,6 +4050,7 @@
                     <li>Станьте носками на опору, наклонитесь вперед и упритесь во что-нибудь руками для равновесия. Пусть партнер сядет к вам на поясницу как можно ближе к копчику. Опустите пятки максимально низко;</li>
                     <li>Поднимитесь на носках до полного сокращения мышц.</li>
                 </ol>
+                <div class="tags"> </div>
             </div>
         </li>
     </shin>

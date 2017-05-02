@@ -2,20 +2,29 @@
 <html>
 <head>
     <title>@ViewBag.Title</title>
+    <meta name="description" content="@ViewBag.Description">
+    <meta name="keywords" content="@ViewBag.Keywords">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://plus.google.com/js/client:platform.js" async defer></script>
     @Styles.Render("~/Content/css")
 </head>
 <body>
-    <a href="/" class="logo">
-        <img src="~/Content/img/logo.png" alt="muscle.by">
-    </a>
+    <div class="menu">
+        <a href="#" class="menu_trigger" id="menu-trigger"></a>
+        <div class="menu_popup">
+            <div class="menu_content">
+                <a href="#" class="menu_link">тренировки</a>
+                <a href="#" class="menu_link">упражнения</a>
+                <a href="#" class="menu_link">о проекте</a>
+            </div>
+        </div>
+    </div>
 
     <div class="menu-right">
         <a href="#" class="menu-right_link menu-right_link__shedule shedule-icon" id="shedule-toggle"></a>
-        <label class="menu-right_link profile-icon" for="profile">
-            <img class="menu-right_avatar" src="~/Content/img/profile.jpg" alt="" id="avatar">
+        <label class="menu-right_link menu-right_link__profile profile-icon" for="profile">
+            <img class="menu-right_avatar" src="" alt="" id="avatar">
         </label>
         <input class="menu-right_checkbox" type="checkbox" id="profile"  />
         <div class="menu-right_popup">
@@ -23,6 +32,10 @@
         </div>
     </div>
     
+    <a href="/" class="logo">
+        <img class="logo_image" src="~/Content/img/logo.png" alt="muscle.by">
+    </a>
+
     @RenderBody()
     
     <footer style="display:none;">

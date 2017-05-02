@@ -1,26 +1,25 @@
 ﻿%heading1 {
-    color: $heading_color;
-    font: 48px/60px $headings_font-family;
+    font: 52px $headings_font-family;
     margin: 5px 0 15px;
 }
 %heading2 {
-    color: $heading_color;
-    font: 500 24px/30px $default_font-family;
+    font: 24px $headings_font-family;
     margin: 30px 0 13px;
     clear: both;
 }
 %heading3 {
-    color: $heading_color;
-    font: 500 18px/24px $default_font-family;
+    font: 28px 'FuturaCondBoldObl';
 }
 %heading4 {
-    color: $heading_color;
-    font: 500 15px/20px $default_font-family;
+    font: 26px $subheadings_font-family;
     margin-bottom: 13px;
 }
 %heading5 {
-    color: $heading_color;
-    font: 500 13px/19px $default_font-family;
+    font: 22px $subheadings_font-family;
+    margin: 0 0 10px;
+}
+%heading6 {
+    font: 18px $subheadings_font-family;
     margin: 0 0 10px;
 }
 
@@ -43,6 +42,10 @@ h4,
 h5,
 .heading-5 {
     @extend %heading5;
+}
+h6,
+.heading-6 {
+    @extend %heading6;
 }
 
 

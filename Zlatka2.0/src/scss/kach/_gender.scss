@@ -16,14 +16,6 @@
         width: 35px;
         transition: .2s ease opacity;
 
-        &__male {
-            background-image: url(img/male.png);
-            height: 46px;
-        }
-        &__female {
-            background-image: url(img/female.png);
-            height: 40px;
-        }
         &:hover,
         &.active {
             opacity: 1;
