@@ -108,7 +108,7 @@
                     <button class="button addTraining" data-handler="Training.add">создать тренировку</button>
                 </li>
                 <li>
-                    <button class="button">редактировать</button>
+                    <button class="button" data-handler="Training.showEditPopup">редактировать</button>
                 </li>
             </ul>
         </li>
@@ -125,10 +125,20 @@
             <button class="excercise_delete" id="delete-excercise"></button>
             <button class="excercise_copy" id="copy-excercise"></button>
         </div>
-        <div class="copy-popup" id="copy-popup">
-            <a href="#" class="copy-popup_back" id="close-copy-popup"></a>
-            <p class="copy-popup_title">Дублировать в тернировку</p>
-            <ul class="copy-popup_list" id="copy-list"></ul>
+    </div>
+
+    <div class="edit-popup" id="copy-popup">
+        <a href="#" class="edit-popup_back" id="close-copy-popup"></a>
+        <p class="edit-popup_title">Дублировать в тернировку</p>
+        <ul class="edit-popup_list" id="copy-list"></ul>
+    </div>
+    <div class="edit-popup" id="edit-popup">
+        <a href="#" class="copy-popup_back" id="close-edit-popup"></a>
+        <p class="edit-popup_title">Список тренировок</p>
+        <ul class="edit-popup_list" id="edit-list"></ul>
+        <div class="edit-popup_buttons">
+            <button class="edit-popup_delete" id="delete-training"></button>
+            <button class="edit-popup_copy" id="copy-training"></button>
         </div>
     </div>
 </div>

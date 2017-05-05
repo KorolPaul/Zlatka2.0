@@ -48,7 +48,6 @@ window.onload = function () {
     menuTrigger.addEventListener('click', UI.toggleMenu);
 
     addTrainingButtons.forEach(function (el) {
-        console.log(el)
         el.addEventListener('click', Training.add);
     });
 

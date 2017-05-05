@@ -92,7 +92,6 @@ window.onload = function () {
     menuTrigger.addEventListener('click', UI.toggleMenu);
 
     addTrainingButtons.forEach(function (el) {
-        console.log(el);
         el.addEventListener('click', Training.add);
     });
 
@@ -311,6 +310,7 @@ var deleteExcercise = document.getElementById('delete-excercise'),
     copyExcercise = document.getElementById('copy-excercise'),
     closeExcercise = document.getElementById('close-excercise'),
     copyPopup = document.getElementById('copy-popup'),
+    editPopup = document.getElementById('edit-popup'),
     addTrainingButtons = document.querySelectorAll('.addTraining');
 
 var UI = {
@@ -398,10 +398,10 @@ var UI = {
 
     loadAvatar: function loadAvatar() {
         if (localStorage.avatarUrl !== undefined) {
-            console.log('avatart is saved');
+            console.log('avatar is saved');
             avatar.src = localStorage.avatarUrl;
         } else {
-            console.log('avatart not saved');
+            console.log('avatar not saved');
 
             gapi.client.init({
                 'discoveryDocs': ['https://people.googleapis.com/$discovery/rest'],
@@ -631,14 +631,14 @@ var Excercise = function () {
 
             trainingsList.forEach(function (el) {
                 var excercisesCount = el.querySelectorAll('.training_item').length,
-                    newTraining = utils.createElement('li', 'copy-popup_list-item', el.querySelector('.trainings_name').innerText, null, function () {
+                    newTraining = utils.createElement('li', 'edit-popup_list-item', el.querySelector('.trainings_name').innerText, null, function () {
                     Excercise.copy(utils.index(el));
                 });
 
-                newTraining.appendChild(utils.createElement('p', 'copy-popup_count', excercisesCount + ' упражнений'));
+                newTraining.appendChild(utils.createElement('p', 'edit-popup_count', excercisesCount + ' упражнений'));
                 copyListHolder.appendChild(newTraining);
             });
-            copyPopup.classList.add('copy-popup__opened');
+            copyPopup.classList.add('edit-popup__opened');
         }
     }, {
         key: 'hideCopyPopup',
@@ -647,7 +647,7 @@ var Excercise = function () {
                 e.preventDefault();
             }
 
-            copyPopup.classList.remove('copy-popup__opened');
+            copyPopup.classList.remove('edit-popup__opened');
         }
     }, {
         key: 'copy',
@@ -845,9 +845,13 @@ var Training = function () {
         value: function showExcercises(e) {
             training.innerHTML = document.querySelector('.trainings_item:nth-of-type(' + utils.index(e.target.parentNode) + ') .trainings_excercises').innerHTML;
 
-            var trainingItems = document.querySelectorAll('.training .training_item');
+            var trainingItems = document.querySelectorAll('.training .training_item, .training .button');
             trainingItems.forEach(function (el) {
-                el.addEventListener('click', Excercise.show);
+                if (el.dataset.handler) {
+                    el.addEventListener('click', eval(el.dataset.handler));
+                } else {
+                    el.addEventListener('click', Excercise.show);
+                }
             });
         }
     }, {
@@ -916,6 +920,41 @@ var Training = function () {
         key: 'hidePopup',
         value: function hidePopup() {
             sheduleElement.classList.remove('shedule__opened');
+        }
+    }, {
+        key: 'showEditPopup',
+        value: function showEditPopup() {
+            var trainingsList = document.querySelectorAll('.trainings_item:not(#trainings-settings)'),
+                editListHolder = document.getElementById('edit-list');
+
+            editListHolder.innerHTML = '';
+
+            trainingsList.forEach(function (el) {
+                var excercisesCount = el.querySelectorAll('.training_item').length,
+                    newTraining = utils.createElement('li', 'edit-popup_list-item', el.querySelector('.trainings_name').innerText, null, function () {
+                    Excercise.copy(utils.index(el));
+                });
+
+                newTraining.appendChild(utils.createElement('p', 'edit-popup_count', excercisesCount + ' упражнений'));
+                editListHolder.appendChild(newTraining);
+            });
+            editPopup.classList.add('edit-popup__opened');
+        }
+    }, {
+        key: 'hideEditPopup',
+        value: function hideEditPopup(e) {
+            if (e) {
+                e.preventDefault();
+            }
+
+            editPopup.classList.remove('edit-popup__opened');
+        }
+    }, {
+        key: 'edit',
+        value: function edit(trainingIndex) {
+            Excercise.add(trainingIndex, trainingsBlock.querySelector('.training_item[data-id="' + copyExcercise.dataset.id + '"] .training_excercise'), trainingsBlock.querySelector('.training_item[data-id="' + copyExcercise.dataset.id + '"] .sets'));
+
+            Training.hideEditPopup();
         }
     }]);
 

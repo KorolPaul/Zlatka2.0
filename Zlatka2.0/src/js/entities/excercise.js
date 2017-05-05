@@ -50,12 +50,12 @@ class Excercise {
 
         trainingsList.forEach(function (el) {
             let excercisesCount = el.querySelectorAll('.training_item').length,
-                newTraining = utils.createElement('li', 'copy-popup_list-item', el.querySelector('.trainings_name').innerText, null, function () { Excercise.copy(utils.index(el)) })    
+                newTraining = utils.createElement('li', 'edit-popup_list-item', el.querySelector('.trainings_name').innerText, null, function () { Excercise.copy(utils.index(el)) })    
             
-            newTraining.appendChild(utils.createElement('p', 'copy-popup_count', excercisesCount + ' упражнений'));
+            newTraining.appendChild(utils.createElement('p', 'edit-popup_count', excercisesCount + ' упражнений'));
             copyListHolder.appendChild(newTraining)
         });
-        copyPopup.classList.add('copy-popup__opened');
+        copyPopup.classList.add('edit-popup__opened');
     }
 
     static hideCopyPopup(e) {
@@ -63,7 +63,7 @@ class Excercise {
             e.preventDefault();
         }
 
-        copyPopup.classList.remove('copy-popup__opened');
+        copyPopup.classList.remove('edit-popup__opened');
     }
 
     static copy(trainingIndex) {

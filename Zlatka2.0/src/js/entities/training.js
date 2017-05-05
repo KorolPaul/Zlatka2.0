@@ -25,9 +25,13 @@ class Training {
     static showExcercises(e) {
         training.innerHTML = document.querySelector('.trainings_item:nth-of-type(' + utils.index(e.target.parentNode) + ') .trainings_excercises').innerHTML;
 
-        let trainingItems = document.querySelectorAll('.training .training_item');
-        trainingItems.forEach(function(el) {
-            el.addEventListener('click', Excercise.show);
+        let trainingItems = document.querySelectorAll('.training .training_item, .training .button');        
+        trainingItems.forEach(function (el) {
+            if (el.dataset.handler) {
+                el.addEventListener('click', eval(el.dataset.handler));
+            } else {
+                el.addEventListener('click', Excercise.show);
+            }
         });
     }
 
@@ -99,6 +103,36 @@ class Training {
 
     static hidePopup() {
         sheduleElement.classList.remove('shedule__opened');
+    }
+
+    static showEditPopup() {
+        let trainingsList = document.querySelectorAll('.trainings_item:not(#trainings-settings)'),
+            editListHolder = document.getElementById('edit-list');    
+
+        editListHolder.innerHTML = '';
+
+        trainingsList.forEach(function (el) {
+            let excercisesCount = el.querySelectorAll('.training_item').length,
+                newTraining = utils.createElement('li', 'edit-popup_list-item', el.querySelector('.trainings_name').innerText, null, function () { Excercise.copy(utils.index(el)) })    
+            
+            newTraining.appendChild(utils.createElement('p', 'edit-popup_count', excercisesCount + ' упражнений'));
+            editListHolder.appendChild(newTraining)
+        });
+        editPopup.classList.add('edit-popup__opened');
+    }
+
+    static hideEditPopup(e) {
+        if (e) {
+            e.preventDefault();
+        }
+
+        editPopup.classList.remove('edit-popup__opened');
+    }
+
+    static edit(trainingIndex) {
+        Excercise.add(trainingIndex, trainingsBlock.querySelector('.training_item[data-id="' + copyExcercise.dataset.id + '"] .training_excercise'), trainingsBlock.querySelector('.training_item[data-id="' + copyExcercise.dataset.id + '"] .sets'));
+        
+        Training.hideEditPopup();
     }
 
     render() {

@@ -26,6 +26,7 @@ const deleteExcercise = document.getElementById('delete-excercise'),
       copyExcercise = document.getElementById('copy-excercise'),
       closeExcercise = document.getElementById('close-excercise'),
       copyPopup = document.getElementById('copy-popup'),
+      editPopup = document.getElementById('edit-popup'),
       addTrainingButtons = document.querySelectorAll('.addTraining');
 
 
@@ -121,10 +122,10 @@ const UI = {
 
     loadAvatar: function () {
         if (localStorage.avatarUrl !== undefined) {
-            console.log('avatart is saved')
+            console.log('avatar is saved')
             avatar.src = localStorage.avatarUrl;
         } else {
-            console.log('avatart not saved')
+            console.log('avatar not saved')
 
             gapi.client.init({
                 'discoveryDocs': ['https://people.googleapis.com/$discovery/rest'],
