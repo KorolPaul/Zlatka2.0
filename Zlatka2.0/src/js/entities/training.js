@@ -23,12 +23,12 @@ class Training {
     } 
 
     static showExcercises(e) {
-        training.innerHTML = document.querySelector('.trainings_item:nth-child(' + utils.index(e.target.parentNode) + ') .trainings_excercises').innerHTML;
-        
+        training.innerHTML = document.querySelector('.trainings_item:nth-of-type(' + utils.index(e.target.parentNode) + ') .trainings_excercises').innerHTML;
+
         let trainingItems = document.querySelectorAll('.training .training_item');
-        for (let i = 0; i < trainingItems.length; i++){
-            trainingItems[i].addEventListener('click', Excercise.show);
-        }
+        trainingItems.forEach(function(el) {
+            el.addEventListener('click', Excercise.show);
+        });
     }
 
     static saveProgram() {
@@ -93,6 +93,14 @@ class Training {
         }
     }
 
+    static showPopup() {
+        sheduleElement.classList.add('shedule__opened');
+    }
+
+    static hidePopup() {
+        sheduleElement.classList.remove('shedule__opened');
+    }
+
     render() {
         let newTraining = utils.createElement('li', 'trainings_item'),
             trainingLink = utils.createElement('a', 'trainings_name', this.name, "#", Training.showExcercises),
@@ -104,7 +112,7 @@ class Training {
         newTraining.appendChild(trainingLink);
         newTraining.appendChild(trainingContent);
 
-        document.querySelector(".trainings").appendChild(newTraining);
+        document.querySelector(".trainings").insertBefore(newTraining, document.querySelector('#trainings-settings'));
         //trainings.push(newTraining);
 
         let elements = document.querySelectorAll('#trainings *');

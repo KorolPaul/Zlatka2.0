@@ -39,13 +39,23 @@
         }
     }
     &_popup {
-        display: none;
+        background: #fff;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        z-index: -1;
+        transition: .2s ease opecity;
 
         &__opened {
-            display: block;
+            z-index: 3;
+            opacity: 1;
         }
     }
     &_link {
         @extend %heading1;
+        display: block;
     }
 }

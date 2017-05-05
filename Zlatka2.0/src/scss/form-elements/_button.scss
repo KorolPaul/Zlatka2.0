@@ -1,7 +1,13 @@
+.button,
 button, 
 input[type="button"],
 input[type="submit"]{
+    background: $light_color;
+    border-radius: 10px;
+    color: $color;
+    display: block;
     padding: 5px 10px;
     font-size: 20px;
     margin: auto;
+    text-decoration: none;
 }

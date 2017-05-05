@@ -11,97 +11,97 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="ApplicationInsights.config">
-      <publishTime>03/30/2017 13:00:03</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
-      <publishTime>03/30/2017 13:00:13</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.pdb">
-      <publishTime>03/30/2017 13:00:13</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/ApplicationInsights.config">
-      <publishTime>03/30/2017 13:00:03</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>04/06/2017 12:17:58</publishTime>
+      <publishTime>06/04/2017 12:17:58</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>04/06/2017 12:17:58</publishTime>
+      <publishTime>06/04/2017 12:17:58</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
-      <publishTime>03/30/2017 13:00:13</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/EntityFramework.SqlServer.dll">
-      <publishTime>03/30/2017 13:00:13</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
-      <publishTime>03/30/2017 13:00:14</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.DependencyCollector.dll">
-      <publishTime>03/30/2017 13:00:14</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
-      <publishTime>03/30/2017 13:00:15</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
-      <publishTime>03/30/2017 13:00:16</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Web.dll">
-      <publishTime>03/30/2017 13:00:16</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.WindowsServer.dll">
-      <publishTime>03/30/2017 13:00:16</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/Microsoft.ApplicationInsights.dll">
-      <publishTime>03/30/2017 13:00:14</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
-      <publishTime>03/30/2017 13:00:16</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
-      <publishTime>03/30/2017 13:00:16</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
-      <publishTime>03/30/2017 13:00:16</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
-      <publishTime>03/30/2017 13:00:17</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.dll">
-      <publishTime>03/30/2017 13:00:17</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
-      <publishTime>03/30/2017 13:00:17</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.Cookies.dll">
-      <publishTime>03/30/2017 13:00:17</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.dll">
-      <publishTime>03/30/2017 13:00:17</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.Facebook.dll">
-      <publishTime>03/30/2017 13:00:17</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.Google.dll">
-      <publishTime>03/30/2017 13:00:17</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.MicrosoftAccount.dll">
-      <publishTime>03/30/2017 13:00:17</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.OAuth.dll">
-      <publishTime>03/30/2017 13:00:17</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.Twitter.dll">
-      <publishTime>03/30/2017 13:00:17</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
-      <publishTime>03/30/2017 13:00:17</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
-      <publishTime>03/30/2017 13:00:18</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/Owin.dll">
-      <publishTime>03/30/2017 13:00:18</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>03/30/2017 13:00:17</publishTime>
@@ -182,40 +182,37 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/30/2017 13:00:17</publishTime>
     </File>
     <File Include="bin/System.Web.Helpers.dll">
-      <publishTime>03/30/2017 13:00:16</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/System.Web.Mvc.dll">
-      <publishTime>03/30/2017 13:00:16</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/System.Web.Optimization.dll">
-      <publishTime>03/30/2017 13:00:16</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/System.Web.Razor.dll">
-      <publishTime>03/30/2017 13:00:16</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/System.Web.WebPages.Deployment.dll">
-      <publishTime>03/30/2017 13:00:16</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/System.Web.WebPages.dll">
-      <publishTime>03/30/2017 13:00:16</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/System.Web.WebPages.Razor.dll">
-      <publishTime>03/30/2017 13:00:16</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
-      <publishTime>03/30/2017 13:00:18</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/Zlatka2.0.dll">
-      <publishTime>04/05/2017 16:48:23</publishTime>
+      <publishTime>05/04/2017 16:48:23</publishTime>
     </File>
     <File Include="bin/Zlatka2.0.pdb">
-      <publishTime>04/05/2017 16:48:23</publishTime>
+      <publishTime>05/04/2017 16:48:23</publishTime>
     </File>
     <File Include="Content/excercises.xml">
-      <publishTime>04/04/2017 17:18:17</publishTime>
-    </File>
-    <File Include="Content/fonts/formular-lisht.woff">
-      <publishTime>03/30/2017 13:00:03</publishTime>
+      <publishTime>04/17/2017 15:05:31</publishTime>
     </File>
     <File Include="Content/fonts/futuraptcond-bookobl.woff">
       <publishTime>03/30/2017 13:00:03</publishTime>
@@ -466,12 +463,6 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/img/male.png">
       <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
-    <File Include="Content/img/mask-2.png">
-      <publishTime>04/05/2017 16:07:40</publishTime>
-    </File>
-    <File Include="Content/img/mask.png">
-      <publishTime>04/05/2017 15:58:47</publishTime>
-    </File>
     <File Include="Content/img/masks.svg">
       <publishTime>04/04/2017 14:51:25</publishTime>
     </File>
@@ -500,13 +491,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/04/2017 14:17:18</publishTime>
     </File>
     <File Include="package.json">
-      <publishTime>04/03/2017 17:38:27</publishTime>
+      <publishTime>03/04/2017 17:38:27</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>03/30/2017 14:58:46</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>04/06/2017 12:17:51</publishTime>
+      <publishTime>04/17/2017 18:05:22</publishTime>
     </File>
     <File Include="Scripts/jquery-1.10.2.js">
       <publishTime>04/04/2017 12:12:44</publishTime>
@@ -538,14 +529,11 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Scripts/respond.min.js">
       <publishTime>04/04/2017 12:12:44</publishTime>
     </File>
-    <File Include="src/fonts/formular-lisht.woff">
-      <publishTime>03/30/2017 13:00:08</publishTime>
-    </File>
     <File Include="src/fonts/futuraptcond-bookobl.woff">
-      <publishTime>03/30/2017 13:00:08</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="src/fonts/futuraptcond-extraboldobl.woff">
-      <publishTime>03/30/2017 13:00:08</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="src/img/barbell.png">
       <publishTime>03/30/2017 13:00:08</publishTime>
@@ -802,12 +790,6 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="src/img/male.png">
       <publishTime>03/30/2017 13:00:11</publishTime>
     </File>
-    <File Include="src/img/mask-2.png">
-      <publishTime>04/05/2017 16:46:49</publishTime>
-    </File>
-    <File Include="src/img/mask.png">
-      <publishTime>04/05/2017 16:46:49</publishTime>
-    </File>
     <File Include="src/img/masks.svg">
       <publishTime>03/30/2017 13:00:11</publishTime>
     </File>
@@ -995,40 +977,40 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/30/2017 13:00:11</publishTime>
     </File>
     <File Include="Views/Account/ConfirmEmail.cshtml">
-      <publishTime>03/30/2017 13:00:07</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Views/Account/ExternalLoginConfirmation.cshtml">
       <publishTime>04/04/2017 12:19:21</publishTime>
     </File>
     <File Include="Views/Account/ExternalLoginFailure.cshtml">
-      <publishTime>03/30/2017 13:00:07</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Views/Account/ForgotPassword.cshtml">
-      <publishTime>03/30/2017 13:00:07</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Views/Account/ForgotPasswordConfirmation.cshtml">
-      <publishTime>03/30/2017 13:00:07</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Views/Account/Login.cshtml">
-      <publishTime>03/30/2017 13:00:07</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Views/Account/Register.cshtml">
-      <publishTime>03/30/2017 13:00:07</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Views/Account/ResetPassword.cshtml">
-      <publishTime>03/30/2017 13:00:07</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Views/Account/ResetPasswordConfirmation.cshtml">
-      <publishTime>03/30/2017 13:00:07</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Views/Account/SendCode.cshtml">
-      <publishTime>03/30/2017 13:00:07</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Views/Account/VerifyCode.cshtml">
-      <publishTime>03/30/2017 13:00:07</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Views/Account/_ExternalLoginsListPartial.cshtml">
-      <publishTime>03/30/2017 13:00:07</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
       <publishTime>04/06/2017 12:17:34</publishTime>
@@ -1061,7 +1043,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/30/2017 13:00:07</publishTime>
     </File>
     <File Include="Views/_ViewStart.cshtml">
-      <publishTime>03/30/2017 13:00:07</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Web.config">
       <publishTime>04/04/2017 17:52:02</publishTime>

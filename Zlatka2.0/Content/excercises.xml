@@ -3614,7 +3614,7 @@
                 <div class="tags"> </div>
             </div>
         </li>
-        <li class="quadriceps butt" data-complexity="7" data-tags="собственный вес, гантели штанга" id="q4">
+        <li class="quadriceps butt" data-complexity="7" data-tags="собственный вес, гантели, штанга" id="q4">
             <div class="info_header">
                 <span class="excercise-name">Выпады</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -3782,7 +3782,7 @@
                 <div class="tags"> </div>
             </div>
         </li>
-        <li class="hamstrings butt" data-complexity="8" data-tags="штанга масса" id="h1">
+        <li class="hamstrings butt" data-complexity="8" data-tags="штанга, масса" id="h1">
             <div class="info_header">
                 <span class="excercise-name">Становая тяга штанги с прямыми ногами</span>
                 <button class="add-button">добавить в тренировку</button>

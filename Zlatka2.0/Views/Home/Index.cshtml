@@ -8,22 +8,7 @@
     <a href="#" class="gender_button gender_button__male">мужской</a>
     <a href="#" class="gender_button gender_button__female active">женский</a>
 </div>
-<div class="shedule" id="shedule">
-    <h2 class="shedule_header">Тренировки</h2>
-    <ul class="trainings" id="trainings"></ul>
-    <ul class="training" id="training"></ul>
-    <a class="share-training" id="shareTraining"></a>
-    <a class="add-training" id="addTraining">+</a>
 
-    <div class="excercise" id="excercise">
-        <a href="#" class="excercise_close" id="close-excercise">✕</a>
-        <div id="excercise_sets-holder"></div>
-        <button class="excercise_delete" id="delete-excercise">✕</button>
-    </div>
-</div>
-<!--
-<img class="brush" src="img/brush.svg" alt="">
--->
 <div class="muscles">
     <div class="muscles_titles">
         <a class="muscles_title muscles_title__chest muscles_title__visible" data-muscle="chest" href="#" data-layer="0">грудные</a>
@@ -57,7 +42,6 @@
             path {
                 fill: none;
             }
-            
         </style>
         <g class="muscles_side active" >
             <path class="quadriceps" title="Квадрицепсы" d="M197.3,635c0,0,13.3,8.7,16.7,19.3c3.3,10.7,42.7,94,45.3,105.3 C262,771,291.3,847,296,851s20.7-4,30.7,0s20.7-11.3,25.3-12.7c4.7-1.3-14-24-20-100s-34.7-169.3-44.7-184 C277.3,539.7,197.3,635,197.3,635z" />
@@ -113,5 +97,51 @@
 </div>
 
 <ul class="trainings-popup" id="trainings-popup"></ul>
+
+<div class="shedule" id="shedule">
+    <h2 class="shedule_header">ТРЕНИРОВКИ</h2>
+    <ul class="trainings" id="trainings">
+        <li class="trainings_item" id="trainings-settings">
+            <a href="#" class="trainings_name" data-handler="Training.showExcercises">Настройки</a>
+            <ul class="trainings_excercises">
+                <li>
+                    <button class="button addTraining" data-handler="Training.add">создать тренировку</button>
+                </li>
+                <li>
+                    <button class="button">редактировать</button>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <ul class="training" id="training"></ul>
+
+    <a class="add-training addTraining"></a>
+    <a class="share-training" id="shareTraining"></a>
+
+    <div class="excercise" id="excercise">
+        <a href="#" class="excercise_close" id="close-excercise">✕</a>
+        <div id="excercise_sets-holder"></div>
+        <div class="excercise_buttons">
+            <button class="excercise_delete" id="delete-excercise"></button>
+            <button class="excercise_copy" id="copy-excercise"></button>
+        </div>
+        <div class="copy-popup" id="copy-popup">
+            <a href="#" class="copy-popup_back" id="close-copy-popup"></a>
+            <p class="copy-popup_title">Дублировать в тернировку</p>
+            <ul class="copy-popup_list" id="copy-list"></ul>
+        </div>
+    </div>
+</div>
+
+<div class="search" id="search">
+    <p class="search_title">УПРАЖНЕКНИЯ</p>
+    <input class="search_input" type="text">
+    <div class="search_tags">
+
+    </div>
+    <div class="search_excercises">
+        
+    </div>
+</div>
 
 <script src="~/Content/script.js"></script>

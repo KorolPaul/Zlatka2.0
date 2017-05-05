@@ -25,8 +25,9 @@ const kach = {
     selectTraining: function (html) {
         let newExcerciseName = utils.createElement('span', 'training_excercise', html.querySelector('.excercise-name').innerText),
             newExcerciseInfo = utils.createElement('div', '', html.querySelector('.sets').innerHTML),    
-            trainingsList = document.querySelectorAll('.trainings_name');
+            trainingsList = document.querySelectorAll('.trainings_item:not(#trainings-settings)  .trainings_name');
 
+        trainingsPopup.innerHTML = '';
         for (let i = 0; i < trainingsList.length; i++) {
             let li = utils.createElement('li', 'trainings-popup_item', trainingsList[i].innerText, null, function(){let newExcercise = new Excercise(li, newExcerciseName, newExcerciseInfo)})
             trainingsPopup.appendChild(li)

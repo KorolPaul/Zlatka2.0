@@ -2,35 +2,39 @@
 let trainings = [],
     xml = document.createElement('div'),
     isTouchDevice = 'ontouchstart' in document.documentElement;
-;
+
 
 let info,
     infoClose,
     training,
     trainingsBlock,
     trainingsPopup,
-    addTrainingButton,
     droppable,
-    shedule,
     muscules,
     musculesSides,
     musculesList,
     musculeTitles,
-    sheduleToggle,
     excercise,
     excercises,
     excerciseSetsHolder,
-    closeExcercise,
-    deleteExcercise,
     avatar,
     menuTrigger,
-    menuPopup;
+    menuPopup,
+    sheduleElement;
+
+const deleteExcercise = document.getElementById('delete-excercise'),
+      copyExcercise = document.getElementById('copy-excercise'),
+      closeExcercise = document.getElementById('close-excercise'),
+      copyPopup = document.getElementById('copy-popup'),
+      addTrainingButtons = document.querySelectorAll('.addTraining');
+
 
 const UI = {
 
-    showMenu: function (e) {
+    toggleMenu: function (e) {
         e.preventDefault();
-        this.classList.toggle('menu_link__opened');
+
+        menuTrigger.classList.toggle('menu_trigger__opened');
         menuPopup.classList.toggle('menu_popup__opened');
     },
 
@@ -82,6 +86,7 @@ const UI = {
         })
         .then(function (data) {
             xml.innerHTML = data;
+            new Search();    
         })
         .catch(function (error) {
             console.log('Cant load xml');
@@ -92,7 +97,7 @@ const UI = {
 
     showExcercises: function (e) {
         let musculeName = this.dataset.muscle || this.innerHTML,
-            html = xml.querySelectorAll('.' + musculeName + ', [data-tags*= ' + musculeName + ']');
+            html = xml.querySelectorAll('.' + musculeName + ', [data-tags*="' + musculeName + '"]');
         
         e.preventDefault();
         excercises.innerHTML = '';

@@ -19,8 +19,7 @@ const utils = {
     },
 
     index: function(el) {
-        let children = el.parentNode.childNodes;
-        
+        let children = el.parentNode.children;
         for (let i = 0; i < children.length; i++) {
             if (children[i] === el) {
                 return i + 1;

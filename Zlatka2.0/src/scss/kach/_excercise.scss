@@ -18,18 +18,30 @@
         right: 45px;
         text-decoration: none;
     }
+    &_buttons {
+        display: flex;
+        justify-content: space-between;
+    }
     &_delete {
-        background: $bright-color;
-        border: none;
+        background: #f6f6f6 url(../Content/img/delete.svg) no-repeat center center;
+        border: 1px solid $color;
         border-radius: 3px;
         color: #fff;
         cursor: pointer;
-        display: block;
-        width: 100%;
-        font-size: 20px;
-        text-align: center;
+        display: inline-block;
+        width: 40%;
         height: 38px;
-        vertical-align: middle;
+        transition: .3s all ease;
+    }
+    &_copy {
+        background: #f6f6f6 url(../Content/img/copy.svg) no-repeat center center;
+        border: 1px solid $color;
+        border-radius: 3px;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        width: 40%;
+        height: 38px;
         transition: .3s all ease;
     }
 }
