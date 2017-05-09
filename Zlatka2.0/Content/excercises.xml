@@ -823,58 +823,64 @@
         </li>
     </trapezium>
     <chest>
-        <li class="chest" data-complexity="8" data-tags="штанга, масса, база" data-url="bench-press" id="ch0">
-            <div class="info_header">
-                <span class="excercise-name">Жим штанги лежа</span>
-                <button class="add-button">добавить в тренировку</button>
-                <div class="characteristics">
-                    <div class="characteristics_item">
-                        <span class="characteristics_value">8</span>
-                        <div class="characteristics_progress">
-                            <div class="characteristics_progress-value" style="width: 80%"> </div>
+        <li class="chest" data-complexity="8" data-tags="штанга, масса, база" id="bench-press">
+            <div class="meta">
+                <span class="meta-description">Базовое упражнение, позволяющее значительно развить силу и массу грудных мышц, а теже передних дельтоидов и трицепсов.</span>
+                <span class="meta-keywords">жим штанги лежа</span>
+            </div>
+            <div class="info">
+                <div class="info_header">
+                    <span class="excercise-name">Жим штанги лежа</span>
+                    <button class="add-button">добавить в тренировку</button>
+                    <div class="characteristics">
+                        <div class="characteristics_item">
+                            <span class="characteristics_value">8</span>
+                            <div class="characteristics_progress">
+                                <div class="characteristics_progress-value" style="width: 80%"> </div>
+                            </div>
+                            <span class="characteristics_title">Сложность</span>
                         </div>
-                        <span class="characteristics_title">Сложность</span>
-                    </div>
-                    <div class="characteristics_item">
-                        <span class="characteristics_value">8</span>
-                        <div class="characteristics_progress">
-                            <div class="characteristics_progress-value" style="width: 80%"> </div>
+                        <div class="characteristics_item">
+                            <span class="characteristics_value">8</span>
+                            <div class="characteristics_progress">
+                                <div class="characteristics_progress-value" style="width: 80%"> </div>
+                            </div>
+                            <span class="characteristics_title">Риск травм</span>
                         </div>
-                        <span class="characteristics_title">Риск травм</span>
                     </div>
                 </div>
-            </div>
-            <ul class="sets">
-                <li class="sets_item repeats">
-                    подходов
-                    <span contenteditable="true" name="sets">3</span>
-                    <input class="sets_range" type="range" min="0" max="10" value="3" name="sets" />
-                </li>
-                <li class="sets_item repeats">
-                    повторений
-                    <span contenteditable="true" name="repeats">8</span>
-                    <input class="sets_range" type="range" min="0" max="30" value="8" name="repeats"/>
-                </li>
-                <li class="sets_item">
-                    вес, кг
-                    <span class="weight" contenteditable="true" name="weight">20</span>
-                    <input class="sets_range" type="range" min="1" max="200" value="20" name="weight"/>                    
-                </li>
-            </ul>
-            <div class="info_gallery">
-                <div class="info_gallery-item info_gallery-item__main">
-                    <img src="Content/img/excercises/chest/bench-press.jpeg" alt="chest" />
+                <ul class="sets">
+                    <li class="sets_item repeats">
+                        подходов
+                        <span contenteditable="true" name="sets">3</span>
+                        <input class="sets_range" type="range" min="0" max="10" value="3" name="sets" />
+                    </li>
+                    <li class="sets_item repeats">
+                        повторений
+                        <span contenteditable="true" name="repeats">8</span>
+                        <input class="sets_range" type="range" min="0" max="30" value="8" name="repeats"/>
+                    </li>
+                    <li class="sets_item">
+                        вес, кг
+                        <span class="weight" contenteditable="true" name="weight">20</span>
+                        <input class="sets_range" type="range" min="1" max="200" value="20" name="weight"/>                    
+                    </li>
+                </ul>
+                <div class="info_gallery">
+                    <div class="info_gallery-item info_gallery-item__main">
+                        <img src="Content/img/excercises/chest/bench-press.jpeg" alt="chest" />
+                    </div>
                 </div>
-            </div>
-            <div class="info_content">
-                <h3 class="info_title">Техника</h3>
-                <p>Базовое упражнение, позволяющее значительно развить силу и массу грудных мышц, а теже передних дельтоидов и трицепсов.</p>
-                <ol>
-                    <li>Лягте спиной на скамью и упритесь ногами в пол. Возмите штангу средним хватом и снимите ее со стоек;</li>
-                    <li>Плавно опустите штангу до касания туловища чуть ниже груди;</li>
-                    <li>В нижней точке ненадолго зафиксируйте штангу, затем снова поднимите ее до полного выпрямления рук.</li>
-                </ol>
-                <div class="tags"> </div>
+                <div class="info_content">
+                    <h3 class="info_title">Техника</h3>
+                    <p>Базовое упражнение, позволяющее значительно развить силу и массу грудных мышц, а теже передних дельтоидов и трицепсов.</p>
+                    <ol>
+                        <li>Лягте спиной на скамью и упритесь ногами в пол. Возмите штангу средним хватом и снимите ее со стоек;</li>
+                        <li>Плавно опустите штангу до касания туловища чуть ниже груди;</li>
+                        <li>В нижней точке ненадолго зафиксируйте штангу, затем снова поднимите ее до полного выпрямления рук.</li>
+                    </ol>
+                    <div class="tags"> </div>
+                </div>
             </div>
         </li>
         <li class="chest" data-complexity="8" data-tags="штанга, масса, база" id="ch1">
@@ -1221,7 +1227,7 @@
                 <div class="tags"> </div>
             </div>
         </li>
-        <li class="chest" data-complexity="5" id="ch7"
+        <li class="chest" data-complexity="5" id="ch7">
             <div class="info_header">
                 <span class="excercise-name">Пуллоуверы</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -1585,7 +1591,7 @@
                 <div class="tags"> </div>
             </div>
         </li>
-        <li class="biceps arm" data-complexity="6" data-tags="гантели" id="bi5"
+        <li class="biceps arm" data-complexity="6" data-tags="гантели" id="bi5">
             <div class="info_header">
                 <span class="excercise-name">"Молоток"</span>
                 <button class="add-button">добавить в тренировку</button>
@@ -1885,7 +1891,7 @@
                 <div class="tags"> </div>
             </div>
         </li>
-        <li class="triceps" data-complexity="5" data-tags="тренажеры" id="tri1"
+        <li class="triceps" data-complexity="5" data-tags="тренажеры" id="tri1">
             <div class="info_header">
                 <span class="excercise-name">Жимы одной рукой на блоке обратным хватом</span>
                 <button class="add-button">добавить в тренировку</button>

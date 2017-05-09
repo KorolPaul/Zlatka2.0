@@ -112,8 +112,6 @@ window.onload = function () {
     UI.loadExcercises();
     UI.loadAvatar();
 
-    Routing.loadPage(window.location.pathname);
-
     gapi.load('client', UI.loadAvatar);
 };
 /*
@@ -325,9 +323,10 @@ var UI = {
         menuPopup.classList.toggle('menu_popup__opened');
     },
 
-    showInfo: function showInfo(e) {
-        var excerciseNode = xml.querySelector('#' + this.dataset['excersice']),
-            html = excerciseNode.innerHTML;
+    showInfo: function showInfo(e, excercise) {
+        var excerciseUrl = utils.isSet(excercise) ? excercise : this.dataset.excersice,
+            excerciseNode = xml.querySelector('#' + excerciseUrl),
+            html = excerciseNode.querySelector('.info').innerHTML;
 
         info.classList.add('opened');
 
@@ -360,11 +359,14 @@ var UI = {
         excercises.classList.remove('excercises__visible');
         window.instgrm.Embeds.process();
 
-        Routing.setPage('info', 'excercise/' + excerciseNode.dataset['url']);
+        Routing.setPage('info', 'excercise/' + excerciseNode.id, {
+            title: info.querySelector('.excercise-name').innerHTML,
+            descr: excerciseNode.querySelector('.meta-description').innerHTML,
+            keywords: excerciseNode.querySelector('.meta-keywords').innerHTML });
     },
 
     loadExcercises: function loadExcercises() {
-        fetch('Content/excercises.xml', {
+        fetch('https://' + window.location.host + '/Content/excercises.xml', {
             method: 'GET',
             headers: { 'Content-Type': 'application/xml' }
         }).then(function (response) {
@@ -372,6 +374,7 @@ var UI = {
         }).then(function (data) {
             xml.innerHTML = data;
             new Search();
+            Routing.loadPage(window.location.pathname);
         }).catch(function (error) {
             console.log('Cant load xml');
             console.log(error);
@@ -696,13 +699,21 @@ var Routing = function () {
 
     _createClass(Routing, null, [{
         key: 'setPage',
-        value: function setPage(title, url) {
+        value: function setPage(title, url, meta) {
+            document.title = meta.title;
+            document.querySelector('meta[name="description"]').content = meta.descr;
+            document.querySelector('meta[name="keywords"]').content = meta.keywords;
+
             history.replaceState({}, title, url);
         }
     }, {
         key: 'loadPage',
         value: function loadPage(url) {
-            console.log(url.substring(1).split('/'));
+            var path = url.substring(1).split('/');
+
+            if (path[0] === 'excercise') {
+                UI.showInfo(null, path[1]);
+            }
         }
     }]);
 

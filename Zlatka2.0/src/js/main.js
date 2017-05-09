@@ -68,8 +68,6 @@ window.onload = function () {
     UI.loadExcercises();
     UI.loadAvatar();
 
-    Routing.loadPage(window.location.pathname);
-
     gapi.load('client', UI.loadAvatar);
 }
 

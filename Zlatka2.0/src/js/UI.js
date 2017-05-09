@@ -39,9 +39,10 @@ const UI = {
         menuPopup.classList.toggle('menu_popup__opened');
     },
 
-    showInfo: function (e) {
-        let excerciseNode = xml.querySelector('#' + this.dataset['excersice']),
-            html = excerciseNode.innerHTML;
+    showInfo: function (e, excercise) {
+        let excerciseUrl = utils.isSet(excercise) ? excercise : this.dataset.excersice,
+            excerciseNode = xml.querySelector('#' + excerciseUrl),
+            html = excerciseNode.querySelector('.info').innerHTML;
         
         info.classList.add('opened');
 
@@ -75,11 +76,15 @@ const UI = {
         excercises.classList.remove('excercises__visible');                
         window.instgrm.Embeds.process();
         
-        Routing.setPage('info', 'excercise/' + excerciseNode.dataset['url']);
+        Routing.setPage('info', 'excercise/' + excerciseNode.id, {
+            title: info.querySelector('.excercise-name').innerHTML,
+            descr: excerciseNode.querySelector('.meta-description').innerHTML,
+            keywords: excerciseNode.querySelector('.meta-keywords').innerHTML}
+        );
     },
 
     loadExcercises: function () {
-        fetch('Content/excercises.xml', {
+        fetch('https://' + window.location.host + '/Content/excercises.xml', {
             method: 'GET',
             headers: { 'Content-Type': 'application/xml' }
         })
@@ -88,7 +93,8 @@ const UI = {
         })
         .then(function (data) {
             xml.innerHTML = data;
-            new Search();    
+            new Search();
+            Routing.loadPage(window.location.pathname);
         })
         .catch(function (error) {
             console.log('Cant load xml');
