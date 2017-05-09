@@ -75,6 +75,7 @@ const UI = {
         excercises.classList.remove('excercises__visible');                
         window.instgrm.Embeds.process();
         
+        Routing.setPage('info', 'excercise/' + excerciseNode.dataset['url']);
     },
 
     loadExcercises: function () {

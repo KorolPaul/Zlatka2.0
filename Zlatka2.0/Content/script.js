@@ -65,6 +65,7 @@ window.onload = function () {
     infoClose.onclick = function (e) {
         e.preventDefault();
         info.classList.remove('opened');
+        Routing.setPage('main', '/');
     };
 
     for (var i = 0; i < muscules.length; i++) {
@@ -110,6 +111,8 @@ window.onload = function () {
 
     UI.loadExcercises();
     UI.loadAvatar();
+
+    Routing.loadPage(window.location.pathname);
 
     gapi.load('client', UI.loadAvatar);
 };
@@ -356,6 +359,8 @@ var UI = {
 
         excercises.classList.remove('excercises__visible');
         window.instgrm.Embeds.process();
+
+        Routing.setPage('info', 'excercise/' + excerciseNode.dataset['url']);
     },
 
     loadExcercises: function loadExcercises() {
@@ -677,6 +682,31 @@ var Excercise = function () {
     }]);
 
     return Excercise;
+}();
+'use strict';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Routing = function () {
+    function Routing() {
+        _classCallCheck(this, Routing);
+    }
+
+    _createClass(Routing, null, [{
+        key: 'setPage',
+        value: function setPage(title, url) {
+            history.replaceState({}, title, url);
+        }
+    }, {
+        key: 'loadPage',
+        value: function loadPage(url) {
+            console.log(url.substring(1).split('/'));
+        }
+    }]);
+
+    return Routing;
 }();
 'use strict';
 

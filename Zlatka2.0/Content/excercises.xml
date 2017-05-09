@@ -823,7 +823,7 @@
         </li>
     </trapezium>
     <chest>
-        <li class="chest" data-complexity="8" data-tags="штанга, масса, база" id="ch0">
+        <li class="chest" data-complexity="8" data-tags="штанга, масса, база" data-url="bench-press" id="ch0">
             <div class="info_header">
                 <span class="excercise-name">Жим штанги лежа</span>
                 <button class="add-button">добавить в тренировку</button>

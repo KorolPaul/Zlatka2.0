@@ -21,6 +21,7 @@ window.onload = function () {
     infoClose.onclick = function (e) {
         e.preventDefault();
         info.classList.remove('opened');
+        Routing.setPage('main', '/');
     }
 
     for (var i = 0; i < muscules.length; i++) {
@@ -40,7 +41,7 @@ window.onload = function () {
 
     new Body();
 
-    closeExcercise.addEventListener('click', Excercise.close,);
+    closeExcercise.addEventListener('click', Excercise.close);
     deleteExcercise.addEventListener('click', Excercise.delete);
     copyExcercise.addEventListener('click', Excercise.showCopyPopup);
     document.getElementById('close-copy-popup').addEventListener('click', Excercise.hideCopyPopup);
@@ -67,6 +68,7 @@ window.onload = function () {
     UI.loadExcercises();
     UI.loadAvatar();
 
+    Routing.loadPage(window.location.pathname);
 
     gapi.load('client', UI.loadAvatar);
 }

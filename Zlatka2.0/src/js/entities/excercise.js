@@ -81,7 +81,6 @@ class Excercise {
             sets[i].innerHTML = html;
         }
         Training.saveProgram();
-        
     }
 
     static changeValue(e) {
