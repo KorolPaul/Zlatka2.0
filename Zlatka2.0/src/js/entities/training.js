@@ -59,7 +59,6 @@ class Training {
     static loadProgram() {
         if (localStorage.trainingProgram !== undefined) {
             trainingsBlock.innerHTML = localStorage.trainingProgram;
-
             addHandlers();
         } else {
             fetch('/Training/LoadTraining', {
@@ -107,17 +106,26 @@ class Training {
 
     static showEditPopup() {
         let trainingsList = document.querySelectorAll('.trainings_item:not(#trainings-settings)'),
-            editListHolder = document.getElementById('edit-list');    
+            editListHolder = document.getElementById('edit-list'),
+            checkboxIndex = 1;    
 
         editListHolder.innerHTML = '';
 
         trainingsList.forEach(function (el) {
             let excercisesCount = el.querySelectorAll('.training_item').length,
-                newTraining = utils.createElement('li', 'edit-popup_list-item', el.querySelector('.trainings_name').innerText, null, function () { Excercise.copy(utils.index(el)) })    
+                checkbox = utils.createElement('input', 'edit-popup_checkbox', null, { type: 'checkbox', name: 'training', id: 'ch' + checkboxIndex }),
+                label = utils.createElement('label', 'edit-popup_label', el.querySelector('.trainings_name').innerText, {htmlFor: 'ch' + checkboxIndex}),
+                newTraining = utils.createElement('li', 'edit-popup_list-item');
             
-            newTraining.appendChild(utils.createElement('p', 'edit-popup_count', excercisesCount + ' упражнений'));
-            editListHolder.appendChild(newTraining)
+            label.appendChild(utils.createElement('p', 'edit-popup_count', excercisesCount + ' упражнений'));
+            newTraining.appendChild(checkbox);
+            newTraining.appendChild(label);
+            
+            editListHolder.appendChild(newTraining);
+
+            checkboxIndex++;
         });
+
         editPopup.classList.add('edit-popup__opened');
     }
 
@@ -129,20 +137,43 @@ class Training {
         editPopup.classList.remove('edit-popup__opened');
     }
 
-    static edit(trainingIndex) {
-        Excercise.add(trainingIndex, trainingsBlock.querySelector('.training_item[data-id="' + copyExcercise.dataset.id + '"] .training_excercise'), trainingsBlock.querySelector('.training_item[data-id="' + copyExcercise.dataset.id + '"] .sets'));
-        
-        Training.hideEditPopup();
+    static copy() {
+        let selectedTrainings = document.querySelectorAll('.edit-popup_checkbox:checked'),
+            editListHolder = document.getElementById('edit-list');    
+
+        selectedTrainings.forEach(function (el) {
+            let newTraining = new Training(el.parentElement.querySelector('label').childNodes[0].textContent);
+            newTraining.render(document.querySelector('.trainings_item:nth-child(' + utils.index(el.parentElement) + ') .trainings_excercises').innerHTML);
+
+            Training.showEditPopup();
+        });
+
+        Training.saveProgram();
     }
 
-    render() {
+    static delete() {
+        let selectedTrainings = document.querySelectorAll('.edit-popup_checkbox:checked');
+
+        selectedTrainings.forEach(function (el) {
+            document.querySelector('.trainings_item:nth-child(' + utils.index(el.parentElement) + ')').remove();
+            el.parentElement.remove();
+        });
+
+        Training.saveProgram();
+    }
+
+    render(html) {
         let newTraining = utils.createElement('li', 'trainings_item'),
-            trainingLink = utils.createElement('a', 'trainings_name', this.name, "#", Training.showExcercises),
+            trainingLink = utils.createElement('a', 'trainings_name', this.name, {href: '#', onclick: Training.showExcercises}),
             trainingContent = utils.createElement('ul', 'trainings_excercises');
 
         //newTraining.classList.add('droppable');
         //newTraining.classList.add('new');
         
+        if (html) {
+            trainingContent.innerHTML = html;
+        }
+
         newTraining.appendChild(trainingLink);
         newTraining.appendChild(trainingContent);
 

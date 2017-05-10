@@ -1,5 +1,5 @@
 const utils = {
-    createElement: function (type, className, content, href, onClick) {
+    createElement: function (type, className, content, attributes) {
         let el = document.createElement(type);
 
         if (className) {
@@ -8,11 +8,9 @@ const utils = {
         if (content) {
             el.innerHTML = content;
         }        
-        if (href) {
-            el.href = href;
-        }
-        if (onClick) {
-            el.onclick = onClick;
+        
+        for (let key in attributes) {
+            el[key] = attributes[key];
         }
 
         return el;

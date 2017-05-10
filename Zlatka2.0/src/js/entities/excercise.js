@@ -50,7 +50,7 @@ class Excercise {
 
         trainingsList.forEach(function (el) {
             let excercisesCount = el.querySelectorAll('.training_item').length,
-                newTraining = utils.createElement('li', 'edit-popup_list-item', el.querySelector('.trainings_name').innerText, null, function () { Excercise.copy(utils.index(el)) })    
+                newTraining = utils.createElement('li', 'edit-popup_list-item', el.querySelector('.trainings_name').innerText, {onclick: function () { Excercise.copy(utils.index(el)) }})    
             
             newTraining.appendChild(utils.createElement('p', 'edit-popup_count', excercisesCount + ' упражнений'));
             copyListHolder.appendChild(newTraining)

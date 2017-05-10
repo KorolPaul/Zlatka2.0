@@ -29,7 +29,7 @@ const kach = {
 
         trainingsPopup.innerHTML = '';
         for (let i = 0; i < trainingsList.length; i++) {
-            let li = utils.createElement('li', 'trainings-popup_item', trainingsList[i].innerText, null, function(){let newExcercise = new Excercise(li, newExcerciseName, newExcerciseInfo)})
+            let li = utils.createElement('li', 'trainings-popup_item', trainingsList[i].innerText, {onclick: function(){let newExcercise = new Excercise(li, newExcerciseName, newExcerciseInfo)}})
             trainingsPopup.appendChild(li)
         }
         trainingsPopup.classList.add('trainings-popup__visible');

@@ -28,9 +28,9 @@ var kach = {
         trainingsPopup.innerHTML = '';
 
         var _loop = function _loop(i) {
-            var li = utils.createElement('li', 'trainings-popup_item', trainingsList[i].innerText, null, function () {
-                var newExcercise = new Excercise(li, newExcerciseName, newExcerciseInfo);
-            });
+            var li = utils.createElement('li', 'trainings-popup_item', trainingsList[i].innerText, { onclick: function onclick() {
+                    var newExcercise = new Excercise(li, newExcerciseName, newExcerciseInfo);
+                } });
             trainingsPopup.appendChild(li);
         };
 
@@ -39,80 +39,6 @@ var kach = {
         }
         trainingsPopup.classList.add('trainings-popup__visible');
     }
-};
-'use strict';
-
-window.onload = function () {
-
-    info = document.getElementById('info');
-    infoClose = document.getElementById('info_close');
-    training = document.getElementById('training');
-    trainingsBlock = document.getElementById('trainings');
-    trainingsPopup = document.getElementById('trainings-popup');
-    droppable = document.getElementsByClassName('droppable');
-    muscules = document.querySelectorAll('path, .muscles_title');
-    musculesSides = document.querySelectorAll('.muscles_side');
-    excercise = document.getElementById('excercise');
-    excercises = document.getElementById('excercises');
-    excerciseSetsHolder = document.getElementById('excercise_sets-holder');
-    avatar = document.getElementById('avatar');
-    menuTrigger = document.getElementById('menu-trigger');
-    sheduleElement = document.getElementById('shedule');
-    menuPopup = document.querySelector('.menu_popup');
-
-    Training.loadProgram();
-
-    infoClose.onclick = function (e) {
-        e.preventDefault();
-        info.classList.remove('opened');
-        Routing.setPage('main', '/');
-    };
-
-    for (var i = 0; i < muscules.length; i++) {
-        utils.addEvent(muscules[i], ['click', 'touchend'], UI.showExcercises);
-    }
-
-    for (var i = 0; i < droppable.length; i++) {
-        trainings.push(droppable[i]);
-    }
-
-    var sets = trainingsBlock.querySelectorAll('.sets');
-    for (var i = 0; i < sets.length; i++) {
-        sets[i].addEventListener('input', kach.validateSets, false);
-    }
-
-    document.onkeydown = UI.clearLocalStorage; //remove after release
-
-    new Body();
-
-    closeExcercise.addEventListener('click', Excercise.close);
-    deleteExcercise.addEventListener('click', Excercise.delete);
-    copyExcercise.addEventListener('click', Excercise.showCopyPopup);
-    document.getElementById('close-copy-popup').addEventListener('click', Excercise.hideCopyPopup);
-
-    menuTrigger.addEventListener('click', UI.toggleMenu);
-
-    addTrainingButtons.forEach(function (el) {
-        el.addEventListener('click', Training.add);
-    });
-
-    document.querySelector('#shedule-toggle').onclick = function (e) {
-        e.preventDefault();
-        Training.showPopup();
-        UI.toggleMenu(e);
-    };
-
-    document.querySelector('#excercises-toggle').onclick = function (e) {
-        e.preventDefault();
-        Training.hidePopup();
-        Search.hidePopup();
-        UI.toggleMenu(e);
-    };
-
-    UI.loadExcercises();
-    UI.loadAvatar();
-
-    gapi.load('client', UI.loadAvatar);
 };
 /*
 window.onload = function () {
@@ -309,6 +235,8 @@ var info = void 0,
 
 var deleteExcercise = document.getElementById('delete-excercise'),
     copyExcercise = document.getElementById('copy-excercise'),
+    deleteTraining = document.getElementById('delete-training'),
+    copyTraining = document.getElementById('copy-training'),
     closeExcercise = document.getElementById('close-excercise'),
     copyPopup = document.getElementById('copy-popup'),
     editPopup = document.getElementById('edit-popup'),
@@ -328,6 +256,11 @@ var UI = {
             excerciseNode = xml.querySelector('#' + excerciseUrl),
             html = excerciseNode.querySelector('.info').innerHTML;
 
+        Routing.setPage('info', '/excercise/' + excerciseNode.id, {
+            title: excerciseNode.querySelector('.excercise-name').innerHTML,
+            descr: excerciseNode.querySelector('.meta-description').innerHTML,
+            keywords: excerciseNode.querySelector('.meta-keywords').innerHTML });
+
         info.classList.add('opened');
 
         info.querySelector('.info_holder').innerHTML = html;
@@ -335,8 +268,12 @@ var UI = {
             kach.selectTraining(info);
         });
 
-        var galleryItems = info.querySelectorAll('.info_gallery-item');
+        var images = info.querySelectorAll('img');
+        images.forEach(function (el) {
+            el.src = el.dataset.src;
+        });
 
+        var galleryItems = info.querySelectorAll('.info_gallery-item');
         galleryItems.forEach(function (el) {
             el.addEventListener('click', function () {
                 galleryItems.forEach(function (el) {
@@ -352,17 +289,12 @@ var UI = {
             tagsNode = info.querySelector('.tags');
 
         tags.forEach(function (el) {
-            var newTag = utils.createElement('a', 'tag', el, '#', UI.showExcercises);
+            var newTag = utils.createElement('a', 'tag', el, { href: '#', onclick: UI.showExcercises });
             tagsNode.appendChild(newTag);
         });
 
         excercises.classList.remove('excercises__visible');
         window.instgrm.Embeds.process();
-
-        Routing.setPage('info', 'excercise/' + excerciseNode.id, {
-            title: info.querySelector('.excercise-name').innerHTML,
-            descr: excerciseNode.querySelector('.meta-description').innerHTML,
-            keywords: excerciseNode.querySelector('.meta-keywords').innerHTML });
     },
 
     loadExcercises: function loadExcercises() {
@@ -388,7 +320,7 @@ var UI = {
         e.preventDefault();
         excercises.innerHTML = '';
         for (var i = 0; i < html.length; i++) {
-            var excercise = utils.createElement('li', 'excercise-name', html[i].querySelector('.excercise-name').innerHTML, null, UI.showInfo);
+            var excercise = utils.createElement('li', 'excercise-name', html[i].querySelector('.excercise-name').innerHTML, { onclick: UI.showInfo });
             excercise.dataset['complexity'] = html[i].getAttribute('data-complexity');
             excercise.dataset['excersice'] = html[i].id;
 
@@ -405,12 +337,9 @@ var UI = {
     },
 
     loadAvatar: function loadAvatar() {
-        if (localStorage.avatarUrl !== undefined) {
-            console.log('avatar is saved');
+        if (utils.isSet(localStorage.avatarUrl)) {
             avatar.src = localStorage.avatarUrl;
-        } else {
-            console.log('avatar not saved');
-
+        } else if (isAuthorized) {
             gapi.client.init({
                 'discoveryDocs': ['https://people.googleapis.com/$discovery/rest'],
                 'clientId': '676405800702-43q3jac4kqbii78partduenvd1utnmmh.apps.googleusercontent.com',
@@ -435,12 +364,88 @@ var UI = {
             localStorage.clear();
             location.reload(false);
         }
+    },
+
+    init: function init(e) {
+        info = document.getElementById('info');
+        infoClose = document.getElementById('info_close');
+        training = document.getElementById('training');
+        trainingsBlock = document.getElementById('trainings');
+        trainingsPopup = document.getElementById('trainings-popup');
+        droppable = document.getElementsByClassName('droppable');
+        muscules = document.querySelectorAll('path, .muscles_title');
+        musculesSides = document.querySelectorAll('.muscles_side');
+        excercise = document.getElementById('excercise');
+        excercises = document.getElementById('excercises');
+        excerciseSetsHolder = document.getElementById('excercise_sets-holder');
+        avatar = document.getElementById('avatar');
+        menuTrigger = document.getElementById('menu-trigger');
+        sheduleElement = document.getElementById('shedule');
+        menuPopup = document.querySelector('.menu_popup');
+
+        Training.loadProgram();
+
+        infoClose.onclick = function (e) {
+            e.preventDefault();
+            info.classList.remove('opened');
+            Routing.setPage('main', '/');
+        };
+
+        for (var i = 0; i < muscules.length; i++) {
+            utils.addEvent(muscules[i], ['click', 'touchend'], UI.showExcercises);
+        }
+
+        for (var i = 0; i < droppable.length; i++) {
+            trainings.push(droppable[i]);
+        }
+
+        var sets = trainingsBlock.querySelectorAll('.sets');
+        for (var i = 0; i < sets.length; i++) {
+            sets[i].addEventListener('input', kach.validateSets, false);
+        }
+
+        document.onkeydown = UI.clearLocalStorage; //remove after release
+
+        new Body();
+
+        closeExcercise.addEventListener('click', Excercise.close);
+        deleteExcercise.addEventListener('click', Excercise.delete);
+        copyExcercise.addEventListener('click', Excercise.showCopyPopup);
+        document.getElementById('close-copy-popup').addEventListener('click', Excercise.hideCopyPopup);
+        deleteTraining.addEventListener('click', Training.delete);
+        copyTraining.addEventListener('click', Training.copy);
+
+        menuTrigger.addEventListener('click', UI.toggleMenu);
+
+        addTrainingButtons.forEach(function (el) {
+            el.addEventListener('click', Training.add);
+        });
+
+        document.querySelector('#shedule-toggle').onclick = function (e) {
+            e.preventDefault();
+            Training.showPopup();
+            UI.toggleMenu(e);
+        };
+
+        document.querySelector('#excercises-toggle').onclick = function (e) {
+            e.preventDefault();
+            Training.hidePopup();
+            Search.hidePopup();
+            UI.toggleMenu(e);
+        };
+
+        UI.loadExcercises();
+        UI.loadAvatar();
+
+        window.onload = function () {
+            gapi.load('client', UI.loadAvatar);
+        };
     }
 };
 'use strict';
 
 var utils = {
-    createElement: function createElement(type, className, content, href, onClick) {
+    createElement: function createElement(type, className, content, attributes) {
         var el = document.createElement(type);
 
         if (className) {
@@ -449,11 +454,9 @@ var utils = {
         if (content) {
             el.innerHTML = content;
         }
-        if (href) {
-            el.href = href;
-        }
-        if (onClick) {
-            el.onclick = onClick;
+
+        for (var key in attributes) {
+            el[key] = attributes[key];
         }
 
         return el;
@@ -639,9 +642,9 @@ var Excercise = function () {
 
             trainingsList.forEach(function (el) {
                 var excercisesCount = el.querySelectorAll('.training_item').length,
-                    newTraining = utils.createElement('li', 'edit-popup_list-item', el.querySelector('.trainings_name').innerText, null, function () {
-                    Excercise.copy(utils.index(el));
-                });
+                    newTraining = utils.createElement('li', 'edit-popup_list-item', el.querySelector('.trainings_name').innerText, { onclick: function onclick() {
+                        Excercise.copy(utils.index(el));
+                    } });
 
                 newTraining.appendChild(utils.createElement('p', 'edit-popup_count', excercisesCount + ' упражнений'));
                 copyListHolder.appendChild(newTraining);
@@ -700,11 +703,16 @@ var Routing = function () {
     _createClass(Routing, null, [{
         key: 'setPage',
         value: function setPage(title, url, meta) {
-            document.title = meta.title;
-            document.querySelector('meta[name="description"]').content = meta.descr;
-            document.querySelector('meta[name="keywords"]').content = meta.keywords;
-
-            history.replaceState({}, title, url);
+            if (utils.isSet(meta)) {
+                document.title = meta.title;
+                document.querySelector('meta[name="description"]').content = meta.descr;
+                document.querySelector('meta[name="keywords"]').content = meta.keywords;
+            } else if (url === '/') {
+                document.title = 'Muscules.by - ваш персональный тренер';
+                document.querySelector('meta[name="description"]').content = 'Ваш персональный тренер';
+                document.querySelector('meta[name="keywords"]').content = 'тренировки, бодибилдинг, упражнения, мышцы';
+            }
+            history.replaceState({}, title, window.location.protocol + '//' + window.location.host + url);
         }
     }, {
         key: 'loadPage',
@@ -773,7 +781,7 @@ var Search = function () {
         value: function showTags(tagElements) {
             var tagsHolder = document.querySelector('.search_tags');
             tagElements.forEach(function (el) {
-                var newTag = utils.createElement('a', 'tag', el, '#', Search.showExcersices);
+                var newTag = utils.createElement('a', 'tag', el, { href: '#', onclick: Search.showExcersices });
                 tagsHolder.appendChild(newTag);
             });
         }
@@ -794,7 +802,7 @@ var Search = function () {
             excercisesList.forEach(function (el) {
                 var excerciseName = el.querySelector('.excercise-name').innerHTML;
                 if (!textQuery || excerciseName.indexOf(textQuery) != -1) {
-                    var excercise = utils.createElement('li', 'excercise-name', excerciseName, null, UI.showInfo);
+                    var excercise = utils.createElement('li', 'excercise-name', excerciseName, { onclick: UI.showInfo });
                     excercise.dataset['complexity'] = el.getAttribute('data-complexity');
                     excercise.dataset['excersice'] = el.id;
 
@@ -838,13 +846,17 @@ var Training = function () {
 
     _createClass(Training, [{
         key: 'render',
-        value: function render() {
+        value: function render(html) {
             var newTraining = utils.createElement('li', 'trainings_item'),
-                trainingLink = utils.createElement('a', 'trainings_name', this.name, "#", Training.showExcercises),
+                trainingLink = utils.createElement('a', 'trainings_name', this.name, { href: '#', onclick: Training.showExcercises }),
                 trainingContent = utils.createElement('ul', 'trainings_excercises');
 
             //newTraining.classList.add('droppable');
             //newTraining.classList.add('new');
+
+            if (html) {
+                trainingContent.innerHTML = html;
+            }
 
             newTraining.appendChild(trainingLink);
             newTraining.appendChild(trainingContent);
@@ -918,7 +930,6 @@ var Training = function () {
         value: function loadProgram() {
             if (localStorage.trainingProgram !== undefined) {
                 trainingsBlock.innerHTML = localStorage.trainingProgram;
-
                 addHandlers();
             } else {
                 fetch('/Training/LoadTraining', {
@@ -966,19 +977,26 @@ var Training = function () {
         key: 'showEditPopup',
         value: function showEditPopup() {
             var trainingsList = document.querySelectorAll('.trainings_item:not(#trainings-settings)'),
-                editListHolder = document.getElementById('edit-list');
+                editListHolder = document.getElementById('edit-list'),
+                checkboxIndex = 1;
 
             editListHolder.innerHTML = '';
 
             trainingsList.forEach(function (el) {
                 var excercisesCount = el.querySelectorAll('.training_item').length,
-                    newTraining = utils.createElement('li', 'edit-popup_list-item', el.querySelector('.trainings_name').innerText, null, function () {
-                    Excercise.copy(utils.index(el));
-                });
+                    checkbox = utils.createElement('input', 'edit-popup_checkbox', null, { type: 'checkbox', name: 'training', id: 'ch' + checkboxIndex }),
+                    label = utils.createElement('label', 'edit-popup_label', el.querySelector('.trainings_name').innerText, { htmlFor: 'ch' + checkboxIndex }),
+                    newTraining = utils.createElement('li', 'edit-popup_list-item');
 
-                newTraining.appendChild(utils.createElement('p', 'edit-popup_count', excercisesCount + ' упражнений'));
+                label.appendChild(utils.createElement('p', 'edit-popup_count', excercisesCount + ' упражнений'));
+                newTraining.appendChild(checkbox);
+                newTraining.appendChild(label);
+
                 editListHolder.appendChild(newTraining);
+
+                checkboxIndex++;
             });
+
             editPopup.classList.add('edit-popup__opened');
         }
     }, {
@@ -991,11 +1009,31 @@ var Training = function () {
             editPopup.classList.remove('edit-popup__opened');
         }
     }, {
-        key: 'edit',
-        value: function edit(trainingIndex) {
-            Excercise.add(trainingIndex, trainingsBlock.querySelector('.training_item[data-id="' + copyExcercise.dataset.id + '"] .training_excercise'), trainingsBlock.querySelector('.training_item[data-id="' + copyExcercise.dataset.id + '"] .sets'));
+        key: 'copy',
+        value: function copy() {
+            var selectedTrainings = document.querySelectorAll('.edit-popup_checkbox:checked'),
+                editListHolder = document.getElementById('edit-list');
 
-            Training.hideEditPopup();
+            selectedTrainings.forEach(function (el) {
+                var newTraining = new Training(el.parentElement.querySelector('label').childNodes[0].textContent);
+                newTraining.render(document.querySelector('.trainings_item:nth-child(' + utils.index(el.parentElement) + ') .trainings_excercises').innerHTML);
+
+                Training.showEditPopup();
+            });
+
+            Training.saveProgram();
+        }
+    }, {
+        key: 'delete',
+        value: function _delete() {
+            var selectedTrainings = document.querySelectorAll('.edit-popup_checkbox:checked');
+
+            selectedTrainings.forEach(function (el) {
+                document.querySelector('.trainings_item:nth-child(' + utils.index(el.parentElement) + ')').remove();
+                el.parentElement.remove();
+            });
+
+            Training.saveProgram();
         }
     }]);
 

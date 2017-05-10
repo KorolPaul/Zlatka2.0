@@ -481,7 +481,6 @@
     <Content Include="src\scss\form-elements\_textarea.scss" />
     <Content Include="src\scss\header\_header.scss" />
     <Content Include="src\scss\header\_logo.scss" />
-    <Content Include="src\scss\header\_menu-right.scss" />
     <Content Include="src\scss\header\_menu.scss" />
     <Content Include="src\scss\header\_navigation.scss" />
     <Content Include="src\scss\kach\_add-button.scss" />

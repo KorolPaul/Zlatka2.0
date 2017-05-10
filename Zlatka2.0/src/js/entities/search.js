@@ -41,7 +41,7 @@ class Search {
     static showTags(tagElements) {
         let tagsHolder = document.querySelector('.search_tags');
         tagElements.forEach(function (el) {
-            let newTag = utils.createElement('a', 'tag', el, '#', Search.showExcersices)
+            let newTag = utils.createElement('a', 'tag', el, {href: '#', onclick: Search.showExcersices })
             tagsHolder.appendChild(newTag);
         });
     }
@@ -61,7 +61,7 @@ class Search {
         excercisesList.forEach(function (el) {
             let excerciseName = el.querySelector('.excercise-name').innerHTML;
             if (! textQuery || excerciseName.indexOf(textQuery) != -1) {
-                let excercise = utils.createElement('li', 'excercise-name', excerciseName, null, UI.showInfo);
+                let excercise = utils.createElement('li', 'excercise-name', excerciseName, {onclick: UI.showInfo});
                 excercise.dataset['complexity'] = el.getAttribute('data-complexity');
                 excercise.dataset['excersice'] = el.id;
 
