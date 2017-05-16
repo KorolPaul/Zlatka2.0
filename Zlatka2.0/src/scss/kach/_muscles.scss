@@ -25,6 +25,25 @@
             }
         }
     }
+    &_slider {
+        position: absolute;
+        bottom: 15%;
+        left: 0;
+        width: 100%;
+
+        path {
+            cursor: pointer;
+            fill: none;
+            stroke: $blue;
+            stroke-width: 4px;
+            stroke-miterlimit: 10;
+            transition: .2s ease stroke;
+
+            &.active {
+                stroke: #000;
+            }
+        }
+    }
     &_side {
         transition: .3s ease opacity;
         opacity: 0;
@@ -42,11 +61,11 @@
         path {
             cursor: pointer;
             transition: .2s all ease-out;
-            opacity: .6;
+            opacity: 1;
             display: none;
 
             &:hover {
-                opacity: 1;
+                opacity: .6;
             }
         }
     }

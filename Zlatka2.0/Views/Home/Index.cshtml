@@ -5,8 +5,8 @@
 }
 
 <div class="gender">
-    <a href="#" class="gender_button gender_button__male">мужской</a>
-    <a href="#" class="gender_button gender_button__female active">женский</a>
+    <a href="#" class="gender_button">мужской</a>
+    <a href="#" class="gender_button gender_button__active">женский</a>
 </div>
 
 <div class="muscles">
@@ -34,19 +34,22 @@
     </div>
     <svg class="muscles_map muscles_map__girl" id="map" pointer-events="all" version="1.1" viewBox="0 0 600 1300">
         <defs>
-            <pattern id="grid" patternUnits="userSpaceOnUse" width="20" height="20" patternTransform="rotate(55 0 0)">
-                <rect x="0" y="0" width="20" height="20" fill="rgba(255, 0, 0, .5)" stroke="red" />
+            <pattern id="dots" patternUnits="userSpaceOnUse" width="28" height="28">
+                <circle cx="2" cy="2" r="2" fill="rgba(255, 255, 255, .9)" />
+                <circle cx="16" cy="2" r="2" fill="rgba(255, 255, 255, .9)" />
+                <circle cx="8" cy="16" r="2" fill="rgba(255, 255, 255, .9)" />
+                <circle cx="22" cy="16" r="2" fill="rgba(255, 255, 255, .9)" />
             </pattern>
         </defs>
         <style>
             path {
-                fill: none;
+                fill: url(#dots);
             }
         </style>
         <g class="muscles_side active" >
             <path class="quadriceps" title="Квадрицепсы" d="M197.3,635c0,0,13.3,8.7,16.7,19.3c3.3,10.7,42.7,94,45.3,105.3 C262,771,291.3,847,296,851s20.7-4,30.7,0s20.7-11.3,25.3-12.7c4.7-1.3-14-24-20-100s-34.7-169.3-44.7-184 C277.3,539.7,197.3,635,197.3,635z" />
             <path class="chest" title="Грудные мышцы" d="M210.7,329c0,0-3.3,36.7,3.3,48s16,21.3,40,23.3 s32.7,0.7,41.3-21.3c8.7-22,5.3-66,8-76s-31.3-38.7-36-46c-4.7-7.3-50.7,6.7-50.7,6.7L210.7,329z" />
-        </g>
+        </g>    
 
         <g class="muscles_side">
             <path class="shoulder" title="Дельтовидные мышцы" d="M335.7,297.2c0,0-8.7-49.3-28-57.3s-28-9.3-44,0s-6,1.3-7.3,7.3 s76.7,50,76.7,50" />
@@ -87,6 +90,14 @@
             <path class="press" title="Брюшной пресс" d="M265,415c0,0,20-2,26,13s-2,38-6,59s3.2,24-5.9,46 c-9.1,22-17.1,37-24.1,45s-26,24-9-33S265,415,265,415z" />
             <path class="press" title="Косые мышцы прессса" d="M187,534c0,0,15-12.8,25-33.4s7-16.6,6-37.6s-34-67-43-64 s-8-12-9,3s11,46,8,57s-18,35.2-14,41.6c4,6.4,24,33.4,24,33.4" />
         </g>
+    </svg>
+    <svg class="muscles_slider" version="1.1" id="slider" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+         width="640px" height="auto" viewBox="0 0 640 120" xml:space="preserve">
+        <path data-layer="0" class="active" d="M78.5,31.3c16,14.7,36.9,22.4,57.2,29.1"/>
+        <path data-layer="1" d="M176.5,71.6c22,4.9,44.2,8.2,66.6,10.4"/>
+        <path data-layer="4" d="M285.1,84.8c23.4,0.1,46.9,0.6,70.3-0.1"/>
+        <path data-layer="6" d="M396.9,81.6c22.4-2.6,44.7-5.6,66.8-10.1"/>
+        <path data-layer="7" d="M503.4,61.5c20.4-6.5,40.4-15.7,56.2-30.3"/>
     </svg>
 </div>
 

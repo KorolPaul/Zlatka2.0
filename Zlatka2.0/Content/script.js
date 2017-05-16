@@ -507,7 +507,9 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var FRAMES_COUNT = 11; //document.querySelector('.muscles_side').lenght
+var FRAMES_COUNT = 11,
+    //document.querySelector('.muscles_side').lenght
+sliderElements = document.querySelectorAll('#slider path');
 
 var motionFrame = 0,
     motionDelay = 85,
@@ -547,10 +549,13 @@ var Body = function () {
             musclesMap.style.backgroundPositionX = motionFrame * 9.1 + "%";
 
             utils.removeClassFromElements(musculeTitles, 'muscles_title__visible');
-            utils.addClassToElements(document.querySelectorAll('[data-layer="' + motionFrame + '"]'), 'muscles_title__visible');
+            utils.addClassToElements(document.querySelectorAll('.muscles_title[data-layer="' + motionFrame + '"]'), 'muscles_title__visible');
 
             utils.removeClassFromElements(musculesSides, 'active');
             musculesSides[motionFrame].classList.add('active');
+
+            utils.removeClassFromElements(sliderElements, 'active');
+            utils.addClassToElements(document.querySelectorAll('#slider path[data-layer="' + motionFrame + '"]'), 'active');
         }
     }, {
         key: 'swipe',
