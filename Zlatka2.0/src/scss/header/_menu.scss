@@ -31,10 +31,10 @@
             background: transparent;
 
             &:before {
-                transform: rotateZ(45deg) translate(5px, 5px);
+                transform: rotateZ(45deg) translate(6px, 5px);
             }
             &:after {
-                transform: rotateZ(-45deg) translate(4px, -2px);
+                transform: rotateZ(-45deg) translate(4px, -3px);
             }
         }
     }
@@ -45,9 +45,12 @@
         left: 0;
         right: 0;
         bottom: 0;
+        padding: 0 25px 50px;
+        display: flex;
+        align-items: center;
         opacity: 0;
         z-index: -1;
-        transition: .2s ease opecity;
+        transition: .2s ease opacity;
 
         &__opened {
             z-index: 3;
@@ -56,6 +59,21 @@
     }
     &_link {
         @extend %heading1;
+        font-size: 36px;
+        margin-bottom: 24px;
         display: block;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    &_login {
+        position: absolute;
+        left: 25px;
+        bottom: 25px;
+    }
+    &_login-link {
+        color: $color;
+        @extend %heading5;
+        margin: 0 25px 0 0;
+        text-decoration: none;
     }
 }

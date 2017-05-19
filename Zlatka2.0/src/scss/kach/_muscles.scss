@@ -27,7 +27,7 @@
     }
     &_slider {
         position: absolute;
-        bottom: 15%;
+        bottom: 19%;
         left: 0;
         width: 100%;
 
@@ -70,15 +70,15 @@
         }
     }
     &_title {
-        font-size: 15vmin;
-        line-height: 1;
-        font-family: $headings_font-family;
+        @extend %heading1;
+        //font-size: 15vmin;
+        //font-family: $headings_font-family;
         position: absolute;
         text-decoration: none;
         text-transform: uppercase;
         z-index: 2;
         opacity: 0;
-        transform: translate(-30%, 0);        
+        transform: translate(30%, 0);        
         user-select: none;
         visibility: hidden;
         transition: .2s ease filter,
@@ -92,32 +92,32 @@
 
         &__press {
             top: 52%;
-            left: 50%;
+            right: 25px;
         }
         &__sidepress {
             top: 30%;
-            right: 55%;
+            left:  25px;
             z-index: 0;
-            transform: translate(30%, 0);
+            transform: translate(-30%, 0);
         }
         &__shoulder {
             top: 35%;
-            left: 55%;
+            right: 25px;
         }
         &__trapezium {
             top: 20%;
-            right: 39%;
-            transform: translate(30%, 0);
+            left: 25px;
+            transform: translate(-30%, 0);
             z-index: 0;
         }
         &__quadriceps {
-            top: 69%;
-            left: 19%;
+            top: 63%;
+            right: 25px;
         }
         &__chest {
             top: 21%;
-            right: 42%;
-            transform: translate(30%, 0);
+            left: 25px;
+            transform: translate(-30%, 0);
             z-index: 0;
         }
         &__hamstrings {
@@ -126,38 +126,38 @@
         }
         &__triceps {
             top: 19%;
-            right: 46%;
-            transform: translate(30%, 0);
+            left:  25px;
+            transform: translate(-30%, 0);
             z-index: 0;
         }
         &__arm {
             top: 50%;
-            left: 20%;
-        }
+            right: 25px;
+        }   
         &__biceps {
             top: 25%;
-            right: 52%;
-            transform: translate(30%, 0);
+            left:  25px;
+            transform: translate(-30%, 0);
             z-index: 0;
         }
         &__butt {
             top: 30%;
-            left: 35%;
+            right: 25px;
         }
         &__shin {
             top: 61%;
-            right: 55%;
-            transform: translate(30%, 0);
+            left: 25px;
+            transform: translate(-30%, 0);
             z-index: 0;
         }
         &__small-back {
             top: 49%;
-            left: 34%;
+            right:  25px;
         }
         &__back {
             top: 25%;
-            right: 12%;
-            transform: translate(30%, 0);
+            left:  25px;
+            transform: translate(-30%, 0);
             z-index: 0;
         }
          

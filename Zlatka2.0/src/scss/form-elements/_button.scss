@@ -1,13 +1,36 @@
-.button,
-button, 
-input[type="button"],
-input[type="submit"]{
-    background: $light_color;
+.button {
+    @extend %heading5;
+    background-color: $input_background;
+    background-image: repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+    background-size: 3px 3px;
     border-radius: 10px;
-    color: #fff;
+    border: none;
     display: block;
-    padding: 5px 10px;
-    font-size: 20px;
-    margin: auto;
+    position: relative;
+    padding: 10px 20px 10px 55px;
+    width: 100%;
+    text-align: left;
     text-decoration: none;
+
+    &:before {
+        content: '';
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        width: 28px;
+        transform: translate(0, -50%);
+    }
+    &__mail:before {
+        background-image: url(../Content/img/mail.svg);
+        height: 14px;        
+    }
+    &__Facebook:before {
+        background-image: url(../Content/img/fb.svg);
+        height: 19px;        
+    }
+    &__Google:before {
+        background-image: url(../Content/img/google.svg);
+        height: 16px;        
+    }
 }

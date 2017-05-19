@@ -5,8 +5,8 @@
 }
 
 <div class="gender">
-    <a href="#" class="gender_button">мужской</a>
-    <a href="#" class="gender_button gender_button__active">женский</a>
+    <a href="#" class="gender_button">мужчина</a>
+    <a href="#" class="gender_button gender_button__active">женщина</a>
 </div>
 
 <div class="muscles">
@@ -106,63 +106,3 @@
     <a href="#" class="info_close" id="info_close">&larr;</a>
     <div class="info_holder"></div>
 </div>
-
-<ul class="trainings-popup" id="trainings-popup"></ul>
-
-<div class="shedule" id="shedule">
-    <h2 class="shedule_header">ТРЕНИРОВКИ</h2>
-    <ul class="trainings" id="trainings">
-        <li class="trainings_item" id="trainings-settings">
-            <a href="#" class="trainings_name" data-handler="Training.showExcercises">Настройки</a>
-            <ul class="trainings_excercises">
-                <li>
-                    <button class="button addTraining" data-handler="Training.add">создать тренировку</button>
-                </li>
-                <li>
-                    <button class="button" data-handler="Training.showEditPopup">редактировать</button>
-                </li>
-            </ul>
-        </li>
-    </ul>
-    <ul class="training" id="training"></ul>
-
-    <a class="add-training addTraining"></a>
-    <a class="share-training" id="shareTraining"></a>
-
-    <div class="excercise" id="excercise">
-        <a href="#" class="excercise_close" id="close-excercise">✕</a>
-        <div id="excercise_sets-holder"></div>
-        <div class="excercise_buttons">
-            <button class="excercise_delete" id="delete-excercise"></button>
-            <button class="excercise_copy" id="copy-excercise"></button>
-        </div>
-    </div>
-
-    <div class="edit-popup" id="copy-popup">
-        <a href="#" class="edit-popup_back" id="close-copy-popup"></a>
-        <p class="edit-popup_title">Дублировать в тернировку</p>
-        <ul class="edit-popup_list" id="copy-list"></ul>
-    </div>
-    <div class="edit-popup" id="edit-popup">
-        <a href="#" class="copy-popup_back" id="close-edit-popup"></a>
-        <p class="edit-popup_title">Список тренировок</p>
-        <ul class="edit-popup_list" id="edit-list"></ul>
-        <div class="edit-popup_buttons">
-            <button class="edit-popup_delete" id="delete-training"></button>
-            <button class="edit-popup_copy" id="copy-training"></button>
-        </div>
-    </div>
-</div>
-
-<div class="search" id="search">
-    <p class="search_title">УПРАЖНЕКНИЯ</p>
-    <input class="search_input" type="text">
-    <div class="search_tags">
-
-    </div>
-    <div class="search_excercises">
-        
-    </div>
-</div>
-
-<script src="~/Content/script.js"></script>
