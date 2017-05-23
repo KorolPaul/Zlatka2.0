@@ -14,9 +14,9 @@
         <a href="#" class="menu_trigger" id="menu-trigger"></a>
         <div class="menu_popup">
             <div class="menu_content">
-                <a href="#" class="menu_link" id="shedule-toggle">тренировки</a>
-                <a href="#" class="menu_link" id="excercises-toggle">упражнения</a>
-                <a href="#" class="menu_link" id="about-toggle">о проекте</a>
+                <a href="/" class="menu_link" id="shedule-toggle">тренировки</a>
+                <a href="/" class="menu_link" id="excercises-toggle">упражнения</a>
+                <a href="/" class="menu_link" id="about-toggle">о проекте</a>
             </div>
             <div class="menu_login">
                 @Html.Partial("_LoginPartial")
@@ -41,63 +41,6 @@
     </footer>
     <div class="fade"></div>
 
-    <div class="search" id="search">
-        <p class="search_title">УПРАЖНЕКНИЯ</p>
-        <input class="search_input" type="text">
-        <div class="search_tags">
-
-        </div>
-        <div class="search_excercises">
-            
-        </div>
-    </div>
-
-    <ul class="trainings-popup" id="trainings-popup"></ul>
-    <div class="shedule" id="shedule">
-        <h2 class="shedule_header">ТРЕНИРОВКИ</h2>
-        <ul class="trainings" id="trainings">
-            <li class="trainings_item" id="trainings-settings">
-                <a href="#" class="trainings_name" data-handler="Training.showExcercises">Настройки</a>
-                <ul class="trainings_excercises">
-                    <li>
-                        <button class="button addTraining" data-handler="Training.add">создать тренировку</button>
-                    </li>
-                    <li>
-                        <button class="button" data-handler="Training.showEditPopup">редактировать</button>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-        <ul class="training" id="training"></ul>
-
-        <a class="add-training addTraining"></a>
-        <a class="share-training" id="shareTraining"></a>
-
-        <div class="excercise" id="excercise">
-            <a href="#" class="excercise_close" id="close-excercise">✕</a>
-            <div id="excercise_sets-holder"></div>
-            <div class="excercise_buttons">
-                <button class="excercise_delete" id="delete-excercise"></button>
-                <button class="excercise_copy" id="copy-excercise"></button>
-            </div>
-        </div>
-
-        <div class="edit-popup" id="copy-popup">
-            <a href="#" class="edit-popup_back" id="close-copy-popup"></a>
-            <p class="edit-popup_title">Дублировать в тернировку</p>
-            <ul class="edit-popup_list" id="copy-list"></ul>
-        </div>
-        <div class="edit-popup" id="edit-popup">
-            <a href="#" class="copy-popup_back" id="close-edit-popup"></a>
-            <p class="edit-popup_title">Список тренировок</p>
-            <ul class="edit-popup_list" id="edit-list"></ul>
-            <div class="edit-popup_buttons">
-                <button class="edit-popup_delete" id="delete-training"></button>
-                <button class="edit-popup_copy" id="copy-training"></button>
-            </div>
-        </div>
-    </div>
-
 
     <script>
         let isAuthorized = @User.Identity.IsAuthenticated.ToString().ToLower();
@@ -105,10 +48,6 @@
     <script async="" defer="defer" src="//platform.instagram.com/en_US/embeds.js"></script>
     @Scripts.Render("~/bundles/jquery")
     @RenderSection("scripts", required: false)
-    <script src="~/Content/script.js"></script>
-    <script>
-        UI.init();
-    </script>
 
 </body>
 </html>

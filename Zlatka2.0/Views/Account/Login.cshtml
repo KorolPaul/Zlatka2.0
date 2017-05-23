@@ -1,40 +1,48 @@
 ﻿@using Zlatka2._0.Models
 @model LoginViewModel
 @{
-    ViewBag.Title = "ВОЙТИ";
+    ViewBag.Title = "войти";
 }
 
 <div class="login">
     <h1>@ViewBag.Title</h1>
-    @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
+    <div class="login_holder">
+        @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
         
-    @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-    {
-        @Html.AntiForgeryToken()
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder="EMAIL" })
-            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+        @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <label class="button button__mail" for="login-popup">войти через почту</label>
+            <input class="login_popup-checkbox" type="checkbox" id="login-popup">
+            <div class="login_popup">
+                <div class="form-group_hidden">
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder="EMAIL" })
+ 
+                    @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder="ПАРОЛЬ" })
+                    @*@Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })*@
 
-            <button class="button button__mail">Войти через почту</button>
-            @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder="ПАРОЛЬ" })
-            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
-        </div>
-        @Html.CheckBoxFor(m => m.RememberMe, new { @checked = "checked" })
-        <div class="form-group">
-            <button class="button button__mail">Log in</button>
-        </div>
-        <p>
-           
-        </p>
-        @* Enable this once you have account confirmation enabled for password reset functionality
-            <p>
-                @Html.ActionLink("Register as a new user", "Register")
-                @Html.ActionLink("Forgot your password?", "ForgotPassword")
-            </p>*@
-    }
+                    <button class="button button__mail" data-valmsg-for="Email, Password" data-valmsg-replace="true" data-text="войти через почту">войти через почту</button>                
+                </div>
+            </div>
+            @Html.CheckBoxFor(m => m.RememberMe, new { @checked = "checked" })
+            @* Enable this once you have account confirmation enabled for password reset functionality
+                <p>
+                    @Html.ActionLink("Register as a new user", "Register")
+                    @Html.ActionLink("Forgot your password?", "ForgotPassword")
+                </p>*@
+        }
+    </div>
 </div>
+<script>
+    document.getElementById('login-popup').checked = false;
+    document.getElementById('menu-trigger').onclick = function(e) {
+        e.preventDefault();
 
+        this.classList.toggle('menu_trigger__opened');
+        document.querySelector('.menu_popup').classList.toggle('menu_popup__opened');
+    }
+</script>
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }

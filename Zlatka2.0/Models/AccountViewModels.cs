@@ -48,12 +48,12 @@ namespace Zlatka2._0.Models
 
     public class LoginViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "введите email")]
         [Display(Name = "Email")]
-        [EmailAddress]
+        [EmailAddress(ErrorMessage = "введите корректный email")]
         public string Email { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "введите пароль")]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
         public string Password { get; set; }
@@ -64,20 +64,20 @@ namespace Zlatka2._0.Models
 
     public class RegisterViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "введите email")]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
 
         [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [StringLength(100, ErrorMessage = "пароль {0} должен иметь не менее {2} символов", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
         [Display(Name = "Confirm password")]
-        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        [Compare("Password", ErrorMessage = "пароли не совпадают")]
         public string ConfirmPassword { get; set; }
     }
 
@@ -89,14 +89,14 @@ namespace Zlatka2._0.Models
         public string Email { get; set; }
 
         [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [StringLength(100, ErrorMessage = "пароль {0} должен иметь не менее {2} символов", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
         [Display(Name = "Confirm password")]
-        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        [Compare("Password", ErrorMessage = "пароли не совпадают")]
         public string ConfirmPassword { get; set; }
 
         public string Code { get; set; }

@@ -461,7 +461,7 @@ $.extend($.validator, {
 			return this.errorList.length;
 		},
 
-		focusInvalid: function() {
+		focusInvalid: function () {
 			if ( this.settings.focusInvalid ) {
 				try {
 					$(this.findLastActive() || this.errorList.length && this.errorList[0].element || [])

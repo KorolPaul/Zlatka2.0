@@ -1,3 +1,25 @@
 .login {
+    box-sizing: border-box;
     padding: 50px 25px 0;
+    position: relative;
+
+    &_holder {
+        margin: 90px 0 0;
+        position: relative;
+    }
+    &_popup {
+        background: #fff;
+        position: absolute;
+        top: 4px;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+        opacity: 0;
+        transition: .2s ease opacity;
+
+        .login_popup-checkbox:checked + & {
+            z-index: 1;
+            opacity: 1;
+        }
+    }
 }

@@ -5,7 +5,7 @@
 }
 
 .info {
-    background: #fff url(img/brush-top.png) no-repeat center 0;
+    background: #fff;
     position: absolute;
     top: 0;
     left: 0;
@@ -16,7 +16,7 @@
     transition: .3s opacity ease;
 
     &.opened {
-        z-index: 3;
+        z-index: 6;
         opacity: 1;
     }
     &__focus {
@@ -102,11 +102,18 @@
     &_gallery {
         @extend %text-column;
         position: relative;
-        height: 420px;
+        overflow: auto;
+        display: grid;
+        grid-template-columns: 96px 96px 96px 96px 96px;
+        grid-template-rows: 96px 96px;
+        grid-column-gap: 16px;
+        grid-row-gap: 16px;
     }
     &_gallery-item {
         overflow: hidden;
-        position: absolute;
+        border-radius: 10px;
+        display: inline-block;
+        position: relative;
         transition: .2s ease all;
 
         &:before {
@@ -120,41 +127,10 @@
         }
 
         &__main {
-            min-width: 200px;
-            top: 40px;
-            left: 50%;
-            transform: translate(-50%, 0);
-            z-index: 5;
-        }
-        &__left {
-            min-width: 215px;
-            top: 0;
-            left: -50%;
-            z-index: 4;
-        }
-        &__right {
-            min-width: 170px;
-            top: 20px;
-            left: 75%;
-            z-index: 3;
-        }
-        &__left-bottom {
-            min-width: 155px;
-            top: 200px;
-            left: -25%;
-            z-index: 2;
-        }
-        &__right-bottom {
-            min-width: 180px;
-            top: 200px;
-            left: 55%;
-            z-index: 1;
-        }
-        &__right-far {
-            min-width: 170px;
-            top: 165px;
-            left: 105%;
-            z-index: 5;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 3;
         }
         &__active {
             top: 50%;
