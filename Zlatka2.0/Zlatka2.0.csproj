@@ -237,9 +237,11 @@
     <Content Include="Content\img\excercises\biceps\сurls-block.jpg" />
     <Content Include="Content\img\excercises\butt\rear-leg-raises.jpg" />
     <Content Include="Content\img\excercises\chest\bench-dumbbels.jpg" />
+    <Content Include="Content\img\excercises\chest\bench-press.jpeg" />
     <Content Include="Content\img\excercises\chest\breeding-dumbbels.jpg" />
     <Content Include="Content\img\excercises\chest\dips.jpg" />
     <Content Include="Content\img\excercises\chest\incle-bench-dumbbels.jpg" />
+    <Content Include="Content\img\excercises\chest\incle-bench-press.jpeg" />
     <Content Include="Content\img\excercises\chest\mix-hands-block.jpg" />
     <Content Include="Content\img\excercises\chest\pullover.jpg" />
     <Content Include="Content\img\excercises\hamstrings\deadlift-streight-legs.jpg" />
@@ -259,6 +261,7 @@
     <Content Include="Content\img\excercises\quadriceps\half-squats.jpg" />
     <Content Include="Content\img\excercises\quadriceps\legs-extensions.jpg" />
     <Content Include="Content\img\excercises\quadriceps\legs-press.jpg" />
+    <Content Include="Content\img\excercises\quadriceps\lunges.jpeg" />
     <Content Include="Content\img\excercises\quadriceps\squats-chest.jpg" />
     <Content Include="Content\img\excercises\quadriceps\squats.jpg" />
     <Content Include="Content\img\excercises\shin\donkey.jpg" />
@@ -282,6 +285,7 @@
     <Content Include="Content\img\excercises\triceps\extension-dumbbell-head.jpg" />
     <Content Include="Content\img\excercises\triceps\french-presses.jpg" />
     <Content Include="Content\img\excercises\triceps\presses-top-shelf-reverse.jpg" />
+    <Content Include="Content\img\excercises\triceps\presses-top-shelf.jpeg" />
     <Content Include="Content\img\excercises\triceps\push-ups-parallel-benches.jpg" />
     <Content Include="Content\img\excercises\triceps\retraction-hand-dumbbells.jpg" />
     <Content Include="Content\img\excercises\triceps\triceps-extensions.jpg" />
@@ -416,7 +420,6 @@
     <Content Include="src\js\entities\excercise.js" />
     <Content Include="src\js\entities\training.js" />
     <Content Include="src\js\kach.js" />
-    <Content Include="src\js\main.js" />
     <Content Include="src\js\stats.js" />
     <Content Include="src\js\touch.js" />
     <Content Include="src\js\UI.js" />
@@ -459,6 +462,7 @@
     <Content Include="src\fonts\futuraptcond-boldobl.woff" />
     <Content Include="src\fonts\futuraptcond-bookobl.woff" />
     <Content Include="src\fonts\futuraptcond-extraboldobl.woff" />
+    <Content Include="Views\Shared\_Excersises.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

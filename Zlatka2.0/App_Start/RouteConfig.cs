@@ -14,9 +14,9 @@ namespace Zlatka2._0
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
-                name: "Excercise",
-                url: "excercise/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                name: "Excercises",
+                url: "excercises.html",
+                defaults: new { controller = "Home", action = "Index" }
             );
 
             routes.MapRoute(

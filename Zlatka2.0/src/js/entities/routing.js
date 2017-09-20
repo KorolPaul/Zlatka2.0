@@ -9,14 +9,14 @@ class Routing {
             document.querySelector('meta[name="description"]').content = 'Ваш персональный тренер';
             document.querySelector('meta[name="keywords"]').content = 'тренировки, бодибилдинг, упражнения, мышцы';
         }
-        history.replaceState({}, title, window.location.protocol + '//' + window.location.host + url);
+        history.pushState({}, title, window.location.protocol + '//' + window.location.host + url);
     }
-
+    
     static loadPage(url) {
-        let path = url.substring(1).split('/');
-
-        if (path[0] === 'excercise') {
-            UI.showInfo(null, path[1]);
+        if (url.pathname === '/excercises.html') {
+            UI.showInfo(null, url.hash.substring(2));
+        } else if (url === '/') {
+            UI.hideInfo();
         }
     }
 }

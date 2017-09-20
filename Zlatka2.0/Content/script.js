@@ -165,9 +165,8 @@ var touch = {
         mouseOffset = {
             x: e.pageX - pos.x,
             y: e.pageY - pos.y
-        };
-        //document.body.onselectstart = function () { return false };
-        return false;
+            //document.body.onselectstart = function () { return false };
+        };return false;
     },
 
     moveExcercise: function moveExcercise(e) {
@@ -256,7 +255,11 @@ var UI = {
             excerciseNode = xml.querySelector('#' + excerciseUrl),
             html = excerciseNode.querySelector('.info').innerHTML;
 
-        Routing.setPage('info', '/excercise/' + excerciseNode.id, {
+        if (utils.isSet(e)) {
+            e.preventDefault();
+        }
+
+        Routing.setPage('info', '/excercises.html#!' + excerciseNode.id, {
             title: excerciseNode.querySelector('.excercise-name').innerHTML,
             descr: excerciseNode.querySelector('.meta-description').innerHTML,
             keywords: excerciseNode.querySelector('.meta-keywords').innerHTML });
@@ -294,40 +297,59 @@ var UI = {
         });
 
         excercises.classList.remove('excercises__visible');
-        window.instgrm.Embeds.process();
+        //window.instgrm.Embeds.process();
+    },
+
+    hideInfo: function hideInfo() {
+        info.classList.remove('opened');
     },
 
     loadExcercises: function loadExcercises() {
+        xml.innerHTML = document.querySelector('#excercises-list').innerHTML;
+        new Search();
+
+        Routing.loadPage(window.location);
+        /*
         fetch('https://' + window.location.host + '/Content/excercises.xml', {
             method: 'GET',
             headers: { 'Content-Type': 'application/xml' }
-        }).then(function (response) {
+        })
+        .then(function (response) {
             return response.text();
-        }).then(function (data) {
+        })
+        .then(function (data) {
             xml.innerHTML = data;
             new Search();
-            Routing.loadPage(window.location.pathname);
-        }).catch(function (error) {
+            
+            Routing.loadPage(window.location.hash);
+        })
+        .catch(function (error) {
             console.log('Cant load xml');
             console.log(error);
         });
+        */
     },
 
     showExcercises: function showExcercises(e) {
         var musculeName = this.dataset.muscle || this.innerHTML,
-            html = xml.querySelectorAll('.' + musculeName + ', [data-tags*="' + musculeName + '"]');
+            html = xml.querySelectorAll('li.' + musculeName + ', [data-tags*="' + musculeName + '"]');
 
         e.preventDefault();
+
         excercises.innerHTML = '';
         for (var i = 0; i < html.length; i++) {
-            var excercise = utils.createElement('li', 'excercise-name', html[i].querySelector('.excercise-name').innerHTML, { onclick: UI.showInfo });
-            excercise.dataset['complexity'] = html[i].getAttribute('data-complexity');
-            excercise.dataset['excersice'] = html[i].id;
+            var excerciseLi = utils.createElement('li', 'excercise-name'),
+                excerciseLink = utils.createElement('a', 'excercise-name_link', html[i].querySelector('.excercise-name').innerHTML, { onclick: UI.showInfo });
+
+            excerciseLink.href = '#!' + html[i].id;
+            excerciseLink.dataset['excersice'] = html[i].id;
+            excerciseLi.dataset['complexity'] = html[i].getAttribute('data-complexity');
 
             //excercise.addEventListener('mousedown', touch.moveExcerciseStart);
             //excercise.addEventListener('touchstart', touch.moveExcerciseStart);
 
-            excercises.appendChild(excercise);
+            excerciseLi.appendChild(excerciseLink);
+            excercises.appendChild(excerciseLi);
         }
         excercises.classList.add('excercises__visible');
     },
@@ -387,7 +409,7 @@ var UI = {
 
         infoClose.onclick = function (e) {
             e.preventDefault();
-            info.classList.remove('opened');
+            UI.hideInfo();
             Routing.setPage('main', '/');
         };
 
@@ -436,6 +458,10 @@ var UI = {
 
         UI.loadExcercises();
         UI.loadAvatar();
+
+        window.addEventListener('popstate', function () {
+            Routing.loadPage(location.pathname);
+        });
 
         window.onload = function () {
             gapi.load('client', UI.loadAvatar);
@@ -717,15 +743,15 @@ var Routing = function () {
                 document.querySelector('meta[name="description"]').content = 'Ваш персональный тренер';
                 document.querySelector('meta[name="keywords"]').content = 'тренировки, бодибилдинг, упражнения, мышцы';
             }
-            history.replaceState({}, title, window.location.protocol + '//' + window.location.host + url);
+            history.pushState({}, title, window.location.protocol + '//' + window.location.host + url);
         }
     }, {
         key: 'loadPage',
         value: function loadPage(url) {
-            var path = url.substring(1).split('/');
-
-            if (path[0] === 'excercise') {
-                UI.showInfo(null, path[1]);
+            if (url.pathname === '/excercises.html') {
+                UI.showInfo(null, url.hash.substring(2));
+            } else if (url === '/') {
+                UI.hideInfo();
             }
         }
     }]);

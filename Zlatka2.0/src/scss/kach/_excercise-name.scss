@@ -2,13 +2,18 @@
     display: block;
     cursor: pointer;
     font-size: 17px;
-    color:#423b5d;
-    padding: 20px 30px 20px 0;
     border-bottom: 1px solid rgba(66, 59, 93, .2);
     transition: .2s all ease-in;
     @include tablet {
         border-color: #e8e8ec;
     } 
+
+    &_link {
+        color:#423b5d;    
+        display: block;
+        padding: 20px 30px 20px 0;
+        text-decoration: none;
+    }
 
     .info & {
         background: transparent;

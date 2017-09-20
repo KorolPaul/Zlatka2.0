@@ -12,7 +12,8 @@ var lr = require('tiny-lr'),
     svg2png = require('gulp-svg2png'),
     server = lr(),
     autoprefixer = require('gulp-autoprefixer'),
-    babel = require('gulp-babel');;
+    babel = require('gulp-babel'),
+    htmlSnapshots = require('html-snapshots');
 
 gulp.task('server', function () {
     connect.server({
@@ -57,6 +58,25 @@ gulp.task('js', function () {
 
 gulp.task('watch', function () {
     gulp.watch(['*.html', 'src/scss/**/*.scss', 'src/js/**/*.js'], ['html', 'sass', 'js']);
+});
+
+gulp.task('snapshot', function () {
+    htmlSnapshots.run({
+        input: "sitemap",
+        source: "sitemap.xml",
+        outputDir: "./snapshots",
+        outputDirClean: true,
+        //checkInterval: 5000,
+        //pollInterval: 10000,
+        selector: ".info"
+
+      })
+      .then(function (completed) {
+        // completed is an array of full file paths to the completed snapshots.
+      })
+      .catch(function (error) {
+        console.log(errorObject.notCompleted)
+      });
 });
 
 gulp.task('default', function () {
