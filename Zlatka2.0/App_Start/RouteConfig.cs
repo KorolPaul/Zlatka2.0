@@ -15,8 +15,8 @@ namespace Zlatka2._0
 
             routes.MapRoute(
                 name: "Excercises",
-                url: "excercises.html",
-                defaults: new { controller = "Home", action = "Index" }
+                url: "excercises/{id}",
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
 
             routes.MapRoute(

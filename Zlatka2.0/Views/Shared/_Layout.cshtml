@@ -6,12 +6,42 @@
     <meta name="keywords" content="@ViewBag.Keywords">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="canonical" href="https://muscules.by">
     <script src="https://plus.google.com/js/client:platform.js" async defer></script>
     @Styles.Render("~/Content/css")
 </head>
 <body>
     <script>
+        document.write('fuck')
         let isAuthorized = @User.Identity.IsAuthenticated.ToString().ToLower();
+
+
+        window.onerror = function (message, url, lineNo, colNo, error) {
+
+        console.log(arguments);
+
+        let container = document.createElement('div');
+
+        container.style.color = 'red';
+        container.style.position = 'fixed';
+        container.style.background = '#eee';
+        container.style.padding = '2em';
+        container.style.top = '1em';
+        container.style.left = '1em';
+
+        let msg = document.createElement('pre');
+        msg.innerText = [
+            'Message: ' + message,
+            'URL: ' + url,
+            'Line: ' + lineNo,
+            'Column: ' + colNo,
+            'Stack: ' + (error && error.stack)
+        ].join('\n');
+
+        container.appendChild(msg);
+
+        document.body.appendChild(container);
+        };
     </script>
     <div class="menu">
         <a href="#" class="menu_trigger" id="menu-trigger"></a>
@@ -36,6 +66,7 @@
     <a href="/" class="logo">
         <img class="logo_image" src="~/Content/img/logo.png" alt="muscle.by">
     </a>
+                   <a class="excercise-name_link" href="/excercises/arnold-wrenches" data-excersice="arnold-wrenches">Жимы арнольда</a>
 
     @RenderBody()
     
@@ -47,6 +78,6 @@
     <script async="" defer="defer" src="//platform.instagram.com/en_US/embeds.js"></script>
     @Scripts.Render("~/bundles/jquery")
     @RenderSection("scripts", required: false)
-
+    
 </body>
 </html>

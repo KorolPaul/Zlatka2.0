@@ -10,13 +10,15 @@ class Routing {
             document.querySelector('meta[name="keywords"]').content = 'тренировки, бодибилдинг, упражнения, мышцы';
         }
         history.pushState({}, title, window.location.protocol + '//' + window.location.host + url);
+        document.querySelector('link[rel="canonical"]').href = window.location.toString();
     }
     
     static loadPage(url) {
-        if (url.pathname === '/excercises.html') {
-            UI.showInfo(null, url.hash.substring(2));
+        if (url.pathname.indexOf('excercises') != -1) {
+            UI.showInfo(null, url.pathname.substring(12));
         } else if (url === '/') {
             UI.hideInfo();
         }
+        document.querySelector('link[rel="canonical"]').href = window.location.toString();
     }
 }
