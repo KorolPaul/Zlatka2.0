@@ -13,8 +13,8 @@ class Routing {
     }
     
     static loadPage(url) {
-        if (url.pathname === '/excercises.html') {
-            UI.showInfo(null, url.hash.substring(2));
+        if (url.pathname.indexOf('excercises') != -1) {
+            UI.showInfo(null, url.pathname.substring(12));
         } else if (url === '/') {
             UI.hideInfo();
         }

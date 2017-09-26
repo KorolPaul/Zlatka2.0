@@ -210,6 +210,7 @@
       <SubType>Designer</SubType>
     </None>
     <Content Include="Content\excercises.xml" />
+    <Content Include="Content\img\avatar.png" />
     <Content Include="Content\img\barbell.png" />
     <Content Include="Content\img\brush-gray.png" />
     <Content Include="Content\img\brush-top.png" />
@@ -297,6 +298,7 @@
     <Content Include="Content\img\male.png" />
     <Content Include="Content\img\masks.svg" />
     <Content Include="Content\img\profile.jpg" />
+    <Content Include="Content\img\search.svg" />
     <Content Include="Content\img\share.png" />
     <Content Include="Content\script.js" />
     <Content Include="Content\style.css" />

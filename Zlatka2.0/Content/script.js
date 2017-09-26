@@ -259,7 +259,7 @@ var UI = {
             e.preventDefault();
         }
 
-        Routing.setPage('info', '/excercises.html#!' + excerciseNode.id, {
+        Routing.setPage('info', '/excercises/' + excerciseNode.id, {
             title: excerciseNode.querySelector('.excercise-name').innerHTML,
             descr: excerciseNode.querySelector('.meta-description').innerHTML,
             keywords: excerciseNode.querySelector('.meta-keywords').innerHTML });
@@ -466,7 +466,69 @@ var UI = {
         window.onload = function () {
             gapi.load('client', UI.loadAvatar);
         };
+        UI.printStackTrace();
+    },
+
+    printStackTrace: function printStackTrace() {
+        var callstack = [];
+        var isCallstackPopulated = false;
+        try {
+            i.dont.exist += 0; //does not exist - that's the point
+        } catch (e) {
+            if (e.stack) {
+                //Firefox
+                var lines = e.stack.split("n");
+                for (var i = 0, len = lines.length; i < len; i++) {
+                    callstack.push(lines[i]);
+                }
+                //Remove call to printStackTrace()
+                callstack.shift();
+                isCallstackPopulated = true;
+            } else if (window.opera && e.message) {
+                //Opera
+                var lines = e.message.split("n");
+                for (var i = 0, len = lines.length; i < len; i++) {
+                    var entry = lines[i];
+                    //Append next line also since it has the file info
+                    if (lines[i + 1]) {
+                        entry += " at " + lines[i + 1];
+                        i++;
+                        callstack.push(entry);
+                    }
+                }
+                //Remove call to printStackTrace()
+                callstack.shift();
+                isCallstackPopulated = true;
+            }
+        }
+        if (!isCallstackPopulated) {
+            //IE and Safari
+            var currentFunction = arguments.callee.caller;
+            while (currentFunction) {
+                var fn = currentFunction.toString();
+                //If we can't get the function name set to "anonymous"
+                var fname = fn.substring(fn.indexOf("function") + 8, fn.indexOf("(")) || "anonymous";
+                callstack.push(fname);
+                currentFunction = currentFunction.caller;
+            }
+        }
+        output(callstack);
+
+        function output(arr) {
+            var container = document.createElement('div');
+
+            container.style.color = 'red';
+            container.style.position = 'fixed';
+            container.style.background = '#eee';
+            container.style.padding = '2em';
+            container.style.top = '1em';
+            container.style.left = '1em';
+            container.innerHTML = arr.join("nn");
+
+            document.body.appendChild(container);
+        }
     }
+
 };
 'use strict';
 
@@ -748,8 +810,8 @@ var Routing = function () {
     }, {
         key: 'loadPage',
         value: function loadPage(url) {
-            if (url.pathname === '/excercises.html') {
-                UI.showInfo(null, url.hash.substring(2));
+            if (url.pathname.indexOf('excercises') != -1) {
+                UI.showInfo(null, url.pathname.substring(12));
             } else if (url === '/') {
                 UI.hideInfo();
             }
