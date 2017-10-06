@@ -298,7 +298,7 @@ var UI = {
         });
 
         excercises.classList.remove('excercises__visible');
-        //window.instgrm.Embeds.process();
+        window.instgrm.Embeds.process();
     },
 
     hideInfo: function hideInfo() {
@@ -342,7 +342,7 @@ var UI = {
             var excerciseLi = utils.createElement('li', 'excercise-name'),
                 excerciseLink = utils.createElement('a', 'excercise-name_link', html[i].querySelector('.excercise-name').innerHTML, { onclick: UI.showInfo });
 
-            excerciseLink.href = '/excercises/' + html[i].id;
+            excerciseLink.href = 'snapshots/excercises/' + html[i].id + '/index.html';
             excerciseLink.dataset['excersice'] = html[i].id;
             excerciseLi.dataset['complexity'] = html[i].getAttribute('data-complexity');
 
@@ -467,19 +467,7 @@ var UI = {
         window.onload = function () {
             gapi.load('client', UI.loadAvatar);
         };
-        UI.printStackTrace();
-
-        document.querySelector('.excercise-name_link').addEventListener('click', function (e) {
-            // alert(e.target.href.substring(e.target.href.indexOf('/ex')))
-            e.preventDefault();
-            Routing.setPage('info', e.target.href.substring(e.target.href.indexOf('/ex')), {
-                title: e.target.innerHTML,
-                descr: e.target.innerHTML,
-                keywords: e.target.innerHTML
-            });
-
-            Routing.loadPage(window.location);
-        });
+        //UI.printStackTrace()
     },
 
     printStackTrace: function printStackTrace() {
@@ -824,8 +812,10 @@ var Routing = function () {
     }, {
         key: 'loadPage',
         value: function loadPage(url) {
-            if (url.pathname.indexOf('excercises') != -1) {
-                UI.showInfo(null, url.pathname.substring(12));
+            if (utils.isSet(url.pathname)) {
+                if (url.pathname.indexOf('excercises') != -1) {
+                    UI.showInfo(null, url.pathname.substring(12));
+                }
             } else if (url === '/') {
                 UI.hideInfo();
             }

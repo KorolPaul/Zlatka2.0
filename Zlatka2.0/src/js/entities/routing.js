@@ -14,8 +14,10 @@ class Routing {
     }
     
     static loadPage(url) {
-        if (url.pathname.indexOf('excercises') != -1) {
-            UI.showInfo(null, url.pathname.substring(12));
+        if (utils.isSet(url.pathname)) {
+            if (url.pathname.indexOf('excercises') != -1) {
+                UI.showInfo(null, url.pathname.substring(12));
+            }
         } else if (url === '/') {
             UI.hideInfo();
         }

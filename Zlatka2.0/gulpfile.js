@@ -68,13 +68,13 @@ gulp.task('snapshot', function () {
         outputDirClean: true,
         //checkInterval: 5000,
         //pollInterval: 10000,
-        selector: ".info"
+        selector: ".info.opened"
 
       })
       .then(function (completed) {
         // completed is an array of full file paths to the completed snapshots.
       })
-      .catch(function (error) {
+      .catch(function (errorObject) {
         console.log(errorObject.notCompleted)
       });
 });

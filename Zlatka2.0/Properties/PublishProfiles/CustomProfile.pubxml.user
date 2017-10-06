@@ -23,10 +23,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/27/2017 15:59:10</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>09/29/2017 14:02:13</publishTime>
+      <publishTime>10/06/2017 11:38:26</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>09/29/2017 14:02:12</publishTime>
+      <publishTime>10/06/2017 11:38:26</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>09/27/2017 15:59:11</publishTime>
@@ -206,10 +206,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/27/2017 15:59:11</publishTime>
     </File>
     <File Include="bin/Zlatka2.0.dll">
-      <publishTime>09/29/2017 13:29:15</publishTime>
+      <publishTime>10/06/2017 11:33:04</publishTime>
     </File>
     <File Include="bin/Zlatka2.0.pdb">
-      <publishTime>09/29/2017 13:29:15</publishTime>
+      <publishTime>10/06/2017 11:33:04</publishTime>
     </File>
     <File Include="Content/excercises.xml">
       <publishTime>09/27/2017 15:59:10</publishTime>
@@ -497,13 +497,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/27/2017 15:59:10</publishTime>
     </File>
     <File Include="Content/script.js">
-      <publishTime>09/29/2017 14:00:59</publishTime>
+      <publishTime>10/06/2017 11:35:50</publishTime>
     </File>
     <File Include="Content/Site.css">
       <publishTime>09/27/2017 15:59:10</publishTime>
     </File>
     <File Include="Content/style.css">
-      <publishTime>09/29/2017 14:00:59</publishTime>
+      <publishTime>10/06/2017 11:35:49</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>09/27/2017 15:59:10</publishTime>
@@ -512,7 +512,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="gulpfile.js">
-      <publishTime>09/27/2017 15:59:10</publishTime>
+      <publishTime>10/05/2017 13:48:43</publishTime>
     </File>
     <File Include="package.json">
       <publishTime>09/27/2017 16:10:54</publishTime>
@@ -521,7 +521,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/27/2017 15:59:10</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>09/29/2017 14:02:08</publishTime>
+      <publishTime>10/06/2017 11:38:21</publishTime>
     </File>
     <File Include="Scripts/jquery-1.10.2.js">
       <publishTime>09/27/2017 15:59:10</publishTime>
@@ -893,7 +893,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/27/2017 15:59:11</publishTime>
     </File>
     <File Include="src/js/UI.js">
-      <publishTime>09/29/2017 14:00:58</publishTime>
+      <publishTime>10/06/2017 11:35:49</publishTime>
     </File>
     <File Include="src/js/utils.js">
       <publishTime>09/27/2017 15:59:11</publishTime>
@@ -1085,7 +1085,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/27/2017 15:59:10</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>09/27/2017 15:59:10</publishTime>
+      <publishTime>10/05/2017 11:05:29</publishTime>
     </File>
     <File Include="Views/Manage/ChangePassword.cshtml">
       <publishTime>09/27/2017 15:59:10</publishTime>
@@ -1106,10 +1106,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/27/2017 15:59:10</publishTime>
     </File>
     <File Include="Views/Shared/_Excersises.cshtml">
-      <publishTime>09/27/2017 15:59:10</publishTime>
+      <publishTime>09/29/2017 14:37:20</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>09/29/2017 13:34:44</publishTime>
+      <publishTime>10/05/2017 13:49:33</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>09/27/2017 15:59:10</publishTime>
@@ -1121,7 +1121,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/27/2017 15:59:10</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>09/29/2017 14:02:07</publishTime>
+      <publishTime>10/03/2017 16:07:58</publishTime>
     </File>
   </ItemGroup>
 </Project>
