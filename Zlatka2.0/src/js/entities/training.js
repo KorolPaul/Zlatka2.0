@@ -22,8 +22,10 @@ class Training {
         Training.saveProgram();
     } 
 
-    static showExcercises(e) {
-        training.innerHTML = document.querySelector('.trainings_item:nth-of-type(' + utils.index(e.target.parentNode) + ') .trainings_excercises').innerHTML;
+    static showExcercises(e, num) {
+        let excercisesindex = utils.isSet(num) ? num : utils.index(e.target.parentNode)
+
+        training.innerHTML = document.querySelector('.trainings_item:nth-of-type(' + excercisesindex + ') .trainings_excercises').innerHTML;
 
         let trainingItems = document.querySelectorAll('.training .training_item, .training .button');        
         trainingItems.forEach(function (el) {
@@ -97,6 +99,10 @@ class Training {
     }
 
     static showPopup() {
+        if(trainingsBlock.children.length === 1) {
+            Training.showExcercises(null, 1);
+        }
+
         sheduleElement.classList.add('shedule__opened');
     }
 

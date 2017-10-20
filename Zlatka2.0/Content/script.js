@@ -447,10 +447,18 @@ var UI = {
         document.querySelector('#shedule-toggle').onclick = function (e) {
             e.preventDefault();
             Training.showPopup();
+            Search.hidePopup();
             UI.toggleMenu(e);
         };
 
         document.querySelector('#excercises-toggle').onclick = function (e) {
+            e.preventDefault();
+            Training.hidePopup();
+            Search.showPopup();
+            UI.toggleMenu(e);
+        };
+
+        document.querySelector('#body-toggle').onclick = function (e) {
             e.preventDefault();
             Training.hidePopup();
             Search.hidePopup();
@@ -993,8 +1001,10 @@ var Training = function () {
         }
     }, {
         key: 'showExcercises',
-        value: function showExcercises(e) {
-            training.innerHTML = document.querySelector('.trainings_item:nth-of-type(' + utils.index(e.target.parentNode) + ') .trainings_excercises').innerHTML;
+        value: function showExcercises(e, num) {
+            var excercisesindex = utils.isSet(num) ? num : utils.index(e.target.parentNode);
+
+            training.innerHTML = document.querySelector('.trainings_item:nth-of-type(' + excercisesindex + ') .trainings_excercises').innerHTML;
 
             var trainingItems = document.querySelectorAll('.training .training_item, .training .button');
             trainingItems.forEach(function (el) {
@@ -1064,6 +1074,10 @@ var Training = function () {
     }, {
         key: 'showPopup',
         value: function showPopup() {
+            if (trainingsBlock.children.length === 1) {
+                Training.showExcercises(null, 1);
+            }
+
             sheduleElement.classList.add('shedule__opened');
         }
     }, {

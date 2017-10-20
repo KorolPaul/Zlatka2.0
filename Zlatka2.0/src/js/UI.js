@@ -240,10 +240,18 @@ const UI = {
         document.querySelector('#shedule-toggle').onclick = function (e) {
             e.preventDefault();
             Training.showPopup();
+            Search.hidePopup();
             UI.toggleMenu(e);
         };
 
         document.querySelector('#excercises-toggle').onclick = function (e) {
+            e.preventDefault();
+            Training.hidePopup();
+            Search.showPopup();
+            UI.toggleMenu(e);
+        };
+
+        document.querySelector('#body-toggle').onclick = function (e) {
             e.preventDefault();
             Training.hidePopup();
             Search.hidePopup();
