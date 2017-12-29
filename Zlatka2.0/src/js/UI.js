@@ -29,7 +29,9 @@ const deleteExcercise = document.getElementById('delete-excercise'),
       closeExcercise = document.getElementById('close-excercise'),
       copyPopup = document.getElementById('copy-popup'),
       editPopup = document.getElementById('edit-popup'),
-      addTrainingButtons = document.querySelectorAll('.addTraining');
+      addTrainingButtons = document.querySelectorAll('.addTraining'),
+      changeGenderButtons = document.querySelectorAll('.gender_button'),
+      musclesMaps = document.querySelectorAll('.muscles_map');
 
 
 const UI = {
@@ -89,8 +91,8 @@ const UI = {
             tagsNode.appendChild(newTag);
         });
 
-        excercises.classList.remove('excercises__visible');                
-        window.instgrm.Embeds.process();
+        excercises.classList.remove('excercises__visible');
+        //window.instgrm.Embeds.process();
     },
 
     hideInfo: function () {
@@ -237,6 +239,16 @@ const UI = {
             el.addEventListener('click', Training.add);
         });
 
+        changeGenderButtons.forEach(function (el) {
+            el.addEventListener('click', (e) => {
+                changeGenderButtons.forEach((el) => {el.classList.remove('gender_button__active')});
+                e.target.classList.add('gender_button__active');
+
+                musclesMaps.forEach((el) => {el.classList.remove('muscles_map__active')});                
+                musclesMaps[utils.index(e.target) - 1].classList.add('muscles_map__active');
+            });
+        });
+
         document.querySelector('#shedule-toggle').onclick = function (e) {
             e.preventDefault();
             Training.showPopup();
@@ -269,6 +281,62 @@ const UI = {
             gapi.load('client', UI.loadAvatar);
         }
         //UI.printStackTrace()
+
+
+        /* Canvas */
+        let scene = new THREE.Scene();
+        let camera = new THREE.PerspectiveCamera( 45, (window.innerWidth / 3) / (window.innerHeight * 0.8), 0.1, 1000 );
+
+        let renderer = new THREE.WebGLRenderer();
+        renderer.setClearColor( 0xffffff, 1);
+        renderer.setSize(  window.innerWidth / 3, window.innerHeight * 0.8 );
+        document.querySelector('.muscles_map__men').appendChild( renderer.domElement );
+
+        var ambientLight = new THREE.AmbientLight( 0xcccccc, 0.2 );
+        scene.add( ambientLight );
+        var pointLight = new THREE.PointLight( 0xcccccc, 0.8 );
+        camera.add( pointLight );
+        scene.add( camera );
+
+        camera.position.z = 250;
+        camera.position.y = 100;
+
+
+        var loader = new THREE.OBJLoader();
+        var mouseX = 0, mouseY = 0;
+
+        let model = null;
+
+        loader.load(
+            'Content/models/men.obj',
+            //'https://threejs.org/examples/obj/male02/male02.obj',
+            ( object ) => {
+                model = object;
+                scene.add( model );
+            },
+            ( xhr ) => {
+                console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+            },
+            ( error ) => {
+                console.log( 'An error happened' );
+            }
+        );
+
+        
+        document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+
+        function onDocumentMouseMove( event ) {
+            mouseX = ( event.clientX - window.innerWidth / 2 ) / 2;
+            mouseY = ( event.clientY - window.innerHeight / 2 ) / 2;
+        };
+
+        function animate() {
+            requestAnimationFrame( animate );
+
+            model.rotation.y = ( mouseX ) * .005;
+            renderer.render( scene, camera );
+        }
+        animate();
     },
 
     

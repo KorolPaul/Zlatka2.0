@@ -8,6 +8,8 @@ namespace Zlatka2._0
     {
         public void Configuration(IAppBuilder app)
         {
+            
+
             ConfigureAuth(app);
         }
     }

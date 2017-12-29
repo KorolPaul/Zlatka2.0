@@ -28,10 +28,22 @@ const kach = {
             trainingsList = document.querySelectorAll('.trainings_item:not(#trainings-settings)  .trainings_name');
 
         trainingsPopup.innerHTML = '';
-        for (let i = 0; i < trainingsList.length; i++) {
-            let li = utils.createElement('li', 'trainings-popup_item', trainingsList[i].innerText, {onclick: function(){let newExcercise = new Excercise(li, newExcerciseName, newExcerciseInfo)}})
-            trainingsPopup.appendChild(li)
+
+        if(!trainingsList.length) {
+            new Promise(function(resolve, reject) {
+                let trainingName = Training.add();
+                resolve(trainingName);
+            }).then((result)=>{
+                let li = utils.createElement('li', 'trainings-popup_item', result.name, {onclick: function(){let newExcercise = new Excercise(li, newExcerciseName, newExcerciseInfo)}})
+                trainingsPopup.appendChild(li)
+            })
+        } else {
+            for (let i = 0; i < trainingsList.length; i++) {
+                let li = utils.createElement('li', 'trainings-popup_item', trainingsList[i].innerText, {onclick: function(){let newExcercise = new Excercise(li, newExcerciseName, newExcerciseInfo)}})
+                trainingsPopup.appendChild(li)
+            }
         }
+
         trainingsPopup.classList.add('trainings-popup__visible');
     }
 }

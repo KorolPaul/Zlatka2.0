@@ -32,6 +32,9 @@
         <a class="muscles_title muscles_title__press" data-muscle="press" href="#" data-layer="11">пресс</a>
         <a class="muscles_title muscles_title__sidepress" data-muscle="press" href="#" data-layer="11">косые</a>
     </div>
+
+    <div class="muscles_map muscles_map__men muscles_map__active"></div>
+
     <svg class="muscles_map muscles_map__girl" id="map" pointer-events="all" version="1.1" viewBox="0 0 600 1300">
         <defs>
             <pattern id="dots" patternUnits="userSpaceOnUse" width="28" height="28">
@@ -91,6 +94,7 @@
             <path class="press" title="Косые мышцы прессса" d="M187,534c0,0,15-12.8,25-33.4s7-16.6,6-37.6s-34-67-43-64 s-8-12-9,3s11,46,8,57s-18,35.2-14,41.6c4,6.4,24,33.4,24,33.4" />
         </g>
     </svg>
+    
     <svg class="muscles_slider" version="1.1" id="slider" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
          width="640px" height="auto" viewBox="0 0 640 120" xml:space="preserve">
         <path data-layer="0" class="active" d="M78.5,31.3c16,14.7,36.9,22.4,57.2,29.1"/>
@@ -166,6 +170,9 @@
 
 @Html.Partial("_Excersises")
 
+<script src="~/Content/vendors/hammer.min.js"></script>
+<script src="~/Content/vendors/three.min.js"></script>
+<script src="~/Content/vendors/objloader.js"></script>
 <script src="~/Content/script.js"></script>
 <script>
     UI.init();

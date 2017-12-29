@@ -1,5 +1,8 @@
 .tags {
+    margin: 0 0 20px;
+    /*
     position: absolute;
+}
     left: 35px;
     top: 55px;
     transform-origin: 0 0;
@@ -7,7 +10,7 @@
     white-space: nowrap;
     @include tablet {
         left: 20px;
-    }
+    */
 }
 
 .tag {

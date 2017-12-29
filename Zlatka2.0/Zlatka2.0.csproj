@@ -26,6 +26,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <TargetFrameworkProfile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -302,6 +303,9 @@
     <Content Include="Content\img\share.png" />
     <Content Include="Content\script.js" />
     <Content Include="Content\style.css" />
+    <Content Include="Content\vendors\hammer.min.js" />
+    <Content Include="Content\vendors\objloader.js" />
+    <Content Include="Content\vendors\three.min.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -311,6 +315,7 @@
     <Content Include="gulpfile.js" />
     <Content Include="Content\fonts\formular-light.woff" />
     <Content Include="Content\fonts\futuraptcond-boldobl.woff" />
+    <Content Include="Content\models\men.obj" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -427,6 +432,7 @@
     <Content Include="src\js\UI.js" />
     <Content Include="src\js\utils.js" />
     <Content Include="src\js\vendors\hammer.min.js" />
+    <Content Include="src\js\vendors\three.min.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

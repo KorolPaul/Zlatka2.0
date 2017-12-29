@@ -23,10 +23,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/27/2017 15:59:10</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>10/06/2017 11:38:26</publishTime>
+      <publishTime>12/28/2017 15:07:27</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>10/06/2017 11:38:26</publishTime>
+      <publishTime>12/28/2017 15:07:27</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>09/27/2017 15:59:11</publishTime>
@@ -206,13 +206,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/27/2017 15:59:11</publishTime>
     </File>
     <File Include="bin/Zlatka2.0.dll">
-      <publishTime>10/06/2017 11:33:04</publishTime>
+      <publishTime>12/27/2017 18:05:57</publishTime>
     </File>
     <File Include="bin/Zlatka2.0.pdb">
-      <publishTime>10/06/2017 11:33:04</publishTime>
+      <publishTime>12/27/2017 18:05:57</publishTime>
     </File>
     <File Include="Content/excercises.xml">
-      <publishTime>09/27/2017 15:59:10</publishTime>
+      <publishTime>11/13/2017 18:08:53</publishTime>
     </File>
     <File Include="Content/fonts/formular-light.woff">
       <publishTime>09/27/2017 15:59:10</publishTime>
@@ -496,14 +496,26 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/img/share.png">
       <publishTime>09/27/2017 15:59:10</publishTime>
     </File>
+    <File Include="Content/models/men.obj">
+      <publishTime>12/27/2017 18:21:02</publishTime>
+    </File>
     <File Include="Content/script.js">
-      <publishTime>10/06/2017 11:35:50</publishTime>
+      <publishTime>12/28/2017 15:06:30</publishTime>
     </File>
     <File Include="Content/Site.css">
       <publishTime>09/27/2017 15:59:10</publishTime>
     </File>
     <File Include="Content/style.css">
-      <publishTime>10/06/2017 11:35:49</publishTime>
+      <publishTime>12/28/2017 15:06:30</publishTime>
+    </File>
+    <File Include="Content/vendors/hammer.min.js">
+      <publishTime>12/28/2017 15:06:30</publishTime>
+    </File>
+    <File Include="Content/vendors/objloader.js">
+      <publishTime>12/27/2017 16:31:09</publishTime>
+    </File>
+    <File Include="Content/vendors/three.min.js">
+      <publishTime>12/28/2017 15:06:30</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>09/27/2017 15:59:10</publishTime>
@@ -512,16 +524,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="gulpfile.js">
-      <publishTime>10/05/2017 13:48:43</publishTime>
+      <publishTime>12/27/2017 15:47:12</publishTime>
     </File>
     <File Include="package.json">
-      <publishTime>09/27/2017 16:10:54</publishTime>
+      <publishTime>12/27/2017 14:50:57</publishTime>
     </File>
     <File Include="packages.config">
       <publishTime>09/27/2017 15:59:10</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>10/06/2017 11:38:21</publishTime>
+      <publishTime>12/28/2017 15:07:22</publishTime>
     </File>
     <File Include="Scripts/jquery-1.10.2.js">
       <publishTime>09/27/2017 15:59:10</publishTime>
@@ -878,10 +890,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/27/2017 15:59:11</publishTime>
     </File>
     <File Include="src/js/entities/training.js">
-      <publishTime>09/27/2017 15:59:11</publishTime>
+      <publishTime>10/23/2017 17:26:55</publishTime>
     </File>
     <File Include="src/js/kach.js">
-      <publishTime>09/27/2017 15:59:11</publishTime>
+      <publishTime>10/23/2017 17:57:29</publishTime>
     </File>
     <File Include="src/js/main.js">
       <publishTime>04/04/2017 11:28:13</publishTime>
@@ -893,13 +905,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/27/2017 15:59:11</publishTime>
     </File>
     <File Include="src/js/UI.js">
-      <publishTime>10/06/2017 11:35:49</publishTime>
+      <publishTime>12/28/2017 15:06:29</publishTime>
     </File>
     <File Include="src/js/utils.js">
       <publishTime>09/27/2017 15:59:11</publishTime>
     </File>
     <File Include="src/js/vendors/hammer.min.js">
       <publishTime>09/27/2017 15:59:11</publishTime>
+    </File>
+    <File Include="src/js/vendors/three.min.js">
+      <publishTime>12/27/2017 15:11:36</publishTime>
     </File>
     <File Include="src/scss/admin/_delete.scss">
       <publishTime>09/27/2017 15:59:11</publishTime>
@@ -920,7 +935,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/27/2017 15:59:11</publishTime>
     </File>
     <File Include="src/scss/form-elements/_input.scss">
-      <publishTime>09/27/2017 15:59:11</publishTime>
+      <publishTime>10/20/2017 17:30:11</publishTime>
     </File>
     <File Include="src/scss/form-elements/_label.scss">
       <publishTime>09/27/2017 15:59:11</publishTime>
@@ -944,7 +959,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/27/2017 15:59:11</publishTime>
     </File>
     <File Include="src/scss/kach/_add-button.scss">
-      <publishTime>09/27/2017 15:59:11</publishTime>
+      <publishTime>10/26/2017 15:36:46</publishTime>
     </File>
     <File Include="src/scss/kach/_add-training.scss">
       <publishTime>09/27/2017 15:59:11</publishTime>
@@ -977,7 +992,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/27/2017 15:59:11</publishTime>
     </File>
     <File Include="src/scss/kach/_info.scss">
-      <publishTime>09/27/2017 15:59:11</publishTime>
+      <publishTime>10/26/2017 17:31:57</publishTime>
     </File>
     <File Include="src/scss/kach/_instagram-media.scss">
       <publishTime>09/27/2017 15:59:11</publishTime>
@@ -986,7 +1001,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/27/2017 15:59:11</publishTime>
     </File>
     <File Include="src/scss/kach/_muscles.scss">
-      <publishTime>09/27/2017 15:59:11</publishTime>
+      <publishTime>12/27/2017 14:14:33</publishTime>
     </File>
     <File Include="src/scss/kach/_plots.scss">
       <publishTime>09/27/2017 15:59:11</publishTime>
@@ -1007,7 +1022,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/27/2017 15:59:11</publishTime>
     </File>
     <File Include="src/scss/kach/_trainings-popup.scss">
-      <publishTime>09/27/2017 15:59:11</publishTime>
+      <publishTime>10/23/2017 16:27:57</publishTime>
     </File>
     <File Include="src/scss/kach/_trainings.scss">
       <publishTime>09/27/2017 15:59:11</publishTime>
@@ -1085,7 +1100,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/27/2017 15:59:10</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>10/05/2017 11:05:29</publishTime>
+      <publishTime>12/27/2017 16:59:13</publishTime>
     </File>
     <File Include="Views/Manage/ChangePassword.cshtml">
       <publishTime>09/27/2017 15:59:10</publishTime>
@@ -1109,7 +1124,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/29/2017 14:37:20</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>10/05/2017 13:49:33</publishTime>
+      <publishTime>10/20/2017 17:42:20</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>09/27/2017 15:59:10</publishTime>
@@ -1121,7 +1136,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/27/2017 15:59:10</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>10/03/2017 16:07:58</publishTime>
+      <publishTime>12/28/2017 15:07:21</publishTime>
     </File>
   </ItemGroup>
 </Project>

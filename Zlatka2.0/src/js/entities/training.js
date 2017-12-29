@@ -7,6 +7,8 @@ class Training {
         let newTraining = new Training(prompt('Введите название тренировки'));
         newTraining.render();
         Training.saveProgram();
+
+        return newTraining;
     }
 
     static addExcercise(e, excercise, excerciseInfo) {
